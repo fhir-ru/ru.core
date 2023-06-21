@@ -1,0 +1,13 @@
+:title "Root schema"
+
+&menu-order
+:type :dockey
+:desc "set a document position in left navigation bar"
+:schema {:type zen/number}
+:ann {:none {}}
+
+&avatar
+:type :dockey
+:desc "a document icon. to search icons type :fs- prefix"
+:schema {:type zen/string}
+:ann {:none {}}
