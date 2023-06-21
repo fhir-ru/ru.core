@@ -6,6 +6,12 @@
 :schema {:type zen/number}
 :ann {:none {}}
 
+&section
+:type :dockey
+:desc "section in left navigation bar"
+:schema {:type zen/string}
+:ann {:none {}}
+
 &avatar
 :type :dockey
 :desc "a document icon. to search icons type :fs- prefix"
