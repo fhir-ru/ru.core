@@ -1,2 +1,3 @@
 :title "История изменений"
+:menu-order 7
 :git/timeline
