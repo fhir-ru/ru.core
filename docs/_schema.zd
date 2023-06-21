@@ -11,3 +11,16 @@
 :desc "a document icon. to search icons type :fs- prefix"
 :schema {:type zen/string}
 :ann {:none {}}
+
+&telegram
+:type :dockey
+:desc "a link to tg chat"
+:schema {:type zen/string}
+:ann {:badge {}}
+
+&icon
+;; TODO make icon list searchable
+:type :dockey
+:schema {:type zen/vector :every {:type zen/keyword}}
+:ann {:none {}}
+:desc "icon of a document"
