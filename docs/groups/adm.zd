@@ -1,0 +1,40 @@
+:title "Административные объекты"
+
+:icon [:fa-solid :fa-hospital-user]
+
+:summary /
+
+Эта группа работает над двумя задачами.
+
+1. Локализация ресурсов административного модуля спецификации FHIR (здесь нужна ссылка на http://hl7.org/fhir/administration-module.html).
+В первую очередь будут обработаны объекты:
+* Organization
+* Patient
+* Practitioner
+
+Результатом этой работы станет руководство по реализации #core в части административного модуля, достаточное для реализации следующих сценариев:
+
+2. Мапирование на ресурсы FHIR федерального реестра медицинских организаций #frmo
+
+:members /
+
+Участники
+
+#people.ekogan
+#people.alexandra
+#people.taleinikov
+#people.varvara
+#people.niquola
+
+:meetings "TODO: filter meetings by group"
+
+:profiles /
+Профайлы
+
+* #core.Organization
+* #core.Affiliation
+* #core.Department
+* #core.Patient
+* #core.Practitioner
+
+Вы можете высказать замечания-предложения по поводу содержания этой страницы в этой дискуссии: (ссылка на дискуссию номер 88)

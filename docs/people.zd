@@ -1,0 +1,5 @@
+:menu-order 13
+
+:icon [:fa-solid :fa-user-group]
+
+:title "Люди"

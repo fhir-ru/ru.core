@@ -1,0 +1,22 @@
+{:paths ["src" "zrc" "docs"]
+ :deps {org.clojure/clojure  {:mvn/version "1.11.1"}
+        zen-lang/zendoc      {:git/url "https://github.com/zen-lang/zendoc"
+                              :sha "3aed7e859a0c9cfe2b91ea148908c358248322b7"}}
+ :aliases
+ {:nrepl
+  {:extra-paths ["test" "libs/zd/test"]
+   :extra-deps  {cider/cider-nrepl {:mvn/version "LATEST"}}
+   :jvm-opts ^:replace ["-XX:-OmitStackTraceInFastThrow"]
+   :main-opts   ["-m" "nrepl.cmdline"
+                 "-b" "0.0.0.0"
+                 "--middleware"
+                 "[cider.nrepl/cider-middleware]"]}
+  :kaocha
+  {:extra-deps {lambdaisland/kaocha {:mvn/version "1.77.1236"}}
+   :extra-paths ["test"]
+   :jvm-opts   ^:replace ["-XX:-OmitStackTraceInFastThrow"]
+   :main-opts  ["-m" "kaocha.runner"]}
+
+  :run
+  {:jvm-opts    ["-XX:-OmitStackTraceInFastThrow"]
+   :main-opts   ["-m" "zd.fhir-ru"]}}}

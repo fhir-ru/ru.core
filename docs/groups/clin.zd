@@ -1,0 +1,15 @@
+:title "Клиническая рабочая группа"
+
+:icon [:fa-solid :fa-stethoscope]
+
+:summary /
+
+Terms - #terms.diagnose
+
+^table
+:members edn/
+[{:Участник people.openzin :role "Руководитель"}
+{:Участник people.ishmyr :role "Редактор"}
+{:Участник people.vrodionov :role "Редактор"}]
+
+:meetings "TODO: filter meetings by groups.clin"

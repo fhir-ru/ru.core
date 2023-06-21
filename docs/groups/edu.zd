@@ -1,0 +1,11 @@
+:title "Обучение"
+
+:icon [:fa :fa-user-graduate]
+
+:summary /
+
+^table
+:members edn/
+[{:person people.niquola}]
+
+:meetings "TODO: filter meetings by groups.edu"

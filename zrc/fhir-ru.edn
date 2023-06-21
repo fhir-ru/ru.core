@@ -1,0 +1,31 @@
+{:ns fhir-ru
+ :import #{zen-web zd}
+
+ zendoc
+ {:zen/tags #{zd/zendoc}
+  :paths ["docs"]
+  :root "readme"
+  :pull-rate 5400
+  :remote {:from "git@github.com:fhir-ru/ru.core.git"
+           :to "."}}
+
+ datalog
+ {:zen/tags #{zen/start zd.engines/datalog}
+  :zendoc zendoc
+  :engine zd.engines/datalog}
+
+ http
+ {:zen/tags #{zen/start zen-web/http zd.engines/http}
+  :engine zen-web/httpkit
+  :port 8080
+  :zendoc zendoc
+  :api zd/api}
+
+ fs
+ {:zen/tags #{zen/start zd.engines/fs}
+  :zendoc zendoc
+  :engine zd.engines/fs}
+
+ system
+ {:zen/tags #{zen/system}
+  :start [datalog fs http]}}

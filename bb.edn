@@ -1,0 +1,16 @@
+{:deps  {}
+ :tasks {:requires    ([babashka.fs :as fs])
+         ;; helpers and constants
+         :init        (do)
+         :enter       (do)
+         :leave       (do)
+         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+         ;; tasks
+         run          {:doc "Run on 3333 port with basic auth"
+                       :task (clojure {:extra-env {}} "-M:run")}
+
+         repl         {:doc  "Run Clojure repl for Emacs with cider"
+                       :task (clojure {:extra-env {}} "-M:nrepl")}
+
+         test {:doc  "Run tests"
+               :task (clojure (str "-M:kaocha " (apply str (interpose " " *command-line-args*))))}}}

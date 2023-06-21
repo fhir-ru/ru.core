@@ -1,0 +1,8 @@
+.cpcache
+.clj-kondo
+.nrepl-port
+.lsp/.cache/db.transit.json
+test/zd/tdocs
+.nrepl-port
+.DS_Store
+files/*

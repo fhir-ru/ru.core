@@ -1,0 +1,6 @@
+
+:menu-order 11
+
+:icon [:fa-regular :fa-building]
+
+:title "Организации"

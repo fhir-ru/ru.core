@@ -1,0 +1,10 @@
+:title "Лаборатория"
+
+:icon [:fa-solid :fa-flask]
+
+^table
+:members edn/
+[{:person people.ai}
+{:person people.mary}]
+
+:meetings "TODO: filter meetings by groups.lab"
