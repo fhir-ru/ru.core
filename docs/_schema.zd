@@ -24,6 +24,12 @@
 :schema {:type zen/string}
 :ann {:link-badge {}}
 
+&site
+:type :dockey
+:desc "a link to site"
+:schema {:type zen/string}
+:ann {:link-badge {}}
+
 &icon
 ;; TODO make icon list searchable
 :type :dockey
