@@ -69,7 +69,9 @@ FHIR-артефакты
 
 :scope:support "support."
 
-:scope:terms "terms."
+^table-of [:xt/id]
+:scope:terms datalog/
+{:find [(pull ?e [:xt/id])] :where [[?e :parent terms]] :in [terms]}
 
 :scope:timeline /
 
