@@ -16,7 +16,7 @@
 :type :dockey
 :desc "a link to tg chat"
 :schema {:type zen/string}
-:ann {:badge {}}
+:ann {:link-badge {}}
 
 &icon
 ;; TODO make icon list searchable
