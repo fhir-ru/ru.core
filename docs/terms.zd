@@ -1,0 +1,5 @@
+:menu-order 16
+
+:icon [:fa-solid :fa-circle-info]
+
+:title "Термины"
