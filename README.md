@@ -2,10 +2,21 @@
 
 [сайт](http://fhir-ru.zendoc.me)
 
-## установка
+## установка на mac
 
 1. установить java 8+
-2. установить [clojure](https://clojure.org/guides/getting_started#_clojure_installer_and_cli_tools)
+проверить установлена ли java можно через Java Control Panel или команду терминала
+```
+java --version
+```
+2. установить пакетный менеджер brew через terminal
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+3. установить clojure
+```
+brew install clojure/tools/clojure
+```
 
 ## запуск
 
