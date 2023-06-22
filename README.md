@@ -4,23 +4,27 @@
 
 ## установка на mac
 
-1. установить java 8+
-проверить установлена ли java можно через Java Control Panel или команду терминала
+1. склонировать этот репозиторий
+```bash
+git clone https://github.com/fhir-ru/ru.core.git
 ```
+2. установить java 8+
+проверить установлена ли java можно через Java Control Panel или команду терминала
+```bash
 java --version
 ```
-2. установить пакетный менеджер brew через terminal
-```
+3. установить пакетный менеджер brew через terminal
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-3. установить clojure
-```
+4. установить clojure
+```bash
 brew install clojure/tools/clojure
 ```
 
 ## запуск
 
-1. в терминале вызвать команду
+1. перейти в репозиторий и в терминале вызвать команду
 
 ```bash
 clojure -M:run
