@@ -5,7 +5,7 @@
  {:zen/tags #{zd/zendoc}
   :paths ["docs"]
   :root "readme"
-  :pull-rate 5400
+  :pull-rate 32400
   :remote {:from "git@github.com:fhir-ru/ru.core.git"
            :to "."}}
 
