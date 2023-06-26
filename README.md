@@ -14,18 +14,19 @@ xcode-select --install
 
 3. установить brew
 
-3.1 Скопировать команду установки в терминал
+* Скопировать команду установки в терминал
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-3.2 Ввести пароль системного пользователя если потребуется.
+* Ввести пароль системного пользователя если потребуется.
 
-3.3. Проверить brew
+* Проверить brew
 ```bash
 brew help
 ```
+
 Для Mac с M1 если команда brew не найдена:
 
 * проверить какая оболочка командной строки используется
@@ -59,6 +60,7 @@ git clone https://github.com/fhir-ru/ru.core.git
 java -version
 ```
 рекомендуем использовать сборку [adoptium](https://adoptium.net). также можно Oracle Java, OpenJDK
+
 7. установить clojure
 ```bash
 brew install clojure/tools/clojure
@@ -69,9 +71,6 @@ brew install clojure/tools/clojure
 1. перейти в склонированный репозиторий и в терминале вызвать:
 ```
 git pull
-```
-
-```bash
 clojure -M:run
 ```
 
