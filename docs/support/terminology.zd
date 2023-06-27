@@ -1,0 +1,8 @@
+
+:icon [:fa-solid :fa-circle-info]
+
+:title "Терминологический репозиторий"
+
+^table [:xt/id]
+:scope:terms-table datalog/
+{:find [(pull ?e [:xt/id])] :where [[?e :parent terms]] :in [terms]}
