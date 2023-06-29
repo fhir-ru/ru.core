@@ -5,7 +5,6 @@
 
 :title "Соглашения"
 
-//TODO ^disc 97
 ^title "Именование артефактов"
 :name-conventions /
 
@@ -167,8 +166,6 @@ __терминологии__
 "title" : "Core ConceptMap Core ValueSet Пол пациента (ФНСИ) X AdministrativeGender"
 ```
 
-
-// TODO ^disc 61
 ^title "Системы идентификации (Naming Systems)"
 :naming-systems-naming /
 
