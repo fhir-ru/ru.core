@@ -1,5 +1,11 @@
 :title "Root schema"
 
+&authors
+:type :dockey
+:desc "document authors"
+:schema {:type zen/set :every {:type zen/symbol}}
+:ann {:badge {}}
+
 &menu-order
 :type :dockey
 :desc "set a document position in left navigation bar"
