@@ -15,11 +15,12 @@
 
 :title "template"
 
+^yt
 :video "" 
 
-^tile "Обсуждение"
-:discussion  md/
+^title "Обсуждение"
+:discussion  /
 
 
 ^title "Решения"
-:decisions md/
+:decisions /
