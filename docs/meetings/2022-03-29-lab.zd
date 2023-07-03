@@ -5,6 +5,7 @@
 ^badge 
 :groups #{groups.lab}
 
+^yt
 :video "https://youtu.be/oZuPRsi0i5I" 
 
 

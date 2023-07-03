@@ -10,6 +10,7 @@
 ;; :title "Встреча ((get :date))"
 :title "Встреча 2021-12-21"
 
+^yt
 :video "https://youtu.be/X6xwJQU8FUc" 
 
 ^tile "Обсуждение"
