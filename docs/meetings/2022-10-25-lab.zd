@@ -8,11 +8,11 @@
 :video "" 
 
 
-:discussion md/
+:discussion /
 
 Присутствовали А.Звягин, А.Макеев
 
-:decisions md/
+:decisions /
 
 Решили:
 1. Согласиться с вариантом использования MustSupport (https://github.com/fhir-ru/core/discussions/38, Комментарий Родионова В. от 14.09.22)

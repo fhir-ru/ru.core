@@ -15,11 +15,11 @@
 :video "https://youtu.be/WT_W63RsH18" 
 
 ^tile "Обсуждение"
-:discussion  md/
+:discussion  /
 
 Обсуждение UseCase с Диспансерным наблюдением пациентов для представления эпизодов\случаев медицинской помощи
 
 ^title "Решения"
-:decisions md/
+:decisions /
 
 

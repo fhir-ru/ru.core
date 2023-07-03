@@ -15,10 +15,10 @@
 :video "https://youtu.be/jiF5RthzChg" 
 
 ^tile "Обсуждение"
-:discussion  md/
+:discussion  /
 
 Обсуждение требований к атрибутивному составу нозологической единицы - см. дискуссию #72
 
 ^title "Решения"
-:decisions md/
+:decisions /
 

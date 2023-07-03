@@ -8,7 +8,7 @@
 :video "https://youtu.be/jLErv1Jo1KE" 
 
 
-:discussion md/
+:discussion /
 
 Сделано:
 
@@ -31,7 +31,7 @@
 9.	Обновлены файлы примеров на githube: https://github.com/fhir-ru/zendoc/tree/main/docs/lab/samples
 
 
-:decisions md/
+:decisions /
 
 1.	Обсудить на общем собрании:
 

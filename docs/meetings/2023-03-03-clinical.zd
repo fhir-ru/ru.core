@@ -15,11 +15,11 @@
 :video "https://youtu.be/9ke2ztq8xbg" 
 
 ^tile "Обсуждение"
-:discussion  md/
+:discussion  /
 
 Обсуждение процессов госпитализации в круглосуточный стационар
 
 ^title "Решения"
-:decisions md/
+:decisions /
 
 To do

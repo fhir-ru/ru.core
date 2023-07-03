@@ -15,9 +15,9 @@
 :video "https://youtu.be/8DAxkKDgJSA" 
 
 ^tile "Обсуждение"
-:discussion  md/
+:discussion  /
 
 Обсуждение пограничных сценариев перед началом госпитализации пациента для лечения в стационаре
 
 ^title "Решения"
-:decisions md/
+:decisions /

@@ -9,7 +9,7 @@
 :video "https://youtu.be/IuioEBXKZ5U" 
 
 ^tile "Обсуждение"
-:discussion  md/
+:discussion  /
 
 
 * 0:05 вопрос про Must Support: Ш.Низамов, Н.Рыжиков
@@ -20,7 +20,7 @@
 * 36:50 – обсуждение сценариев использования в отдельных дискуссиях в категории UseCase - С.Ситник, Н.Рыжиков
 
 ^title "Решения"
-:decisions md/
+:decisions /
 
 1) Тему по лабораторному результату (ServiceRequest, Diagnostic Report, Observation, Bundle и пр) выделить в отдельную группу discussions  (А.Иванов к пятнице), туда же включить тему про анализаторы
 2) Обсудить к следующей встрече вопрос о valueset для идентификаторов организации (в discussion), вынести на решение.

@@ -15,10 +15,10 @@
 :video "https://youtu.be/8e-q1BRK0OE" 
 
 ^tile "Обсуждение"
-:discussion  md/
+:discussion  /
 
 Обсуждение маппинга амбулаторной медицинской помощи на ресурсы FHIR
 
 ^title "Решения"
-:decisions md/
+:decisions /
 

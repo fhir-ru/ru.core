@@ -8,7 +8,7 @@
 :video "" 
 
 
-:discussion md/
+:discussion /
 
 Сделано:
 1)  Продолжатся валидация ресурсов примера в https://validator.fhir.org/
@@ -19,7 +19,7 @@
 ..4.2)  No code provided, and a code should be provided from the value set 'Observation Interpretation Codes' (http://hl7.org/fhir/ValueSet/observation-interpretation)
 
 
-:decisions md/
+:decisions /
 
 Решено: 
 

@@ -6,7 +6,7 @@
 :video "https://youtu.be/vZvcSTrouzU"
 
 ^title "Обсуждение"
-:discussion md/
+:discussion /
 
 * 05:25 как использовать расширение NullFlavor, брать ли стандартное или делать свое
 * 34:46 А.Макеев: начали работу по внесению в профили ПЛИ кардинальности и Must Support
@@ -14,7 +14,7 @@
 * 54:14 А.Павлышина – результаты апробации конвертера Т.Алейникова, перевод CDA-FHIR. Использование JUTE https://github.com/HealthSamurai/jute.clj для конвертации CDA-FHIR.
 
 ^title "Решили"
-:decisions md/
+:decisions /
 
 1.	В RuCore создать российское расширение NullFlavor по аналогии со стандартным расширением. В нем в качестве источника значений указать [справочник причин отсутствия информации НСИ ЕГИСЗ](http://nsi.rosminzdrav.ru/#!/refbook/1.2.643.5.1.13.13.99.2.286/version/3.1) – [задача 216](https://github.com/fhir-ru/core/issues/216) - Макеев
 

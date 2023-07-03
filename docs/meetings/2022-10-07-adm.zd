@@ -12,7 +12,7 @@
 :video "https://youtu.be/Xtx_-WacMZM" 
 
 ^title "Обсуждение"
-:discussion  md/
+:discussion  /
 
 * 02:37 проверка состояния работ по профилированию Patient & Encounter
 * 12:35 EpisodeOfCare: впоследствии нужно будет сделать профиль, в нем определить identifier с привязкой (extensible) к тому же ValueSet, который используется для CorePatient.
@@ -27,7 +27,7 @@
 
 
 ^title "Решения"
-:decisions md/
+:decisions /
 
 1) Дожать схемы профилей – [адм группа – задача 208](https://github.com/fhir-ru/core/issues/208)
 ..1) Для Patient – добавить в slicing PI – номер пациента в МИС, как это описано в разделе http://fhir.ru/core.Patient#:elements:identifier:patient-internal-identifier 

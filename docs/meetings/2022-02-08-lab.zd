@@ -26,7 +26,7 @@
 ..* Аликвоты - возможно множество вариантов кодирования, нужно писать Implementation Guide
 
 ^title "Решения"
-:decisions md/
+:decisions /
 
 * Продолжаем работу по модели данных для ЦНИИОИЗ
 * Хотим начать Implementation Guide

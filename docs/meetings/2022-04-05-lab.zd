@@ -8,14 +8,14 @@
 :video "https://youtu.be/0czSgOTaI00" 
 
 
-:discussion md/
+:discussion /
 
 * Обсуждение связи Task и ServiceRequest, изменения в Task
 * Пример использования FHIR валидатора
 * Обсуждение disussion по типу Bundle для ПЛИ
 * Обсуждение профиля липидограммы от Хеликс
 
-:decisions md/
+:decisions /
 
 * Подготовить discussion связи ServiceRequest и Task (Иванов)
 * Продолжение работы по ресурсам, валидация примеров (Звягин)

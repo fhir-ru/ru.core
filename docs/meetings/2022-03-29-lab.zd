@@ -8,13 +8,13 @@
 :video "https://youtu.be/oZuPRsi0i5I" 
 
 
-:discussion md/
+:discussion /
 
 * Обсуждение использования Task и интегрального примера
 * Обсуждения типа Bundle для ПЛИ
 * Обсуждение отражения тэгов CDA в схеме FHIR
 
-:decisions md/
+:decisions /
 
 * Подготовить discussion по типу Bundle (Иванов)
 * Продолжение работы по Task, ServiceRequest и интегральному примеру (Звягин)

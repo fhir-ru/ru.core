@@ -11,12 +11,12 @@
 
 :video "https://youtu.be/MFqIYccNYQw" 
 
-:summary md/
+:summary /
 
 Обсуждение административных ресурсов в составе лабораторного ответа – Patient, Coverage, Encounter, Task - А.Звягин, А.Павлышина, В.Семенова, Е.Коган. 
 
 ^title "Обсуждение"
-:discussion  md/
+:discussion  /
 
 * 00:00 Patient
 * 13:40 Coverage
@@ -25,7 +25,7 @@
 
 
 ^title "Решения"
-:decisions md/
+:decisions /
 
 Административная группа [задача 154](https://github.com/fhir-ru/core/issues/154):
 

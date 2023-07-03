@@ -15,8 +15,8 @@
 :video "https://youtu.be/pRuCkhwTTbc" 
 
 ^tile "Обсуждение"
-:discussion  md/
+:discussion  /
 
 
 ^title "Решения"
-:decisions md/
+:decisions /

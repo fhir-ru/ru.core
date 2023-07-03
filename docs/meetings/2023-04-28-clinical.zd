@@ -15,9 +15,9 @@
 :video "https://youtu.be/2lM08ZTSV8w" 
 
 ^tile "Обсуждение"
-:discussion  md/
+:discussion  /
 
 Обсуждение сценария ведения беременности
 
 ^title "Решения"
-:decisions md/
+:decisions /

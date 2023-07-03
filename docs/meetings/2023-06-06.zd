@@ -5,7 +5,7 @@
 :video "https://youtu.be/C7btDMwoRF8"
 
 ^title "Обсуждение"
-:discussion md/
+:discussion /
 
 * 03:05 Вспоминаем задачи по объединению плюсов Zendoc и Fsh (описаны в [дискуссии 224](https://github.com/fhir-ru/core/discussions/224) ) и вводим в курс дел Тимура, HealthSamurai, который готовит вторую версию Zendoc. 
 * 16:40 О.Пензин о PlantUML для рисования моделей процессов.
@@ -15,7 +15,7 @@
 * 47:19 как привести артефакты в соответствие с решением по Patient.gender?
 
 ^title "Решили"
-:decisions md/
+:decisions /
 
 1.	Провести на следующей встрече (13.07) показ новой версии сайта – Тимур
 

@@ -15,7 +15,7 @@
 :video "" 
 
 ^tile "Обсуждение"
-:discussion  md/
+:discussion  /
 
 Установочная встрача группы Point of care - POC. Запись видео не велась. 
 
@@ -32,7 +32,7 @@
 
 
 ^title "Решения"
-:decisions md/
+:decisions /
 
 1. Найти описания сценариев работы с POC - Фадин
 

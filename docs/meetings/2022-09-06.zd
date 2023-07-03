@@ -6,7 +6,7 @@
 :video "https://youtu.be/CG8A27adUaQ"
 
 ^title "Обсуждение"
-:discussion md/
+:discussion /
 
 * 5:13 must support
 * 9:23 как читать файлик лабораторной группы – комментарии С.Елфимова в пересказе Е.Когана
@@ -17,7 +17,7 @@
 * 27:12 – включение инвариантов, использование FHIRPath
 
 ^title "Решили"
-:decisions md/
+:decisions /
 
 1)	Вернуться к вопросу о must support в общем спектре требований к обязательности информации, как это описано в [дискуссии 38]( https://github.com/fhir-ru/core/discussions/38) – Коган, Родионов
 
