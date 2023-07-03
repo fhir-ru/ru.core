@@ -1,0 +1,25 @@
+^badge 
+:date ""
+
+^badge 
+:tags #{}
+
+^badge 
+:groups #{}
+
+^badge 
+:participants #{}
+
+^hide
+:icon [:fa-regular :fa-calendar]
+
+:title "template"
+
+:video "" 
+
+^tile "Обсуждение"
+:discussion  md/
+
+
+^title "Решения"
+:decisions md/
