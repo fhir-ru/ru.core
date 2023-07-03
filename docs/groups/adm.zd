@@ -2,11 +2,13 @@
 
 :icon [:fa-solid :fa-hospital-user]
 
+^title "Описание"
 :summary /
 
 Эта группа работает над двумя задачами.
 
-1. Локализация ресурсов административного модуля спецификации FHIR (здесь нужна ссылка на http://hl7.org/fhir/administration-module.html).
+1. Локализация ресурсов [административного модуля](http://hl7.org/fhir/administration-module.html) спецификации FHIR
+
 В первую очередь будут обработаны объекты:
 * Organization
 * Patient
@@ -16,9 +18,8 @@
 
 2. Мапирование на ресурсы FHIR федерального реестра медицинских организаций #frmo
 
+^title "Участники"
 :members /
-
-Участники
 
 #people.ekogan
 #people.alexandra
@@ -26,10 +27,11 @@
 #people.varvara
 #people.niquola
 
+^title "Встречи"
 :meetings "TODO: filter meetings by group"
 
+^title "Профайлы"
 :profiles /
-Профайлы
 
 * #core.Organization
 * #core.Affiliation
@@ -37,4 +39,4 @@
 * #core.Patient
 * #core.Practitioner
 
-Вы можете высказать замечания-предложения по поводу содержания этой страницы в этой дискуссии: (ссылка на дискуссию номер 88)
+Вы можете высказать замечания-предложения по поводу содержания этой страницы в этой дискуссии [[d 88]]
