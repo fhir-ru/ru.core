@@ -15,7 +15,7 @@
 ^yt
 :video "https://youtu.be/2lM08ZTSV8w" 
 
-^tile "Обсуждение"
+^title "Обсуждение"
 :discussion  /
 
 Обсуждение сценария ведения беременности

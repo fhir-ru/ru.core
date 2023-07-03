@@ -15,7 +15,7 @@
 ^yt
 :video "https://youtu.be/8e-q1BRK0OE" 
 
-^tile "Обсуждение"
+^title "Обсуждение"
 :discussion  /
 
 Обсуждение маппинга амбулаторной медицинской помощи на ресурсы FHIR

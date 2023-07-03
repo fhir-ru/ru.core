@@ -12,7 +12,7 @@
 ^yt
 :video "https://youtu.be/f_gCuwn66sI" 
 
-^tile "Обсуждение"
+^title "Обсуждение"
 :discussion  /
 
 

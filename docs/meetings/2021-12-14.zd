@@ -12,7 +12,7 @@
 ^yt
 :video "https://youtu.be/jdial-CsnA0???" 
 
-^tile "Обсуждение"
+^title "Обсуждение"
 :discussion  /
 
 * 09:29 Обзор того что сделано за неделю: дискуссии по Organization, Department, OrganizationAffilation, первый артефакт со структурой Organization, и дискуссия по Развернутому диагнозу – Е.Коган, О.Пензин, Н.Рыжиков. Разделение на дискуссии и артефакты. Правка артефактов через Pull Request.

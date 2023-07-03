@@ -13,7 +13,7 @@
 ^yt
 :video "https://youtu.be/X6xwJQU8FUc" 
 
-^tile "Обсуждение"
+^title "Обсуждение"
 :discussion  /
 
 * 02:14 Отчет группы Организации – о Plan Definition, об адресе - Е.Коган, А.Павлишина

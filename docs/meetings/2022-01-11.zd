@@ -12,7 +12,7 @@
 ^yt
 :video "https://youtu.be/-ucFWdkbC2E" 
 
-^tile "Обсуждение"
+^title "Обсуждение"
 :discussion  /
 
 * 1:32 Все ли поля ФРМО надо поддержать в FHIR – А.Павлышина

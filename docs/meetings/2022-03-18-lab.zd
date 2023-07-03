@@ -9,7 +9,7 @@
 ^yt
 :video "https://youtu.be/b8IkbljHD1I" 
 
-^tile "Обсуждение"
+^title "Обсуждение"
 :discussion  markdown/
 
 * Синхронизация статусов рабочей группы

@@ -9,7 +9,7 @@
 ^yt
 :video "https://youtu.be/IuioEBXKZ5U" 
 
-^tile "Обсуждение"
+^title "Обсуждение"
 :discussion  /
 
 

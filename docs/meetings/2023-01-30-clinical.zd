@@ -15,7 +15,7 @@
 ^yt
 :video "https://youtu.be/0KbVlazxjME" 
 
-^tile "Обсуждение"
+^title "Обсуждение"
 :discussion  /
 
 Выбор пилотного UseCase для представления эпизодов\случаев медицинской помощи

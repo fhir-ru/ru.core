@@ -15,7 +15,7 @@
 ^yt
 :video "https://youtu.be/ALts88-QKtc" 
 
-^tile "Обсуждение"
+^title "Обсуждение"
 :discussion  /
 
 Установочная встрача группы Point of care - POC, теперь с видеозаписью. 
