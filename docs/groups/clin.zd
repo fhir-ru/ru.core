@@ -2,14 +2,15 @@
 
 :icon [:fa-solid :fa-stethoscope]
 
+^title "Описание"
 :summary /
 
-Terms - #terms.diagnose
+Термины - #terms.diagnose
 
-^table
-:members edn/
-[{:Участник people.openzin :role "Руководитель"}
-{:Участник people.ishmyr :role "Редактор"}
-{:Участник people.vrodionov :role "Редактор"}]
+^title "Участники"
+:members /
+Руководитель #people.openzin
 
-:meetings "TODO: filter meetings by groups.clin"
+Редактор #people.ishmyr
+
+Редактор #people.vrodionov
