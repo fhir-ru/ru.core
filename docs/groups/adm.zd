@@ -27,9 +27,6 @@
 #people.varvara
 #people.niquola
 
-^title "Встречи"
-:meetings "TODO: filter meetings by group"
-
 ^title "Профайлы"
 :profiles /
 
