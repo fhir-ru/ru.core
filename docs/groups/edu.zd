@@ -4,8 +4,5 @@
 
 :summary /
 
-^table
-:members edn/
-[{:person people.niquola}]
-
-:meetings "TODO: filter meetings by groups.edu"
+:members /
+Руководитель #people.niquola
