@@ -2,6 +2,11 @@
 
 [сайт](http://fhir-ru.zendoc.me)
 
+## состав инсталляции
+
+1. Веб приложение клиент-сервер на clojure (платформа java)
+2. Система контроля версий git
+
 ## установка на mac
 
 1. открыть terminal
@@ -20,7 +25,7 @@ xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-* Ввести пароль системного пользователя если потребуется.
+* Ввести пароль системного пользователя если потребуется. После установки пакета может потребоваться перезапуск терминала.
 
 * Проверить brew
 ```bash
@@ -46,9 +51,19 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
 brew help
 ```
 
-4. установить git (если требуется)
+4. установить и настроить git (если требуется)
 ```bash
 brew install git
+```
+также по желанию вместо команды git терминала можно пользоваться [оф. приложением](https://desktop.github.com/)
+* выставить метод слияния для git:
+```
+git config pull.rebase false
+```
+* выставить имя редактора и email как в аккаунте на github
+```
+git config user.name "editor name"
+git config user.email "editor@zendoc.me"
 ```
 5. склонировать этот репозиторий
 ```bash

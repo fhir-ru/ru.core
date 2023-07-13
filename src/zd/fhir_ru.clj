@@ -1,6 +1,7 @@
 (ns zd.fhir-ru
   (:require
    [zd.api]
+   [zd.fsh]
    [zen.core :as zen]))
 
 (defn start [ztx]

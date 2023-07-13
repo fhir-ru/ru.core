@@ -1,10 +1,27 @@
 {:ns fhir-ru
- :import #{zen-web zd}
+ :import #{zen-web zd zd.events}
+
+ on-fsh-compile
+ {:zen/tags #{zen/event :zen/schema}
+  :zen/desc "compile fsh document field into FHIR profile"
+  :type zen/map}
+
+ fsh-build
+ {:zen/tags #{zen/sub}
+  :config zendoc
+  :events #{zd.events/on-doc-load}}
+
+ fhir-ru
+ {:zen/tags #{zen/tag zen/schema}
+  :type zen/map
+  :require #{:fsh-dir}
+  :keys {:fsh-dir {:type zen/string}}}
 
  zendoc
- {:zen/tags #{zd/zendoc}
+ {:zen/tags #{zd/zendoc fhir-ru}
   :paths ["docs"]
   :root "readme"
+  :fsh-dir "sushi-project"
   :pull-rate 32400
   :remote {:from "git@github.com:fhir-ru/ru.core.git"
            :to "."}}

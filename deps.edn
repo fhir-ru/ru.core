@@ -1,7 +1,7 @@
 {:paths ["src" "zrc" "docs"]
  :deps {org.clojure/clojure  {:mvn/version "1.11.1"}
         zen-lang/zendoc      {:git/url "https://github.com/zen-lang/zendoc"
-                              :sha "e6d6bb016e515857d3748872b51aef4144ef4ae8"}}
+                              :sha "7de04d4ca6efdc69a634330634440e2c7038157a"}}
  :aliases
  {:nrepl
   {:extra-paths ["test" "libs/zd/test"]
