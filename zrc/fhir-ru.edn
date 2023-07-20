@@ -24,6 +24,8 @@
   :fsh-dir "sushi-project"
   :pull-rate 32400
   :remote {:from "git@github.com:fhir-ru/ru.core.git"
+           :keystore "keystore"
+           :key "ru.core"
            :to "."}}
 
  datalog

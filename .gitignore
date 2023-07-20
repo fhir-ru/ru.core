@@ -6,5 +6,6 @@ test/zd/tdocs
 .nrepl-port
 .DS_Store
 files/*
+keystore/
 sushi-project/fsh-generated
 sushi-project/input
