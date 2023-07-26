@@ -58,7 +58,7 @@
 (defmethod zen/op 'fhir-ru/fsh-build
   [ztx config {ev-name :ev {{dn :docname :as m} :zd/meta :as doc} :params :as ev} & opts]
   (let [zd-config (zen/get-symbol ztx (:config config))]
-    #_(doseq [k (filter (fn [k]
+    (doseq [k (filter (fn [k]
                         (= :fsh (get-in m [:ann k :zd/content-type])))
                       (:doc m))]
       ;; TODO think about file naming convention
