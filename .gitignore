@@ -6,5 +6,5 @@ test/zd/tdocs
 .nrepl-port
 .DS_Store
 files/*
-sushi-project/fsh-generated
-sushi-project/input
+RuCoreIG/input/fsh
+RuCoreIG/output

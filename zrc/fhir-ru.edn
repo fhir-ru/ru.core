@@ -6,8 +6,18 @@
   :zen/desc "compile fsh document field into FHIR profile"
   :type zen/map}
 
+ fsh-init
+ {:zen/tags #{zen/sub zd.events/sub}
+  :config zendoc
+  :events #{zd.events/on-load-start}}
+
+ fsh-publish
+ {:zen/tags #{zen/sub zd.events/sub}
+  :config zendoc
+  :events #{zd.events/on-load-complete}}
+
  fsh-build
- {:zen/tags #{zen/sub}
+ {:zen/tags #{zen/sub zd.events/sub}
   :config zendoc
   :events #{zd.events/on-doc-load}}
 
@@ -21,10 +31,7 @@
  {:zen/tags #{zd/zendoc fhir-ru}
   :paths ["docs"]
   :root "readme"
-  :fsh-dir "sushi-project"
-  :pull-rate 32400
-  :remote {:from "git@github.com:fhir-ru/ru.core.git"
-           :to "."}}
+  :fsh-dir "RuCoreIG"}
 
  datalog
  {:zen/tags #{zen/start zd.engines/datalog}

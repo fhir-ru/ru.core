@@ -1,5 +1,6 @@
 (ns zd.fhir-ru
   (:require
+   [clojure.java.io :as io]
    [zd.api]
    [zd.fsh]
    [zen.core :as zen]))
