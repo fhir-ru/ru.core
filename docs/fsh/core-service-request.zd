@@ -1,0 +1,51 @@
+
+:title "Core service request"
+:profile fsh/
+
+Profile: CoreServiceRequest
+Id: core-servicerequest
+Parent: ServiceRequest
+Title: "Заказ услуги (Ru Core)"
+Description: "Заказ услуги"
+
+* status 1..1
+* status ^short = "Статус запроса"
+
+* intent 1..1
+* intent ^short = "Цель запроса"
+
+* subject 1..1
+* subject ^short = "Субъект запроса"
+* subject only Reference(CorePatient or CoreGroup)
+
+* code 0..1
+* code ^short = "Код запроса"
+
+* code.coding 0..*
+* code.coding ^short = "Кодирование услуги или профиля"
+
+* code.coding.code 0..1
+* code.coding.code ^short = "Код услуги или профиля"
+
+* code.coding.display 0..1
+* code.coding.display ^short = "Название услуги или профиля"
+
+* code.coding.system 0..1
+* code.coding.system ^short = "Кодовая система услуги или профиля"
+
+Instance: CoreServiceRequest-instance-7
+InstanceOf: CoreServiceRequest
+Usage: #example
+* status = #completed
+* intent = #original-order
+* subject = Reference(CorePatient-instance-1)
+
+Instance: CoreServiceRequest-instance-8
+InstanceOf: CoreServiceRequest
+Usage: #example
+* status = #completed
+* intent = #original-order
+* subject = Reference(CorePatient-instance-1)
+* code.coding.code = #49541-6
+* code.coding.display = "Fasting status - Reported"
+* code.coding.system = "http://loinc.org"

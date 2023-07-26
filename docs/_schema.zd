@@ -1,9 +1,23 @@
 :title "Root schema"
 
+:schema {:require #{:title}}
+
 &authors
 :type :dockey
 :desc "document authors"
 :schema {:type zen/set :every {:type zen/symbol}}
+:ann {:badge {}}
+
+&groups
+:type :dockey
+:desc "related working groups"
+:schema {:type zen/set :every {:type zen/symbol}}
+:ann {:badge {}}
+
+&status
+:type :dockey
+:desc "document status: draft, published"
+:schema {:type zen/keyword}
 :ann {:badge {}}
 
 &menu-order
@@ -29,6 +43,11 @@
 :desc "a link to tg chat"
 :schema {:type zen/string}
 :ann {:link-badge {}}
+
+&title 
+:type :dockey
+:desc "document title"
+:schema {:type zen/string}
 
 &site
 :type :dockey

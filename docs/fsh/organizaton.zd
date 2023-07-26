@@ -1,19 +1,21 @@
 
+:title "Organization profile"
+
 :organization-profile fsh/
 
-Profile:     CoreAddress
-Id:          core-address
-Parent:      Address
-Title:       "Адресс (Ru Core)"
+Profile: CoreAddress
+Id: core-address
+Parent: Address
+Title: "Адресс (Ru Core)"
 Description: "Адрес с кодом адреса и кодом дома по ФИАС"
 
 // TODO - нужно описать профиль на тип данных с предварительным описанием двух расширений, которые в нём используются
 
 
-Profile:     CoreOrganization
-Id:          core-organization
-Parent:      Organization
-Title:       "Organization"
+Profile: CoreOrganization
+Id: core-organization
+Parent: Organization
+Title: "Organization"
 Description: "Профиль Organisation описывает субъекты хозяйственной деятельности в области здравоохранения. Определены специфические идентификаторы - ОГРН, ФРМО, ИНН."
 
 * name 1..1 MS
@@ -33,16 +35,16 @@ Description: "Профиль Organisation описывает субъекты х
 * identifier ^slicing.description = "Нарезка по типам реквизитов организации - ИНН, ФРМО, ОГРН"
 
 * identifier contains 
-  ИНН  0..1 and
-  ФРМО 0..1 and
-  ОГРН 0..1 
-  
+ ИНН 0..1 and
+ ФРМО 0..1 and
+ ОГРН 0..1 
+ 
 * identifier[ИНН] ^short = "Идентификационный номер налогоплательщика — цифровой код, упорядочивающий учёт налогоплательщиков в Российской Федерации. Присваивается налоговой записи как юридических, так и физических лиц Федеральной налоговой службой России."
 * identifier[ИНН].system = "http://fhir.ru/core/systems/inn"
-  
+ 
 * identifier[ФРМО] ^short = "Уникальный идентификатор МО в справочнике ФРМО"
-* identifier[ФРМО].system = "http://fhir.ru/core/systems/frmo"  
-  
+* identifier[ФРМО].system = "http://fhir.ru/core/systems/frmo" 
+ 
 * identifier[ОГРН] ^short = "Основной государственный регистрационный номер юридического лица (индивидуального предпринимателя)"
 * identifier[ОГРН].system = "http://fhir.ru/core/systems/ogrn"
 
@@ -51,7 +53,7 @@ Description: "Профиль Organisation описывает субъекты х
 * address only CoreAddress
 
 
-Instance:   core-organization-instance-1
+Instance: core-organization-instance-1
 InstanceOf: CoreOrganization
 Usage: #example
 
@@ -62,11 +64,11 @@ Usage: #example
 * identifier[ИНН].system = "http://fhir.ru/core/systems/inn"
 * identifier[ИНН].value = "номер ИНН"
 * identifier[ИНН].assigner = Reference(core-organization-instance-2)
-  
-* identifier[ФРМО].system = "http://fhir.ru/core/systems/frmo"  
-* identifier[ФРМО].value = "идентификатор ФРМО"  
+ 
+* identifier[ФРМО].system = "http://fhir.ru/core/systems/frmo" 
+* identifier[ФРМО].value = "идентификатор ФРМО" 
 * identifier[ФРМО].assigner = Reference(ore-organization-instance-2)
-  
+ 
 * identifier[ОГРН].system = "http://fhir.ru/core/systems/ogrn"
 * identifier[ОГРН].value = "номер ОГРН"
 * identifier[ОГРН].assigner = Reference(core-organization-instance-2)
@@ -74,7 +76,7 @@ Usage: #example
 * address.text = "Адрес"
 
 
-Instance:   core-organization-instance-2
+Instance: core-organization-instance-2
 InstanceOf: CoreOrganization
 Usage: #example
 
@@ -84,10 +86,10 @@ Usage: #example
 
 * identifier[ИНН].system = "http://fhir.ru/core/systems/inn"
 * identifier[ИНН].value = "номер ИНН 2"
-  
-* identifier[ФРМО].system = "http://fhir.ru/core/systems/frmo"  
-* identifier[ФРМО].value = "идентификатор ФРМО 2"  
-  
+ 
+* identifier[ФРМО].system = "http://fhir.ru/core/systems/frmo" 
+* identifier[ФРМО].value = "идентификатор ФРМО 2" 
+ 
 * identifier[ОГРН].system = "http://fhir.ru/core/systems/ogrn"
 * identifier[ОГРН].value = "номер ОГРН 2"
 
