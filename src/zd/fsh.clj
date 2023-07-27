@@ -26,6 +26,7 @@
 (defn get-hashes [ztx fsh-dir]
   (set (map hash (map slurp (.listFiles (io/file (inputdir fsh-dir)))))))
 
+;; exec fhir publisher if fsh files have changed
 (defn publish! [ztx {:keys [fsh-dir]}]
   (let [publish-fn*
         (fn [ag]
@@ -62,7 +63,8 @@
                         (= :fsh (get-in m [:ann k :zd/content-type])))
                       (:doc m))]
       ;; TODO think about file naming convention
-      (let [fp (str (:fsh-dir zd-config) "/input/fsh/" dn "_" (name k) ".fsh")]
+      (let [fp (str (inputdir (:fsh-dir zd-config)) dn "_" (name k) ".fsh")]
+        (.mkdirs (io/file (inputdir (:fsh-dir zd-config))))
         (spit fp (get doc k))
         (zen/pub ztx 'fhir-ru/on-fsh-compile {:dn dn :k k :fp fp})
           ;; TODO impl queue for publisher?
