@@ -3,7 +3,6 @@ Thumbs.db
 /fsh-generated
 /input-cache/
 /output/*
-!/output/index
 /temp
 /template
 /input/fsh

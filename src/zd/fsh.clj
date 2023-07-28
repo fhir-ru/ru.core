@@ -31,7 +31,6 @@
   (let [publish-fn*
         (fn [ag]
           ;; TODO push update to UI sub
-          (reset! in-progress? true)
           (zen/pub ztx 'fhir-ru/on-ig-compile {:fsh-dir (dirpath fsh-dir)})
           (let [proc (runner/exec {:env {}
                                    ;; TODO launch different script on windows?
@@ -43,6 +42,7 @@
         publish-fn (utils/safecall ztx publish-fn* {:type :fhir-ru/fsh-publish-error})]
     (when (and (not @in-progress?)
                (not= (get-hashes ztx fsh-dir) (get-in @publisher [:result :input-hashes])))
+      (reset! in-progress? true)
       (send-off publisher publish-fn))))
 
 (defmethod zen/op 'fhir-ru/fsh-init
@@ -130,8 +130,6 @@
 
       [:div
        (cond
-         @in-progress? [:span "FHIR publisher compiles fsh definitions. please wait."]
-
          errors?
          [:div
           [:h3 "Publishing failed"]
@@ -150,21 +148,7 @@
                [:h4 fname]
                cnt]))]]
 
-         :else [:span "publisher output not found. check logs tab"])])
+         :else [:span "FHIR publisher compiles fsh definitions. please wait."])])
     [:div [:span "fsh-dir is not set"]]))
 
 ;; TODO implement reactive page reloads via JS server sent events
-
-(comment
-
-  (def f (slurp "RuCoreIG/output/StructureDefinition-core-servicerequest.html"))
-
-  (def tree (hickory/as-hiccup (hickory/parse f)))
-
-  (sequential? tree)
-
-  (rest tree)
-
-  (def tbl (search-hiccup tree [:div {:id "tbl-diff"}]))
-
-  (runner/exec {:env {} :exec ["sushi" "sushi-project"] :dir "."}))

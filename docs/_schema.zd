@@ -20,6 +20,18 @@
 :schema {:type zen/keyword}
 :ann {:badge {}}
 
+&organization
+:type :dockey
+:desc "link to person employee"
+:schema {:type zen/symbol}
+:ann {:badge {}}
+
+&email
+:type :dockey
+:desc "person email"
+:schema {:type zen/string}
+:ann {:badge {}}
+
 &menu-order
 :type :dockey
 :desc "set a document position in left navigation bar"
