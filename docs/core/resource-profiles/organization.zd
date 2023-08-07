@@ -35,18 +35,18 @@ Description: "Профиль Organisation описывает субъекты х
 * identifier ^slicing.description = "Нарезка по типам реквизитов организации - ИНН, ФРМО, ОГРН"
 
 * identifier contains 
- ИНН 0..1 and
- ФРМО 0..1 and
- ОГРН 0..1 
+ INN 0..1 and
+ FRMO 0..1 and
+ OGRN 0..1 
  
-* identifier[ИНН] ^short = "Идентификационный номер налогоплательщика — цифровой код, упорядочивающий учёт налогоплательщиков в Российской Федерации. Присваивается налоговой записи как юридических, так и физических лиц Федеральной налоговой службой России."
-* identifier[ИНН].system = "http://fhir.ru/core/systems/inn"
+* identifier[INN] ^short = "Идентификационный номер налогоплательщика — цифровой код, упорядочивающий учёт налогоплательщиков в Российской Федерации. Присваивается налоговой записи как юридических, так и физических лиц Федеральной налоговой службой России."
+* identifier[INN].system = "http://fhir.ru/core/systems/inn"
  
-* identifier[ФРМО] ^short = "Уникальный идентификатор МО в справочнике ФРМО"
-* identifier[ФРМО].system = "http://fhir.ru/core/systems/frmo" 
+* identifier[FRMO] ^short = "Уникальный идентификатор МО в справочнике ФРМО"
+* identifier[FRMO].system = "http://fhir.ru/core/systems/frmo" 
  
-* identifier[ОГРН] ^short = "Основной государственный регистрационный номер юридического лица (индивидуального предпринимателя)"
-* identifier[ОГРН].system = "http://fhir.ru/core/systems/ogrn"
+* identifier[OGRN] ^short = "Основной государственный регистрационный номер юридического лица (индивидуального предпринимателя)"
+* identifier[OGRN].system = "http://fhir.ru/core/systems/ogrn"
 
 * address 0..*
 * address ^short = "Адрес организации"
@@ -61,17 +61,17 @@ Usage: #example
 
 * alias = "Сокращенное наименование организации"
 
-* identifier[ИНН].system = "http://fhir.ru/core/systems/inn"
-* identifier[ИНН].value = "номер ИНН"
-* identifier[ИНН].assigner = Reference(core-organization-instance-2)
+* identifier[INN].system = "http://fhir.ru/core/systems/inn"
+* identifier[INN].value = "номер ИНН"
+* identifier[INN].assigner = Reference(core-organization-instance-2)
  
-* identifier[ФРМО].system = "http://fhir.ru/core/systems/frmo" 
-* identifier[ФРМО].value = "идентификатор ФРМО" 
-* identifier[ФРМО].assigner = Reference(core-organization-instance-2)
+* identifier[FRMO].system = "http://fhir.ru/core/systems/frmo" 
+* identifier[FRMO].value = "идентификатор ФРМО" 
+* identifier[FRMO].assigner = Reference(core-organization-instance-2)
  
-* identifier[ОГРН].system = "http://fhir.ru/core/systems/ogrn"
-* identifier[ОГРН].value = "номер ОГРН"
-* identifier[ОГРН].assigner = Reference(core-organization-instance-2)
+* identifier[OGRN].system = "http://fhir.ru/core/systems/ogrn"
+* identifier[OGRN].value = "номер ОГРН"
+* identifier[OGRN].assigner = Reference(core-organization-instance-2)
 
 * address.text = "Адрес"
 
@@ -84,13 +84,13 @@ Usage: #example
 
 * alias = "Сокращенное наименование организации 2"
 
-* identifier[ИНН].system = "http://fhir.ru/core/systems/inn"
-* identifier[ИНН].value = "номер ИНН 2"
+* identifier[INN].system = "http://fhir.ru/core/systems/inn"
+* identifier[INN].value = "номер ИНН 2"
  
-* identifier[ФРМО].system = "http://fhir.ru/core/systems/frmo" 
-* identifier[ФРМО].value = "идентификатор ФРМО 2" 
+* identifier[FRMO].system = "http://fhir.ru/core/systems/frmo" 
+* identifier[FRMO].value = "идентификатор ФРМО 2" 
  
-* identifier[ОГРН].system = "http://fhir.ru/core/systems/ogrn"
-* identifier[ОГРН].value = "номер ОГРН 2"
+* identifier[OGRN].system = "http://fhir.ru/core/systems/ogrn"
+* identifier[OGRN].value = "номер ОГРН 2"
 
 * address.text = "Адрес 2"

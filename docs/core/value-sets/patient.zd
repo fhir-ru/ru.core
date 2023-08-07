@@ -19,7 +19,7 @@ Title: "Пациент"
 * identifier contains 
   PassportRF  0..1 and
   INN 0..1 and
-  ОГРН 0..1 and
+  OGRN 0..1 and
   SNILS 0..1 and
   MRN 0..1 and
   InsuranceOMS 0..1 and
