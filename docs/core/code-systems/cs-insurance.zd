@@ -1,0 +1,17 @@
+:title "Виды полиса обязательного медицинского страхования"
+:profile fsh/
+
+CodeSystem: CoreCsMandatoryMedicalInsurancePolicyType 
+Id:        core-cs-mandatory-medical-insurance-policy-type
+Title:  "Core CodeSystem НСИ Минздрава Виды полиса обязательного медицинского страхования"
+Description: "НСИ Минздрава Виды полиса обязательного медицинского страхования "
+* ^url = "http://fhir.ru/CodeSystem/core-cs-mandatory-medical-insurance-policy-type"
+* ^content = #complete
+
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.value = "urn:oid:1.2.643.5.1.13.13.11.1035"
+
+* #1 "Полис ОМС старого образца"
+* #2 "Полис ОМС единого образца, бессрочный"
+* #3 "Полис ОМС единого образца, со сроком действия"
+* #4 "Временное свидетельство"

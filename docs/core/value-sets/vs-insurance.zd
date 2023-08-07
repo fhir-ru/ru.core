@@ -1,0 +1,10 @@
+:title "Виды полиса обязательного медицинского страхования"
+
+:profile fsh/
+
+ValueSet: VsNsiMandatoryMedicalInsurancePolicyType
+Id:       vs-nsi-mandatory-medical-insurance-policy-type
+Title:  "Core ValueSet Виды полиса обязательного медицинского страхования"
+
+* ^url = "http://fhir.ru/ValueSet/vs-nsi-mandatory-medical-insurance-policy-type"
+* include codes from system core-cs-mandatory-medical-insurance-policy-type

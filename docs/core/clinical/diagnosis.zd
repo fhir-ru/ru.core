@@ -85,17 +85,6 @@ direction LR
 
 ^title "Логическая модель нозологической единицы"
 :usage:nu-logical-model:profile fsh/
-Profile: DiagnosisNosology
-Id: rucore-condition
-Parent: Condition
-* code from http://hl7.org/fhir/ValueSet/icd-10 (required)
-* clinicalStatus from ConditionClinicalStatusVS (required)
-
-Alias: $CCS = http://example.com/ccs
-
-ValueSet: ConditionClinicalStatusVS
-Id: rucore-condition-vs
-* include $CCS#активное "актуальный диагноз"
 
 ^title "Схема логической модели нозологической единицы"
 :usage:nu-logical-model:mindmap mindmap/

@@ -1,5 +1,5 @@
 
-:title "Organization profile"
+:title "Organization"
 
 :organization-profile fsh/
 
@@ -16,7 +16,7 @@ Profile: CoreOrganization
 Id: core-organization
 Parent: Organization
 Title: "Organization"
-Description: "Профиль Organisation описывает субъекты хозяйственной деятельности в области здравоохранения. Определены специфические идентификаторы - ОГРН, ФРМО, ИНН."
+Description: "Профиль Organisation описывает субъекты хозяйственной деятельности в области здравоохранения. Определены специфические идентификаторы - ОГРН, ФРМО, ИНН ."
 
 * name 1..1 MS
 * name ^short = "Полное наименоване организации"
@@ -67,7 +67,7 @@ Usage: #example
  
 * identifier[ФРМО].system = "http://fhir.ru/core/systems/frmo" 
 * identifier[ФРМО].value = "идентификатор ФРМО" 
-* identifier[ФРМО].assigner = Reference(ore-organization-instance-2)
+* identifier[ФРМО].assigner = Reference(core-organization-instance-2)
  
 * identifier[ОГРН].system = "http://fhir.ru/core/systems/ogrn"
 * identifier[ОГРН].value = "номер ОГРН"
