@@ -15,7 +15,7 @@
 (defonce publisher (agent nil))
 
 ;; TODO wtf, look for process
-(def in-progress? (atom nil))
+(defonce in-progress? (atom nil))
 
 (defn dirpath [fsh-dir]
   (str (System/getProperty "user.dir") "/" fsh-dir))
@@ -62,14 +62,15 @@
     (doseq [k (filter (fn [k]
                         (= :fsh (get-in m [:ann k :zd/content-type])))
                       (:doc m))]
+      (when (not (str/blank? (get doc k)))
       ;; TODO think about file naming convention
-      (let [fp (str (inputdir (:fsh-dir zd-config)) dn "_" (name k) ".fsh")]
-        (.mkdirs (io/file (inputdir (:fsh-dir zd-config))))
-        (spit fp (get doc k))
-        (zen/pub ztx 'fhir-ru/on-fsh-compile {:dn dn :k k :fp fp})
+        (let [fp (str (inputdir (:fsh-dir zd-config)) dn "_" (name k) ".fsh")]
+          (.mkdirs (io/file (inputdir (:fsh-dir zd-config))))
+          (spit fp (get doc k))
+          (zen/pub ztx 'fhir-ru/on-fsh-compile {:dn dn :k k :fp fp})
           ;; TODO impl queue for publisher?
-        (when @publisher
-          (publish! ztx zd-config))))))
+          (when @publisher
+            (publish! ztx zd-config)))))))
 
 ;; init publisher on load complete
 (defmethod zen/op 'fhir-ru/fsh-publish
@@ -118,23 +119,25 @@
                (map (fn [[fname cnt]]
                       ;; parse publisher's output and render hiccup
                       (let [tr (first (filter #(vector? %) (hickory/as-hiccup (hickory/parse cnt))))
-                            diff-table (search-hiccup tr [:div {:id "tbl-diff"}])
-                            cnt (if (nil? diff-table)
+                            view (or (search-hiccup tr [:div {:id "tbl-diff"}])
+                                     (search-hiccup tr [:table {:class "codes"}]))
+                            cnt (if (nil? view)
                                   [:div (str fname " view is not implemented yet")]
-                                  (walk/postwalk map-links diff-table))]
+                                  (walk/postwalk map-links view))]
                         [fname cnt]))))
           output? (seq fs)
-          errors? (and (vector? (:result @publisher))
-                       (some #(str/includes? % "Sushi: error")
-                             (:result @publisher)))]
-
+          errors? (some #(str/includes? % "Sushi: error")
+                        (get-in @publisher [:result :out]))]
       [:div
        (cond
+         @in-progress?
+         [:span "FHIR Publisher собирает ImplementationGuide. Может занять до 3 минут."]
+
          errors?
          [:div
           [:h3 "Publishing failed"]
           [:div {:class (c [:text-sm])}
-           (for [l (:result @publisher)]
+           (for [l (:out (:result @publisher))]
              [:div {:style (when (str/includes? l "error")
                              {:color "red"})}
               l])]]
@@ -144,11 +147,14 @@
           [:div
            (doall
             (for [[fname cnt] fs]
-              [:div {:class (c [:py 1])}
-               [:h4 fname]
+              [:div {:class (c [:pb 8])}
+               [:div {:class (c [:pb 3])}
+                [:div fname]
+                [:div {:class (c [:mx 1] [:text-xs])}
+                 (str "file://" (dirpath fsh-dir) "/output/" fname)]]
                cnt]))]]
 
-         :else [:span "FHIR publisher compiles fsh definitions. please wait."])])
+         :else [:span "FHIR Publisher собирает ImplementationGuide. Может занять до 3 минут."])])
     [:div [:span "fsh-dir is not set"]]))
 
 ;; TODO implement reactive page reloads via JS server sent events

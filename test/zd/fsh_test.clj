@@ -20,6 +20,11 @@
 (deftest fsh-files-generated
   (zen/stop-system ztx)
 
+  ;; TODO to test
+  ;; fsh files are updated on edit
+  ;; fsh files are deleted on doc delete
+  ;; no validation errors in out/qa
+
   (load!)
 
   (zen/start-system ztx 'fhir-ru/system)
