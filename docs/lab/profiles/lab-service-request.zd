@@ -1,4 +1,6 @@
 :title "LabServiceRequest"
+^hide
+:fsh/dir "RuLabIG"
 :profile fsh/
 
 Profile: LabServiceRequest
