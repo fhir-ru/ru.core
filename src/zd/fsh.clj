@@ -27,9 +27,10 @@
   (set (map hash (map slurp (.listFiles (io/file (inputdir fsh-dir)))))))
 
 ;; exec fhir publisher if fsh files have changed
-(defn publish! [ztx {:keys [fsh-dir]}]
+(defn publish! [ztx config]
   (let [publish-fn*
-        (fn [ag]
+        (fn [ag fsh-dir]
+          (reset! in-progress? true)
           ;; TODO push update to UI sub
           (zen/pub ztx 'fhir-ru/on-ig-compile {:fsh-dir (dirpath fsh-dir)})
           (let [proc (runner/exec {:env {}
@@ -40,20 +41,20 @@
             {:out (:stdout proc)
              :input-hashes (get-hashes ztx fsh-dir)}))
         publish-fn (utils/safecall ztx publish-fn* {:type :fhir-ru/fsh-publish-error})]
-    (when (and (not @in-progress?)
-               (not= (get-hashes ztx fsh-dir) (get-in @publisher [:result :input-hashes])))
-      (reset! in-progress? true)
-      (send-off publisher publish-fn))))
+    (when (not @in-progress?)
+      (doseq [d (:fsh-dir config)]
+        (send-off publisher publish-fn d)))))
 
 (defmethod zen/op 'fhir-ru/fsh-init
   [ztx config ev & opts]
-  (let [zd-config (zen/get-symbol ztx (:config config))]
-    (zen/pub ztx 'fhir-ru/on-fsh-init {:dir (inputdir (:fsh-dir zd-config))})
-    (doall (->> (inputdir (:fsh-dir zd-config))
-                (io/file)
-                (.listFiles)
-                (remove #(.isDirectory %))
-                (map #(io/delete-file %))))))
+  (let [zd-config (zen/get-symbol ztx (:config config))
+        dirs (map inputdir (:fsh-dir zd-config))]
+    (zen/pub ztx 'fhir-ru/on-fsh-init {:dirs dirs})
+    (doseq [d dirs]
+      (doall (->> (io/file d)
+                  (.listFiles)
+                  (remove #(.isDirectory %))
+                  (map #(io/delete-file %)))))))
 
 ;; save fsh file and poll publisher
 (defmethod zen/op 'fhir-ru/fsh-build
@@ -63,9 +64,10 @@
                         (= :fsh (get-in m [:ann k :zd/content-type])))
                       (:doc m))]
       (when (not (str/blank? (get doc k)))
-      ;; TODO think about file naming convention
-        (let [fp (str (inputdir (:fsh-dir zd-config)) dn "_" (name k) ".fsh")]
-          (.mkdirs (io/file (inputdir (:fsh-dir zd-config))))
+        ;; TODO think if it is sane to use first by default
+        (let [fsh-dir (or (:fsh/dir doc) (first (:fsh-dir zd-config)))
+              fp (str (inputdir fsh-dir) dn "_" (name k) ".fsh")]
+          (.mkdirs (io/file (inputdir fsh-dir)))
           (spit fp (get doc k))
           (zen/pub ztx 'fhir-ru/on-fsh-compile {:dn dn :k k :fp fp})
           ;; TODO impl queue for publisher?
@@ -110,13 +112,15 @@
                    (set))
           ;; read publisher's output and filter ids
           fs
-          (->> (file-seq (io/file (str fsh-dir "/output")))
+          (->> fsh-dir
+               (mapcat (fn [d]
+                         (file-seq (io/file (str (dirpath d) "/output")))) )
                (filter (fn [f]
                          (some (fn [id]
                                  (str/includes? (.getName f) (str id ".html")))
                                ids)))
-               (map (fn [f] [(.getName f) (slurp f)]))
-               (map (fn [[fname cnt]]
+               (map (fn [f] [(.getName f) (.getAbsolutePath f) (slurp f)]))
+               (map (fn [[fname p cnt]]
                       ;; parse publisher's output and render hiccup
                       (let [tr (first (filter #(vector? %) (hickory/as-hiccup (hickory/parse cnt))))
                             view (or (search-hiccup tr [:div {:id "tbl-diff"}])
@@ -124,7 +128,7 @@
                             cnt (if (nil? view)
                                   [:div (str fname " view is not implemented yet")]
                                   (walk/postwalk map-links view))]
-                        [fname cnt]))))
+                        [fname p cnt]))))
           output? (seq fs)
           errors? (some #(str/includes? % "Sushi: error")
                         (get-in @publisher [:result :out]))]
@@ -146,12 +150,13 @@
          [:div
           [:div
            (doall
-            (for [[fname cnt] fs]
+            (for [[fname p cnt] fs]
               [:div {:class (c [:pb 8])}
                [:div {:class (c [:pb 3])}
                 [:div fname]
                 [:div {:class (c [:mx 1] [:text-xs])}
-                 (str "file://" (dirpath fsh-dir) "/output/" fname)]]
+                 (str "file://" p)
+                 #_(str "file://" (dirpath fsh-dir) "/output/" fname)]]
                cnt]))]]
 
          :else [:span "FHIR Publisher собирает ImplementationGuide. Может занять до 3 минут."])])
