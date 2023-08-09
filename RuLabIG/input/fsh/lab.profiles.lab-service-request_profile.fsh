@@ -1,7 +1,3 @@
-:title "LabServiceRequest"
-^hide
-:fsh/dir "RuLabIG"
-:profile fsh/
 
 Profile: LabServiceRequest
 Id: lab-service-request

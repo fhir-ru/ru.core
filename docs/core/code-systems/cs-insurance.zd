@@ -5,7 +5,7 @@ CodeSystem: CoreCsMandatoryMedicalInsurancePolicyType
 Id:        core-cs-mandatory-medical-insurance-policy-type
 Title:  "Core CodeSystem НСИ Минздрава Виды полиса обязательного медицинского страхования"
 Description: "НСИ Минздрава Виды полиса обязательного медицинского страхования "
-* ^url = "http://fhir.ru/CodeSystem/core-cs-mandatory-medical-insurance-policy-type"
+* ^url = "http://fhir.ru/core/CodeSystem/core-cs-mandatory-medical-insurance-policy-type"
 * ^content = #complete
 
 * ^identifier.system = "urn:ietf:rfc:3986"
