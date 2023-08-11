@@ -5,5 +5,4 @@ Thumbs.db
 /temp
 /template
 /input/fsh
-/input-cache/schemas
-/input-cache/txcache
+/input-cache
