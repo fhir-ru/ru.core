@@ -7,49 +7,13 @@
   :type zen/map}
 
  fsh-init
- {:zen/tags #{zen/sub zd.events/sub}
-  :config zendoc
+ {:zen/tags #{zen/sub}
   :events #{zd.events/on-load-start}}
 
- fsh-publish
- {:zen/tags #{zen/sub zd.events/sub}
-  :config zendoc
+ fsh-ig-publish
+ {:zen/tags #{zen/sub}
   :events #{zd.events/on-load-complete}}
 
- fsh-build
- {:zen/tags #{zen/sub zd.events/sub}
-  :config zendoc
-  :events #{zd.events/on-doc-load}}
-
- fhir-ru
- {:zen/tags #{zen/tag zen/schema}
-  :type zen/map
-  :require #{:fsh-dir}
-  :keys {:fsh-dir {:type zen/string}}}
-
- zendoc
- {:zen/tags #{zd/zendoc fhir-ru}
-  :paths ["docs"]
-  :root "readme"
-  :fsh-dir ["RuCoreIG" "RuLabIG"]}
-
- datalog
- {:zen/tags #{zen/start zd.engines/datalog}
-  :zendoc zendoc
-  :engine zd.engines/datalog}
-
- http
- {:zen/tags #{zen/start zen-web/http zd.engines/http}
-  :engine zen-web/httpkit
-  :port 8080
-  :zendoc zendoc
-  :api zd/api}
-
- fs
- {:zen/tags #{zen/start zd.engines/fs}
-  :zendoc zendoc
-  :engine zd.engines/fs}
-
- system
- {:zen/tags #{zen/system}
-  :start [datalog fs http]}}
+ fsh-file-build
+ {:zen/tags #{zen/sub}
+  :events #{zd.events/on-doc-load}}}

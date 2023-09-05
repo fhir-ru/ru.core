@@ -1,27 +1,21 @@
 (ns zd.fhir-ru
   (:require
+   [zd.core :as zd]
    [clojure.java.io :as io]
-   [zd.api]
    [zd.fsh]
    [zen.core :as zen]))
 
-(defn start [ztx]
-  (zen/read-ns ztx 'fhir-ru)
-  (zen/start-system ztx 'fhir-ru/system)
-  (println :started)
-  (println "http://localhost:8080"))
-
 (defonce dtx (atom nil))
 
-(defn -main [& opts]
+(defn start! [& opts]
   (let [ztx (zen/new-context {})]
-    (reset! dtx ztx)
-    (start ztx)))
+    (zen/read-ns ztx 'zd)
+    (zen/read-ns ztx 'fhir-ru)
+    (zen/start-system ztx 'zd/system)
+    ztx))
 
 (comment
-  (def ztx (zen/new-context))
+  (def ztx (start!))
 
-  (:zen/state @ztx)
-
-  (start ztx)
-  (zen/stop-system ztx))
+  (zd.core/stop ztx)
+  )
