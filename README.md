@@ -4,8 +4,11 @@
 
 ## состав инсталляции
 
-1. Веб приложение клиент-сервер на clojure (платформа java)
+1. Веб приложение на clojure (платформа java)
 2. Система контроля версий git
+3. FHIR IG Publisher
+4. Sushi FSH Compiler
+5. Jekyll + ruby
 
 ## установка на mac
 
@@ -25,7 +28,7 @@ xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-* Ввести пароль системного пользователя если потребуется. После установки пакета может потребоваться перезапуск терминала.
+* Ввести пароль системного пользователя если потребуется. После установки пакета перезапустить терминал.
 
 * Проверить brew
 ```bash
@@ -76,9 +79,17 @@ java -version
 ```
 рекомендуем использовать сборку [adoptium](https://adoptium.net). также можно Oracle Java, OpenJDK
 
-7. установить clojure
+7. установить clojure cli, перезапустить терминал
 ```bash
 brew install clojure/tools/clojure
+
+```
+
+8. установить FHIR IG Publisher Tool
+
+```
+cd RuLabIG && ./_updatePublisher.sh
+cd RuCoreIG && ./_updatePublisher.sh
 ```
 
 ## запуск
