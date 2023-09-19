@@ -64,7 +64,6 @@
                  (filter (fn [[k anns]]
                            (= :fsh (:type anns))))
                  (map first))]
-    (println (str dn "__" k))
     (when (not (str/blank? (get doc k)))
         ;; TODO think if it is sane to use first by default
       (let [fsh-dir (or (:fsh/dir doc) (first fsh-dir))
