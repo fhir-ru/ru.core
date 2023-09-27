@@ -7,20 +7,22 @@
 1. Веб приложение на clojure (платформа java)
 2. Система контроля версий git
 3. FHIR IG Publisher
-4. Sushi FSH Compiler
+4. Sushi FSH Compiler + Node.js
 5. Jekyll + ruby
 
-## установка на mac
+## установка 
 
 1. открыть terminal
 
-2. установить Command Line Tools для xcode (если не установлены)
+Mac:
+
+- установить Command Line Tools для xcode (если не установлены)
 ```
 xcode-select --install
 ```
 Во всплывающем окне нажать установить, дождаться окончания установки.
 
-3. установить brew
+- установить brew
 
 * Скопировать команду установки в терминал
 
@@ -54,44 +56,70 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
 brew help
 ```
 
-4. установить и настроить git (если требуется)
+2. установить и настроить git (если требуется)
+
+Mac:
 ```bash
 brew install git
 ```
 также по желанию вместо команды git терминала можно пользоваться [оф. приложением](https://desktop.github.com/)
-* выставить метод слияния для git:
+
+* выставить метод слияния веток для git:
 ```
 git config pull.rebase false
 ```
-* выставить имя редактора и email как в аккаунте на github
-```
-git config user.name "editor name"
-git config user.email "editor@zendoc.me"
-```
-5. склонировать этот репозиторий
+
+3. склонировать этот репозиторий
 ```bash
 git clone https://github.com/fhir-ru/ru.core.git
 ```
-6. установить java 8+
+
+4. установить java 8+
 проверить установлена ли java можно через Java Control Panel или команду терминала
 ```bash
 java -version
 ```
 рекомендуем использовать сборку [adoptium](https://adoptium.net). также можно Oracle Java, OpenJDK
 
-7. установить clojure cli, перезапустить терминал
+5. установить clojure cli, перезапустить терминал
+
+Mac:
 ```bash
 brew install clojure/tools/clojure
 
 ```
 
-8. установить FHIR IG Publisher Tool
+6. установить FHIR IG Publisher Tool
 
 ```
 cd RuLabIG && ./_updatePublisher.sh
 cd RuCoreIG && ./_updatePublisher.sh
 ```
 
+7. установить node.js 18 версии
+
+для установки на [debian/ubuntu](https://github.com/nodesource/distributions#installation-instructions)
+
+8. установить sushi (компилятор fsh)
+
+```
+npm install -g fsh-sushi
+```
+
+9. установить ruby
+
+Debian/ubuntu:
+
+```
+sudo apt-get install ruby-full build-essential zlib1g-dev
+```
+
+10. установить jekyll
+
+```
+gem install jekyll bundler
+
+```
 ## запуск
 
 1. перейти в склонированный репозиторий и в терминале вызвать:
