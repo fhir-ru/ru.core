@@ -21,7 +21,7 @@
  http
  {:zen/tags #{zen/start zen-web/http zd.engines/http}
   :engine zen-web/httpkit
-  :port 3333
+  :port 3344
   :zendoc zd/zendoc
   :api zd/api}
 
