@@ -17,6 +17,10 @@
    :jvm-opts   ^:replace ["-XX:-OmitStackTraceInFastThrow"]
    :main-opts  ["-m" "kaocha.runner"]}
 
+  :run-cloud
+  {:jvm-opts    ["-XX:-OmitStackTraceInFastThrow"]
+   :main-opts   ["-m" "zd.fhir-cloud"]}
+
   :run
   {:jvm-opts    ["-XX:-OmitStackTraceInFastThrow"]
    :main-opts   ["-m" "zd.fhir-ru"]}}}

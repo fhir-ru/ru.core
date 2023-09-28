@@ -16,4 +16,15 @@
 
  fsh-file-build
  {:zen/tags #{zen/sub}
-  :events #{zd.events/on-doc-load}}}
+  :events #{zd.events/on-doc-load}}
+
+ http
+ {:zen/tags #{zen/start zen-web/http zd.engines/http}
+  :engine zen-web/httpkit
+  :port 3333
+  :zendoc zd/zendoc
+  :api zd/api}
+
+ system
+ {:zen/tags #{zen/system}
+  :start [zd/zendoc http]}}

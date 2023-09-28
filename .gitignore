@@ -6,3 +6,4 @@ test/zd/tdocs
 .nrepl-port
 .DS_Store
 files/*
+keystore/
