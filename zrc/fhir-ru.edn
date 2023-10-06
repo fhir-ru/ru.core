@@ -10,10 +10,6 @@
  {:zen/tags #{zen/sub}
   :events #{zd.events/on-load-start}}
 
- fsh-ig-publish
- {:zen/tags #{zen/sub}
-  :events #{zd.events/on-load-complete}}
-
  fsh-file-build
  {:zen/tags #{zen/sub}
   :events #{zd.events/on-doc-load}}

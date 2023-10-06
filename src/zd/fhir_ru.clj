@@ -63,21 +63,23 @@
       {:status 200
        :body (pr-str resp)})))
 
-;; enable client_id, client_secret envs
-;; change default port to 3333
-
 (defmethod zen-web.core/middleware-in 'zd/auth
   [ztx cfg req & args]
-  (let [u (:uri req)]
-    (when (and (:auth @ztx)
-               (or (str/includes? u "/edit")
-                   (str/includes? u "/new")
-                   (= (:request-method req) :delete)))
-      (if-let [code (get-in req [:params :code])]
-        {:zen-web.core/response (do-login ztx code)}
-        (if-let [session (get-session ztx (get-in (ring.middleware.cookies/cookies-request req) [:cookies "dojo-session" :value]))]
-          (assoc req :session session)
-          {:zen-web.core/response (redirect (google-login ztx))})))))
+  (let [u (:uri req)
+        session (->> [:cookies "dojo-session" :value]
+                     (get-in (ring.middleware.cookies/cookies-request req))
+                     (get-session ztx))
+
+        access-token (get-in req [:params :code])
+        auth-required?
+        (or (str/includes? u "/edit")
+            (str/includes? u "/new")
+            (= (:request-method req) :delete))]
+    (when (:auth @ztx)
+      (cond
+        session (assoc req :session session)
+        access-token {:zen-web.core/response (do-login ztx access-token)}
+        auth-required? {:zen-web.core/response (redirect (google-login ztx))}))))
 
 (defonce dtx (atom nil))
 

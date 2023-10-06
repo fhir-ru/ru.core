@@ -13,51 +13,24 @@
 
 (def fsh-dir ["RuCoreIG" "RuLabIG"])
 
-;; TODO implement delete from fsh folder doc delete
-(defonce publisher (agent nil))
-
-;; TODO wtf, look for process
-(defonce in-progress? (atom nil))
-
 (defn dirpath [fsh-dir]
   (str (System/getProperty "user.dir") "/" fsh-dir))
 
 (defn inputdir [fsh-dir]
   (str (dirpath fsh-dir) "/input/fsh/"))
 
-(defn get-hashes [ztx fsh-dir]
-  (set (map hash (map slurp (.listFiles (io/file (inputdir fsh-dir)))))))
-
-;; exec fhir publisher if fsh files have changed
-(defn publish! [ztx]
-  (let [publish-fn*
-        (fn [ag fsh-dir]
-          (reset! in-progress? true)
-          ;; TODO push update to UI sub
-          (zen/pub ztx 'fhir-ru/on-ig-compile {:fsh-dir (dirpath fsh-dir)})
-          (let [proc (git/exec {:env {}
-                                ;; TODO launch different script on windows?
-                                :exec ["./_genonce.sh"]
-                                :dir (dirpath fsh-dir)})]
-            (reset! in-progress? false)
-            {:out (:stdout proc)
-             :input-hashes (get-hashes ztx fsh-dir)}))
-        publish-fn (utils/safecall ztx publish-fn* {:type :fhir-ru/fsh-publish-error})]
-    (when (not @in-progress?)
-      (doseq [d fsh-dir]
-        (send-off publisher publish-fn d)))))
-
 (defmethod zen/op 'fhir-ru/fsh-init
   [ztx config ev & opts]
   (let [dirs (map inputdir fsh-dir)]
     (zen/pub ztx 'fhir-ru/on-fsh-init {:dirs dirs})
+    ;; TODO impl index to delete fsh files
     (doseq [d dirs]
       (doall (->> (io/file d)
                   (.listFiles)
                   (remove #(.isDirectory %))
                   (map #(io/delete-file %)))))))
 
-;; save fsh file and poll publisher
+;; save fsh files for fhir ig
 (defmethod zen/op 'fhir-ru/fsh-file-build
   [ztx config {ev-name :ev {dn :zd/docname :as doc} :params :as ev} & opts]
   (doseq [k (->> (:zd/view doc)
@@ -70,15 +43,7 @@
             fp (str (inputdir fsh-dir) dn "_" (name k) ".fsh")]
         (.mkdirs (io/file (inputdir fsh-dir)))
         (spit fp (get doc k))
-        (zen/pub ztx 'fhir-ru/on-fsh-compile {:dn dn :k k :fp fp})
-          ;; TODO impl queue for publisher?
-        (when @publisher
-          (publish! ztx))))))
-
-;; init publisher on load complete
-(defmethod zen/op 'fhir-ru/fsh-ig-publish
-  [ztx config ev & opts]
-  (publish! ztx))
+        (zen/pub ztx 'fhir-ru/on-fsh-compile {:dn dn :k k :fp fp})))))
 
 (defn search-hiccup [tree [el-name attr-map & oth :as arg]]
   (if (sequential? tree)
@@ -129,18 +94,15 @@
                                 (walk/postwalk map-links view))]
                       [fname p cnt]))))
         output? (seq fs)
-        errors? (some #(str/includes? % "Sushi: error")
-                      (get-in @publisher [:result :out]))]
+        ;; TODO check errors in fhir ig folders
+        errors []]
     [:div
      (cond
-       @in-progress?
-       [:span "FHIR Publisher собирает ImplementationGuide. Может занять до 3 минут."]
-
-       errors?
+       (seq errors)
        [:div
         [:h3 "Publishing failed"]
         [:div {:class (c [:text-sm])}
-         (for [l (:out (:result @publisher))]
+         (for [l errors]
            [:div {:style (when (str/includes? l "error")
                            {:color "red"})}
             l])]]
@@ -158,6 +120,4 @@
                #_(str "file://" (dirpath fsh-dir) "/output/" fname)]]
              cnt]))]]
 
-       :else [:span "FHIR Publisher собирает ImplementationGuide. Может занять до 3 минут."])]))
-
-;; TODO implement reactive page reloads via JS server sent events
+       :else [:span d])]))
