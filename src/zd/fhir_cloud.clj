@@ -11,7 +11,8 @@
     (zen/read-ns ztx 'fhir-ru)
     (zen/start-system ztx 'fhir-ru/system)
     (swap! ztx assoc
-           :redirect-uri "https://fhir.ru"
+           ;; TODO choose another url to test locally
+           :redirect-uri "https://fhir-ru.zendoc.me"
            :auth true)
     (reset! dtx ztx)
     ztx))
