@@ -1,16 +1,17 @@
 :title "Core Condition"
 :profile fsh/
 
-Alias: $FHIR_ДатаУстановленияНозологическойЕдиницы = http://hl7.org/fhir/StructureDefinition/condition-assertedDate
-
 Alias: $SNOMED_Справочник = http://snomed.info/sct
+
+Alias: $FHIR_ДатаУстановленияНозологическойЕдиницы = http://hl7.org/fhir/StructureDefinition/condition-assertedDate
+Alias: $FHIR_Справочник_КлиническийСтатусСостояния = http://terminology.hl7.org/CodeSystem/condition-clinical
 
 Instance: core-condition-instance-main
 InstanceOf: Core_Condition
 Usage: #example
 Description: "Пример экземпляра ресурса Condition, соответствуюещго базового профилю Ru-Core"
 
-* clinicalStatus.coding[fhir] = http://terminology.hl7.org/CodeSystem/condition-clinical#active
+* clinicalStatus.coding[fhir] = $FHIR_Справочник_КлиническийСтатусСостояния#active
 
 * clinicalStatus.coding[core] = $Ядро_Справочник_КлиническиеСтатусы#active 
 
@@ -19,7 +20,7 @@ Description: "Пример экземпляра ресурса Condition, соо
 * subject = Reference(core-patient-instance-konstantinopolskaya)
 
 * bodySite = $SNOMED_Справочник#49521004 "Left external ear structure"
-* bodySite.extension[laterality].valueCodeableConcept = http://fhir.ru/core/CodeSystem/nsi-cs-1-2-643-5-1-13-13-99-2-778#1 "Слева"	
+* bodySite.extension[laterality].valueCodeableConcept = $НСИ_Справончик_Латеральность#1 "Слева"	
 
 Alias: $FHIR_НаборЗначений_КлиническийСтатус = http://hl7.org/fhir/ValueSet/condition-clinical
 
@@ -52,11 +53,11 @@ active | recurrence | relapse | inactive | remission | resolved"""
 
 * clinicalStatus.coding[fhir] ^short = "Клинический статус по справочнику FHIR"
 * clinicalStatus.coding[fhir] from $FHIR_НаборЗначений_КлиническийСтатус (required)
-* clinicalStatus.coding[fhir].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding[fhir].system = $FHIR_Справочник_КлиническийСтатусСостояния
 
 * clinicalStatus.coding[core] ^short = "Клинический статус по справочнику RU-Core"
 * clinicalStatus.coding[core] from $Ядро_НаборЗначений_КлиническиеСтатусы (required)
-* clinicalStatus.coding[core].system = "http://fhir.ru/core/CodeSystem/core-cs-clinicalstatus"
+* clinicalStatus.coding[core].system = $Ядро_Справочник_КлиническиеСтатусы
 
 
 * verificationStatus MS
@@ -75,7 +76,7 @@ problem-list-item | encounter-diagnosis"""
 * code from $НСИ_НаборЗначений_МКБ10 (required)
 * code.coding 1..1 MS
 * code.coding.system 1..1 MS
-* code.coding.system = "http://fhir.ru/core/CodeSystem/nsi-cs-1-2-643-5-1-13-13-11-1005"
+* code.coding.system = $НСИ_Справочник_МКБ10
 * code.coding.code 1..1 MS
 * code.coding.display 1..1 MS
 
@@ -124,7 +125,7 @@ Description: "Сторона поражения."
 * value[x] from $НСИ_НаборЗначений_Латеральность (required)
 
 
-Alias: $НСИ_Справончик_Латеральность = Nsi_Cs_1_2_643_5_1_13_13_99_2_778
+Alias: $НСИ_Справончик_Латеральность = http://fhir.ru/core/CodeSystem/nsi-cs-1-2-643-5-1-13-13-99-2-778
 
 CodeSystem: Nsi_Cs_1_2_643_5_1_13_13_99_2_778
 Id:         nsi-cs-1-2-643-5-1-13-13-99-2-778
@@ -174,7 +175,7 @@ Description:   """Набор значений для указания клини
 * include codes from system $Ядро_Справочник_КлиническиеСтатусы
 
 
-Alias: $Ядро_Справочник_КлиническиеСтатусы = Core_Cs_Clinicalstatus
+Alias: $Ядро_Справочник_КлиническиеСтатусы = http://fhir.ru/core/CodeSystem/core-cs-clinicalstatus
 
 CodeSystem: Core_Cs_Clinicalstatus
 Id:         core-cs-clinicalstatus
@@ -192,7 +193,8 @@ Description: "Справочник клинических статусов [РФ
 * #inactive #remission "ремиссия" 
 * #inactive #resolved "перенесённое" 
 
-Alias: $НСИ_Справочник_МКБ10 = Nsi_Cs_1_2_643_5_1_13_13_11_1005
+
+Alias: $НСИ_Справочник_МКБ10 = http://fhir.ru/core/CodeSystem/nsi-cs-1-2-643-5-1-13-13-11-1005
 
 CodeSystem: Nsi_Cs_1_2_643_5_1_13_13_11_1005
 Id:         nsi-cs-1-2-643-5-1-13-13-11-1005
