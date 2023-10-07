@@ -11,6 +11,7 @@ Description: "Пример экземпляра ресурса Patient"
 * name.use = #official
 * name.family = "Константинопольская"
 
+
 Instance:   core-encounter-instance-1
 InstanceOf: Core_Encounter
 Usage: #example
@@ -24,6 +25,7 @@ Description: "Пример экземпляра ресурса Encounter, соо
 * diagnosis[0].use[type]     = $НСИ_Справочник_СтепеньОбоснованностиДиагноза#10 "Клинический диагноз"
 * diagnosis[0].use[rubric] = $НСИ_Справочник_ВидыНозологическихЕдиницДиагноза#1   "Основное заболевание"
 * diagnosis[0].extension[priority].valuePositiveInt = 1
+
 
 Profile:        Core_Encounter
 Id:             core-encounter
@@ -57,14 +59,14 @@ Description:    "Случай оказания медицинской помощ
 * diagnosis.use[type] ^definition = "Тип диагноза - клинический\\этапный\\заключительный и другие."
 
 * diagnosis.use[type] from $Ядро_НаборЗначений_ТипыДиагноза (required)
-* diagnosis.use[type].coding.system = "http://fhir.ru/core/CodeSystem/nsi-cs-1-2-643-5-1-13-13-99-2-795"
+* diagnosis.use[type].coding.system = $НСИ_Справочник_СтепеньОбоснованностиДиагноза
 
 
 * diagnosis.use[rubric] ^short = "Рубрика диагноза (в рамках типа)"
 * diagnosis.use[rubric] ^definition = "Рубрика диагноза (в рамках типа) - основной\\осложнение\\сопутствующее и другие."
 
 * diagnosis.use[rubric] from $Ядро_НаборЗначений_РубрикиДиагноза (required)
-* diagnosis.use[rubric].coding.system = "http://fhir.ru/core/CodeSystem/nsi-cs-1-2-643-5-1-13-13-11-1077"
+* diagnosis.use[rubric].coding.system = $НСИ_Справочник_ВидыНозологическихЕдиницДиагноза
 
 * diagnosis.extension 1..* MS
 * diagnosis.extension ^short = "Массив с дополнительными (не входящими в базовую спецификацию FHIR) атрибутами"
@@ -79,6 +81,7 @@ Description:    "Случай оказания медицинской помощ
 * diagnosis.extension[priority] ^short = "Порядок|Приоритет нозологической единицы"
 * diagnosis.extension[priority] ^definition = "Порядок|Приоритет нозологической единицы."
 
+
 Alias: $Ядро_Расширение_ПриоритетДиагноза = Core_Ex_Diagnosis_Rank
 
 Extension: Core_Ex_Diagnosis_Rank
@@ -92,7 +95,8 @@ Description: "Порядок|Приоритет диагноза."
 * value[x] 1..1 MS
 * value[x] only positiveInt
 
-Alias: $НСИ_Справочник_СтепеньОбоснованностиДиагноза = Nsi_Cs_1_2_643_5_1_13_13_99_2_795
+
+Alias: $НСИ_Справочник_СтепеньОбоснованностиДиагноза = http://fhir.ru/core/CodeSystem/nsi-cs-1-2-643-5-1-13-13-99-2-795
 
 CodeSystem: Nsi_Cs_1_2_643_5_1_13_13_99_2_795
 Id:         nsi-cs-1-2-643-5-1-13-13-99-2-795
@@ -135,7 +139,7 @@ Description:   "Типы диагноза."
 * include codes from system $НСИ_Справочник_СтепеньОбоснованностиДиагноза
 
 
-Alias: $НСИ_Справочник_ВидыНозологическихЕдиницДиагноза = Nsi_Cs_1_2_643_5_1_13_13_11_1077
+Alias: $НСИ_Справочник_ВидыНозологическихЕдиницДиагноза = http://fhir.ru/core/CodeSystem/nsi-cs-1-2-643-5-1-13-13-11-1077
 
 CodeSystem: Nsi_Cs_1_2_643_5_1_13_13_11_1077 
 Id:         nsi-cs-1-2-643-5-1-13-13-11-1077
