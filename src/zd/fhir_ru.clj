@@ -38,6 +38,12 @@
 (defn get-session [ztx sid]
   (get-in @ztx [:sessions sid]))
 
+(def editors #{"tim.zallin@health-samurai.io"
+               "niquola@health-samurai.io"
+               "ekogan2000@gmail.com"
+               "Oleg.v.penzin@gmail.com"
+               "rvs200686@gmail.com"})
+
 (defn do-login [ztx code]
   (let [data {:client_id client-id
               :client_secret client-secret
@@ -53,13 +59,16 @@
                       (cheshire.core/parse-string keyword))
             id (first (str/split (:email guser) #"@"))
             user {:id id :name (:name guser) :email (:email guser) :photo (:picture id)}]
-        (let [sid (str (java.util.UUID/randomUUID))]
-          (println :session> sid user)
-          (swap! ztx assoc-in [:sessions sid] user)
-          (ring.middleware.cookies/cookies-response
-           {:status 303
-            :cookies {"dojo-session" sid}
-            :headers {"Location" "/"}})))
+        (if (get editors (:email guser))
+          (let [sid (str (java.util.UUID/randomUUID))]
+            (println :session> sid user)
+            (swap! ztx assoc-in [:sessions sid] user)
+            (ring.middleware.cookies/cookies-response
+             {:status 303
+              :cookies {"dojo-session" sid}
+              :headers {"Location" "/"}}))
+          {:status 303
+           :headers {"Location" "/?error=user_unauthorized"}}))
       {:status 200
        :body (pr-str resp)})))
 
