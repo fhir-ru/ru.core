@@ -68,3 +68,20 @@ Title: "Пациент"
 * name.given ^short = "Имя и отчество пациента. Первым должно идти имя, вторым - отчество"
 * name.family 0..1
 * name.family ^short = "Фамилия пациента"
+
+Instance: CorePatient-instance-2
+InstanceOf: CorePatient
+Usage: #example
+* address.type = #physical 
+* address.city = "Санкт-Петербург"
+* address.text = "Россия, г. Санкт-Петербург, Невский проспект, д. 100"
+* birthDate = "1955-01-10"
+* identifier[PassportRF].system = "http://fhir.ru/core/CodeSystem/core-cs-PassportRF"
+* identifier[PassportRF].value = "665902622388"
+* identifier[INN].system = "http://fhir.ru/core/CodeSystem/core-cs-INN"
+* identifier[INN].value = "463217055385"
+* identifier[SNILS].system = "http://fhir.ru/core/CodeSystem/core-cs-SNILS"
+* identifier[SNILS].value = "152-583-614 14"
+* name.family = "Габсбург-Лотарингская"
+* name.given = "Мария-Антуанетта | Иоганновна"
+* name.use = #official
