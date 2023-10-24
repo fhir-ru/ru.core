@@ -1,0 +1,14 @@
+
+:menu-order 10
+
+:avatar "https://uploads-ssl.webflow.com/5ac60362cb2f7c52cdc7b543/5d78fafcecca5c1282e49b5b_minilogo-red.png"
+
+:telegram "https://t.me/fhir_ru"
+
+:title "Core Address"
+
+^title "Введение"
+:summary /
+Профиль адреса добавляет два расширения: код адреса по ФИАС и код дома по ФИАС. Эти поля являются типичными при передаче адресных сведений между системами с использованием системы ФИАС.
+
+
