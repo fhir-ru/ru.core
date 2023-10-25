@@ -70,9 +70,11 @@
   (let [ids (->> (-> (StringReader. d)
                      (io/reader)
                      (line-seq))
-                 (filter #(str/starts-with? % "Id"))
+                 (filter #(or (str/starts-with? % "Id")
+                              (str/starts-with? % "Instance: ")))
                  (map (fn [id]
-                        (second (re-matches #"^Id:\s*(\S+)" id))))
+                        (second (or (re-matches #"^Instance:\s*(\S+)" id)
+                                    (re-matches #"^Id:\s*(\S+)" id)))))
                  (set))
           ;; read publisher's output and filter ids
         fs
@@ -88,7 +90,11 @@
                       ;; parse publisher's output and render hiccup
                     (let [tr (first (filter #(vector? %) (hickory/as-hiccup (hickory/parse cnt))))
                           view (or (search-hiccup tr [:div {:id "tbl-diff"}])
-                                   (search-hiccup tr [:table {:class "codes"}]))
+                                   (search-hiccup tr [:table {:class "codes"}])
+                                   (drop-while (fn [el]
+                                                 (not (and (vector? el)
+                                                           (= :div (first el)))))
+                                               (search-hiccup tr [:div {:class "col-12"}])))
                           cnt (if (nil? view)
                                 [:div (str fname " view is not implemented yet")]
                                 (walk/postwalk map-links view))]
@@ -114,10 +120,18 @@
           (for [[fname p cnt] fs]
             [:div {:class (c [:pb 8])}
              [:div {:class (c [:pb 3])}
-              [:div fname]
-              [:div {:class (c [:mx 1] [:text-xs])}
+              (let [base (if (str/includes? p "RuCore")
+                           "https://rucore.fhir.ru"
+                           "https://rulab.fhir.ru")
+                    res-id (last (str/split fname #"/"))]
+                [:a {:href (str base "/" res-id) :target "_blank"}
+                 fname])
+              #_[:div {:class (c [:mx 1] [:text-xs])}
                (str "file://" p)
                #_(str "file://" (dirpath fsh-dir) "/output/" fname)]]
              cnt]))]]
 
-       :else [:span d])]))
+       :else
+       [:div
+        (for [l (str/split d #"\n")]
+          [:div l])])]))

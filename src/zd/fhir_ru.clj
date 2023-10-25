@@ -41,6 +41,7 @@
 (def editors #{"tim.zallin@health-samurai.io"
                "niquola@health-samurai.io"
                "ekogan2000@gmail.com"
+               "GorbachevaTV11@gmail.com"
                "Oleg.v.penzin@gmail.com"
                "rvs200686@gmail.com"})
 
@@ -105,6 +106,6 @@
 
 (comment
   (def ztx (start!))
-
+  
   (zd.core/stop ztx)
   )
