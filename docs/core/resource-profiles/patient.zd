@@ -225,8 +225,11 @@ Usage: #example
 * address.text = "Россия, г. Санкт-Петербург, Невский проспект, д. 100"
 * birthDate = "1955-01-10"
 * identifier[PassportRF].value = "665902622388"
+* identifier[PassportRF].system = "http://fhir.ru/core/systems/passport-rf"
 * identifier[INN].value = "463217055385"
+* identifier[INN].system = "http://fhir.ru/core/systems/inn"
 * identifier[SNILS].value = "152-583-614 14"
+* identifier[SNILS].system = "http://fhir.ru/core/systems/snils"
 * name.family = "Габсбург-Лотарингская"
 * name.given = "Мария-Антуанетта | Иоганновна"
 * name.use = #official
