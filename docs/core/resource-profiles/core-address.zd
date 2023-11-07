@@ -48,13 +48,7 @@ Description: "Адрес"
 * period 0..1
 * period ^short = "Период времени, когда адрес был/является действительным"
 
-* extension contains $Ядро_Расширение_КодФИАС named fias 0..1 MS and $Ядро_Расширение_КодДомаФИАС named fias_house 0..1 MS
-
-* extension[fias] ^short = "Код адреса по ФИАС"
-* extension[fias] ^definition = "Код адреса по ФИАС."
-
-* extension[fias_house] ^short = "Код дома по ФИАС"
-* extension[fias_house] ^definition = "Код дома по ФИАС."
+* extension contains $Ядро_Расширение_КодыФИАС named fias 0..1 MS
 
 
 :instance fsh/
@@ -70,7 +64,9 @@ Usage: #inline
 * state = "Санкт-Петербург"
 * postalCode = "192236"
 * country = "Россия"
-* extension[fias_house].valueCodeableConcept.coding.system = "http://fhir.ru/core/CodeSystem/RF-Cs-FIAS"
-* extension[fias_house].valueCodeableConcept.coding.display = "Идентификатор дома по ФИАС"
-* extension[fias_house].valueCodeableConcept.coding.code = #7b1996be-c0fe-4797-bedc-f503e31a83fd
-* extension[fias].valueString = "Кв.987"
+
+* extension[fias].extension[aoguid].valueIdentifier.value = "urn:uuid:7b1996be-c0fe-4797-bedc-f503e31a83fd"
+* extension[fias].extension[aoguid].valueIdentifier.system = "urn:hl7-ru:fias:aoguid"
+
+* extension[fias].extension[houseguid].valueIdentifier.value = "urn:uuid:7b1996be-c0fe-4797-bedc-f503e31a83fd"
+* extension[fias].extension[houseguid].valueIdentifier.system = "urn:hl7-ru:fias:houseguid"
