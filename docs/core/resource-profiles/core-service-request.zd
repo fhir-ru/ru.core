@@ -1,2 +1,13 @@
 :title "Core Service Request"
 
+:profile fsh/
+
+Profile: CoreServiceRequest
+Id: core-service-request
+Parent: ServiceRequest
+Title: "Заказ услуги (Ru Core)"
+Description: "Заказ услуги"
+
+* subject 1..1
+* subject ^short = "Пациент"
+* subject only Reference(CorePatient)
