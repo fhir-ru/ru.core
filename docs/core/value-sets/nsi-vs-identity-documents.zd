@@ -1,1 +1,11 @@
 :title "Документы удостоверяющие личность"
+
+:text fsh/
+
+Alias: $Ядро_НаборЗначений_ДокументыУдостоверяющиеЛичность = Nsi_Vs_identity_documents
+ValueSet: Nsi_Vs_identity_documents
+Id: nsi-vs-identity-documents
+Title: "Документы удостоверяющие личность"
+Description: "Документы, удостоверяющие личность - набор из всех значений системы кодирования"
+* ^experimental = false
+* include codes from system $МЗРФ_Справочник_ДокументыУдостоверяющиеЛичность
