@@ -1,0 +1,25 @@
+:title "ФИАС"
+
+:text fsh/
+
+Instance: rf-ns-fias-aoguid
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "FIAS_aoguid"
+* status = #active
+* kind = #identifier
+* date = "2023-10-23"
+* uniqueId.type = #uri
+* uniqueId.value = "urn:hl7-ru:fias:aoguid"
+* uniqueId.preferred = true
+
+Instance: rf-ns-fias-houseguid
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "FIAS_houseguid"
+* status = #active
+* kind = #identifier
+* date = "2023-10-23"
+* uniqueId.type = #uri
+* uniqueId.value = "urn:hl7-ru:fias:houseguid"
+* uniqueId.preferred = true
