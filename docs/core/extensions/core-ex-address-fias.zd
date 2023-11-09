@@ -1,0 +1,25 @@
+:title "Адрес по ФИАС"
+
+:text fsh/
+
+Alias: $Ядро_Расширение_КодыФИАС = Core_Ex_Address_Fias
+
+Extension: Core_Ex_Address_Fias
+Id: core-ex-address-fias
+Title: "Кодирование адреса по ФИАС"
+Description: "Кодирование адреса по ФИАС."
+* ^url = "urn:hl7-ru:fias"
+
+* extension contains
+    aoguid 1..1 MS and
+    houseguid 0..1 MS
+
+* extension[aoguid].value[x] only Identifier
+* extension[aoguid].valueIdentifier.system = "urn:hl7-ru:fias:aoguid"
+* extension[aoguid].valueIdentifier.value 1..1 MS
+* extension[aoguid].valueIdentifier.value ^short = "GUID адресного объекта"
+
+* extension[houseguid].value[x] only Identifier
+* extension[houseguid].valueIdentifier.system = "urn:hl7-ru:fias:houseguid"
+* extension[houseguid].valueIdentifier.value 1..1 MS
+* extension[houseguid].valueIdentifier.value ^short = "GUID дома"
