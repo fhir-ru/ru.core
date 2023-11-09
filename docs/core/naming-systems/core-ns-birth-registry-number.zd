@@ -1,0 +1,13 @@
+:title "Номер государственного свидетельства о рождении"
+
+:text fsh/
+
+Instance: core-ns-birth-registry-number
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "core-ns-birth-registry-number"
+* status = #active
+* kind = #codesystem
+* date = "2023-10-23"
+* uniqueId.type = #uri
+* uniqueId.value = "http://fhir.ru/core/NamingSystem/birth-registry-number"
