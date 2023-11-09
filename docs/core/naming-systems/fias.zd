@@ -1,6 +1,6 @@
 :title "ФИАС"
 
-:text fsh/
+:rf-ns-fias-aoguid fsh/
 
 Instance: rf-ns-fias-aoguid
 InstanceOf: NamingSystem
@@ -13,6 +13,7 @@ Usage: #definition
 * uniqueId.value = "urn:hl7-ru:fias:aoguid"
 * uniqueId.preferred = true
 
+:rf-ns-fias-houseguid fsh/
 
 Instance: rf-ns-fias-houseguid
 InstanceOf: NamingSystem
