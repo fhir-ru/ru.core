@@ -1,0 +1,72 @@
+
+:menu-order 10
+:status :in-progress
+
+:avatar "https://uploads-ssl.webflow.com/5ac60362cb2f7c52cdc7b543/5d78fafcecca5c1282e49b5b_minilogo-red.png"
+
+:telegram "https://t.me/fhir_ru"
+
+:title "Core Address"
+
+^title "Введение"
+:summary /
+Профиль адреса добавляет два расширения: код адреса по ФИАС и код дома по ФИАС. Эти поля являются типичными при передаче адресных сведений между системами с использованием системы ФИАС.
+
+
+:profile fsh/
+
+Profile: CoreAddress
+Id: core-address
+Parent: Address
+Title: "Адрес (Ru Core)"
+Description: "Адрес"
+
+* use 0..1
+* use ^short = "Целевое назначение адреса: home | work | temp | old | billing"
+
+* type 0..1
+* type ^short = "Тип адреса: postal | physical | both"
+
+* text 0..1
+* text ^short = "Текстовое представление адреса"
+
+* line 0..*
+* line ^short = "Улица"
+
+* city 0..1
+* city ^short = "Город"
+
+* state 0..1
+* state ^short = "Регион"
+
+* postalCode 0..1
+* postalCode ^short = "Почтовый код"
+
+* country 0..1
+* country ^short = "Страна"
+
+* period 0..1
+* period ^short = "Период времени, когда адрес был/является действительным"
+
+* extension contains $Ядро_Расширение_КодыФИАС named fias 0..1 MS
+
+
+:instance fsh/
+
+Instance: CoreAddress-instance-2
+InstanceOf: CoreAddress
+Usage: #inline
+* use = #home
+* type = #postal
+* text = "Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987"
+* line = "Софийская 32-1-987"
+* city = "Санкт-Петербург"
+* state = "Санкт-Петербург"
+* postalCode = "192236"
+* country = "Россия"
+
+* extension[fias].extension[aoguid].valueIdentifier.value = "urn:uuid:7b1996be-c0fe-4797-bedc-f503e31a83fd"
+* extension[fias].extension[aoguid].valueIdentifier.system = "urn:hl7-ru:fias:aoguid"
+
+* extension[fias].extension[houseguid].valueIdentifier.value = "urn:uuid:7b1996be-c0fe-4797-bedc-f503e31a83fd"
+* extension[fias].extension[houseguid].valueIdentifier.system = "urn:hl7-ru:fias:houseguid"
