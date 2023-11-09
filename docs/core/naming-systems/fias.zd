@@ -13,6 +13,7 @@ Usage: #definition
 * uniqueId.value = "urn:hl7-ru:fias:aoguid"
 * uniqueId.preferred = true
 
+
 Instance: rf-ns-fias-houseguid
 InstanceOf: NamingSystem
 Usage: #definition
