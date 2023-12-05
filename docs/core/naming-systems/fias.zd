@@ -2,26 +2,40 @@
 
 :address-object-guid fsh/
 
-Instance: rf-ns-fias-aoguid
+Instance:   core-ns-fias-aoguid
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "FIAS_aoguid"
+
+* name =   "Core_Ns_Fias_Aoguid"
+
 * status = #active
+
 * kind = #identifier
+
 * date = "2023-10-23"
-* uniqueId.type = #uri
-* uniqueId.value = "urn:hl7-ru:fias:aoguid"
-* uniqueId.preferred = true
+
+* uniqueId
+  * type = #uri
+  * value = "urn:hl7-ru:fias:aoguid"
+  * preferred = true
+
 
 :house-guid fsh/
 
-Instance: rf-ns-fias-houseguid
+Instance:   core-ns-fias-houseguid
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "FIAS_houseguid"
+
+* name =   "Core_Ns_Fias_Houseguid"
+
 * status = #active
+
 * kind = #identifier
+
 * date = "2023-10-23"
-* uniqueId.type = #uri
-* uniqueId.value = "urn:hl7-ru:fias:houseguid"
-* uniqueId.preferred = true
+
+* uniqueId
+  * type = #uri
+  * value = "urn:hl7-ru:fias:houseguid"
+  * preferred = true
+
