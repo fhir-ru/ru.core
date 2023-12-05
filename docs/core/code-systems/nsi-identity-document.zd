@@ -2,40 +2,56 @@
 
 :naming-system fsh/
 
-Instance: ns-nsi-identity-document
+Instance:   core-ns-nsi-identity-document
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "ns-nsi-identity-document"
+
+* name =   "core-ns-nsi-identity-document"
+
 * status = #active
+
 * kind = #codesystem
+
 * date = "2023-10-23"
-* description = " НСИ Минздрава Документы, удостоверяющие личность, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.48, Дополнительный OID: 1.2.643.5.1.13.13.11.1011, 1.2.643.5.1.13.2.1.1.736, предпочтительно URI: http://fhir.ru/core/cs/core-cs-nsi-identity-document "
-* uniqueId[0].type = #oid
-* uniqueId[0].value = "1.2.643.5.1.13.13.99.2.48"
-* uniqueId[0].comment = "Основной"
-* uniqueId[1].type = #oid
-* uniqueId[1].value = "1.2.643.5.1.13.13.11.1011"
-* uniqueId[1].comment = "Дополнительный"
-* uniqueId[2].type = #oid
-* uniqueId[2].value = "1.2.643.5.1.13.2.1.1.736"
-* uniqueId[2].comment = "Дополнительный"
-* uniqueId[3].type = #oid
-* uniqueId[3].preferred = true
-* uniqueId[3].value = "http://fhir.ru/core/cs/core-cs-nsi-identity-document"
-* uniqueId[4].type = #oid
-* uniqueId[4].value = "http://nsi.rosminzdrav.ru/#!/refbook/1.2.643.5.1.13.13.99.2.48/version/7.1"
+
+* description = " Справочник НСИ Минздрава <Документы, удостоверяющие личность>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.48, Дополнительный OID: 1.2.643.5.1.13.13.11.1011, 1.2.643.5.1.13.2.1.1.736, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-identity-document "
+
+* uniqueId[0]
+  * type = #oid
+  * value = "1.2.643.5.1.13.13.99.2.48"
+  * comment = "Основной"
+
+* uniqueId[1]
+  * type = #oid
+  * value = "1.2.643.5.1.13.13.11.1011"
+  * comment = "Дополнительный"
+
+* uniqueId[2]
+  * type = #oid
+  * value = "1.2.643.5.1.13.2.1.1.736"
+  * comment = "Дополнительный"
+
+* uniqueId[3]
+  * type = #uri
+  * preferred = true
+  * value = "http://fhir.ru/core/CodeSystem/core-ns-nsi-identity-document"
+
+* uniqueId[4]
+  * type = #uri
+  * value = "http://nsi.rosminzdrav.ru/#!/refbook/1.2.643.5.1.13.13.99.2.48/version/7.1"
 
 :code-system fsh/
 
-Alias: $МЗРФ_Справочник_ДокументыУдостоверяющиеЛичность = Nsi_identity_document
-CodeSystem: Nsi_identity_document
-Id: nsi-identity-document
+Alias: $МЗРФ_Справочник_ДокументыУдостоверяющиеЛичность = Core_Cs_Nsi_Identity_Document
+CodeSystem: Core_Cs_Nsi_Identity_Document
+Id:         core-cs-nsi-identity-document
 Title: "Документы удостоверяющие личность"
-Description: "НСИ МЗ РФ справочник [документы удостоверяющие личность](http://nsi.rosminzdrav.ru/#!/refbook/1.2.643.5.1.13.13.99.2.48/version/7.1)"
-* ^identifier.system = "urn:hl7-ru:fias"
-* ^identifier.value = "http://nsi.rosminzdrav.ru/#!/refbook/1.2.643.5.1.13.13.99.2.48/version/7.1"
+Description: "НСИ МЗ РФ справочник [документы удостоверяющие личность](http://fhir.ru/core/CodeSystem/core-cs-nsi-identity-document)"
+
 * ^experimental = false
+
 * ^caseSensitive = false
+
 * ^content = #example
 
 * #100 "Общегражданские документы"
@@ -49,4 +65,5 @@ Description: "НСИ МЗ РФ справочник [документы удос
   * #43 "Свидетельство о смерти"
 * #400 "Специальные документы, связанные с удостоверением личности"
   * #36 "Водительское удостоверение"
+
 
