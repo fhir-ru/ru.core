@@ -3,13 +3,19 @@
 :fsh/dir "RuLabIG"
 :profile fsh/
 
-Profile: LabServiceRequest
-Id: lab-service-request
-Parent: ServiceRequest
-Title: "Запрос услуги"
-Description: "Запись запроса на процедуру, диагностику или другую услугу, которая должна быть запланирована, предложена или выполнена"
+Profile:  Lab_ServiceRequest
+Id:       lab-servicerequest
+Parent:  Core_ServiceRequest
+Title: "Заказ услуги (Ru Lab)"
+Description: "Заказ лабораторного исследования"
 
-* ^url = "http://fhir.ru/lab/StructureDefinition/lab-service-request"
-* subject 1..1 MS
-* subject ^short = "Физическое или юридическое лицо, для которого заказана услуга"
-* subject only Reference(CorePatient)
+
+Instance:   lab-servicerequest-instance-full
+InstanceOf: Lab_ServiceRequest
+Usage: #example
+
+* status = #active
+
+* intent = #plan
+
+* subject = Reference(core-patient-instance-full)  
