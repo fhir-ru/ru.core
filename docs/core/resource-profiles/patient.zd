@@ -2,65 +2,53 @@
 :status :in-progress
 :profile fsh/
 
-Profile: CorePatient
-Id: core-patient
-Parent: Patient
+Profile: Core_Patient
+Id:      core-patient
+Parent:       Patient
 Title: "Пациент (Ru Core)"
 Description: "Пациент"
 
-* . 0..*
-
-* address 0..*
 * address ^short = "Адрес пациента"
-* address only CoreAddress
+* address only Core_Address
 
-* address.text 0..1
-* address.text ^short = "Текстовое представление адреса"
-
-* identifier 0..* 
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system" 
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
-* identifier ^slicing.description = "Нарезка по Идентификаторам пациента - Паспорт РФ, ИНН, СНИЛС, номер МК, полис ОМС, номер св-ва о рожд.,Номер пациента в МИС"
+* identifier ^slicing.description = "Нарезка по типам идентификаторов пациента - Паспорт РФ, ИНН, СНИЛС, номер МК, полис ОМС, свидетельство о рождении, номер пациента в МИС"
 //для отладки оставили только свидетельство о рождении
-* identifier contains 
-  BirthCertificate 0..1 
+* identifier contains birthCertificate 0..1
 
-* identifier[BirthCertificate] ^short = "Номер государственного свидетельства о рождении"
-* identifier[BirthCertificate].value only string
-* identifier[BirthCertificate].system 1..1
-* identifier[BirthCertificate].system ^short = "Fixed value: http://fhir.ru/core/systems/birth-certificate"
-* identifier[BirthCertificate].system = "http://fhir.ru/core/systems/birth-certificate"
-* identifier[BirthCertificate].type 0..1
-* identifier[BirthCertificate].type ^short = "Тип идентификатора"
-  * coding 1..1
-  * coding from $Ядро_НаборЗначений_ДокументыУдостоверяющиеЛичность (required)
-    * code = #6
-    * display = "Код свидетельства о рождении по НСИ"
-    * system = "http://fhir.ru/core/CodeSystem/nsi-identity-document"
-    
-* name 0..*
+* identifier[birthCertificate] ^short = "Государственное свидетельство о рождении"
+  * value only string
+  * system 1..1
+  * system = "http://fhir.ru/core/systems/birth-certificate"
+  * type 1..1
+  * type ^short = "Тип идентификатора, кодируется по НСИ"
+  * type from $Ядро_НаборЗначений_ДокументыУдостоверяющиеЛичность (required)
+  * type = $МЗРФ_Справочник_ДокументыУдостоверяющиеЛичность#6
+
 * name ^short = "ФИО пациента"
+  * family ^short = "Фамилия пациента"
+  * given ^short = "Имя и отчество пациента. Первым должно идти имя, вторым - отчество"
+  * use ^short = "Тип имени пациента. Рекомендуемое значение: official"
 
-* name.family 0..1
-* name.family ^short = "Фамилия пациента"
 
-* name.given 0..*
-* name.given ^short = "Имя и отчество пациента. Первым должно идти имя, вторым - отчество"
 
-* name.use 0..1
-* name.use ^short = "Тип имени пациента.Фиксированное значение 
-Fixed value: official"
-
-:instance fsh/
-
-Instance: CorePatient-instance-2
-InstanceOf: CorePatient
+Instance:   core-patient-instance-full
+InstanceOf: Core_Patient
 Usage: #example
-* address = CoreAddress-instance-2
+
+* address = core-address-instance-full
+
 * birthDate = "1955-01-10"
-* identifier[BirthCertificate].system = "http://fhir.ru/core/systems/birth-certificate"
-* identifier[BirthCertificate].value = "IIЮБ-123456"
-* name.family = "Габсбург-Лотарингская"
-* name.given = "Мария-Антуанетта | Иоганновна"
-* name.use = #official
+
+* identifier[birthCertificate]
+  * system = "http://fhir.ru/core/systems/birth-certificate"
+  * value = "IIЮБ-123456"
+  * type = $МЗРФ_Справочник_ДокументыУдостоверяющиеЛичность#6
+
+* name
+  * family = "Габсбург-Лотарингская"
+  * given[0] = "Мария-Антуанетта"
+  * given[1] = "Иоганновна"
+  * use = #official
