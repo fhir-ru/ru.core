@@ -2,12 +2,23 @@
 
 :profile fsh/
 
-Profile: CoreServiceRequest
-Id: core-service-request
-Parent: ServiceRequest
+Profile: Core_ServiceRequest
+Id:      core-servicerequest
+Parent:       ServiceRequest
 Title: "Заказ услуги (Ru Core)"
 Description: "Заказ услуги"
 
 * subject 1..1
 * subject ^short = "Пациент"
-* subject only Reference(CorePatient)
+* subject only Reference(Core_Patient)
+
+
+Instance:   core-servicerequest-instance-full
+InstanceOf: Core_ServiceRequest
+Usage: #example
+
+* status = #active
+
+* intent = #plan
+
+* subject = Reference(core-patient-instance-full)
