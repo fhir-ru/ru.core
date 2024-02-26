@@ -43,6 +43,7 @@
                "ekogan2000@gmail.com"
                "GorbachevaTV11@gmail.com"
                "Oleg.v.penzin@gmail.com"
+               "andrew.zabelin@health-samurai.io"
                "rvs200686@gmail.com"})
 
 (defn do-login [ztx code]
@@ -107,5 +108,5 @@
 (comment
   (def ztx (start!))
   
-  (zd.core/stop ztx)
-  )
+  (zd.core/stop ztx))
+  

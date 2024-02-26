@@ -1,0 +1,9 @@
+.clj-kondo
+.cpcache
+.git
+.github
+.lsp
+test
+Dockerfile
+README.md
+bb.edn
