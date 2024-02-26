@@ -21,6 +21,10 @@
   {:jvm-opts    ["-XX:-OmitStackTraceInFastThrow"]
    :main-opts   ["-m" "zd.fhir-cloud"]}
 
+  :download-deps
+  {:jvm-opts    ["-XX:-OmitStackTraceInFastThrow"]
+   :main-opts   ["-m" "zd.download-deps"]}
+
   :run
   {:jvm-opts    ["-XX:-OmitStackTraceInFastThrow"]
    :main-opts   ["-m" "zd.fhir-ru"]}}}
