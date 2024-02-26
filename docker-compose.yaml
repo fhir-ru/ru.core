@@ -4,6 +4,7 @@ services:
   fhir-ru:
     image: healthsamurai/fhir-ru:latest
     restart: unless-stopped
+    pull_policy: always
     volumes:
       - ./keystore:/app/keystore
     ports:
