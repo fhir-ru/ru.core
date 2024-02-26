@@ -1,7 +1,2 @@
 .clj-kondo
 .cpcache
-.lsp
-test
-Dockerfile
-README.md
-bb.edn
