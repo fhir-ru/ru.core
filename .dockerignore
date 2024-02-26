@@ -1,7 +1,5 @@
 .clj-kondo
 .cpcache
-.git
-.github
 .lsp
 test
 Dockerfile
