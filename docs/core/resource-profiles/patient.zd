@@ -20,14 +20,14 @@ Description: "Пациент"
 
 * identifier[birthCertificate] ^short = "Государственное свидетельство о рождении"
   * value only string
-  * system 1..*
+  * system 1..1
   * system = "http://fhir.ru/core/systems/birth-certificate"
   * type 1..1
   * type ^short = "Тип идентификатора, кодируется по НСИ"
   * type from $Ядро_НаборЗначений_ДокументыУдостоверяющиеЛичность (required)
   * type = $МЗРФ_Справочник_ДокументыУдостоверяющиеЛичность#6
 
-* name ^short = "ФИО пациента"
+* name ^short = "ФИО пациента test"
   * family ^short = "Фамилия пациента"
   * given ^short = "Имя и отчество пациента. Первым должно идти имя, вторым - отчество"
   * use ^short = "Тип имени пациента. Рекомендуемое значение: official"
