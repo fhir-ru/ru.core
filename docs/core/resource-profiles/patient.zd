@@ -20,7 +20,7 @@ Description: "Пациент"
 
 * identifier[birthCertificate] ^short = "Государственное свидетельство о рождении"
   * value only string
-  * system 1..1
+  * system 1..*
   * system = "http://fhir.ru/core/systems/birth-certificate"
   * type 1..1
   * type ^short = "Тип идентификатора, кодируется по НСИ"
