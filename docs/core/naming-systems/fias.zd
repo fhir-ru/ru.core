@@ -8,6 +8,8 @@ Usage: #definition
 
 * name =   "Core_Ns_Fias_Aoguid"
 
+* description = "Идентификатор адресного объекта по справочнику ФИАС" 
+
 * status = #active
 
 * kind = #identifier
@@ -28,6 +30,8 @@ Usage: #definition
 
 * name =   "Core_Ns_Fias_Houseguid"
 
+* description = "Идентификатор дома по справочнику ФИАС"
+
 * status = #active
 
 * kind = #identifier
@@ -38,4 +42,3 @@ Usage: #definition
   * type = #uri
   * value = "urn:hl7-ru:fias:houseguid"
   * preferred = true
-
