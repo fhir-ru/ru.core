@@ -46,7 +46,7 @@ Alias: $МЗРФ_Справочник_ДокументыУдостоверяющ
 CodeSystem: Core_Cs_Nsi_Identity_Document
 Id:         core-cs-nsi-identity-document
 Title: "Документы удостоверяющие личность"
-Description: "НСИ МЗ РФ справочник [документы удостоверяющие личность](http://fhir.ru/core/CodeSystem/core-cs-nsi-identity-document)"
+Description: "НСИ МЗ РФ справочник [документы удостоверяющие личность](http://fhir.ru/core/NamingSystem/core-ns-nsi-identity-document)"
 
 * ^experimental = false
 
@@ -65,4 +65,3 @@ Description: "НСИ МЗ РФ справочник [документы удос
   * #43 "Свидетельство о смерти"
 * #400 "Специальные документы, связанные с удостоверением личности"
   * #36 "Водительское удостоверение"
-
