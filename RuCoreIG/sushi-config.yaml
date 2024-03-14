@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ru.core
-canonical: https://fhir.ru/core
+canonical: http://fhir.ru/core
 name: RuCoreIG
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
