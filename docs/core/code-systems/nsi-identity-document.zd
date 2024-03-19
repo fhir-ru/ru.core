@@ -34,7 +34,7 @@ Usage: #definition
 * uniqueId[3]
   * type = #uri
   * preferred = true
-  * value = "http://fhir.ru/core/CodeSystem/core-ns-nsi-identity-document"
+  * value = "http://fhir.ru/core/CodeSystem/core-cs-nsi-identity-document"
 
 * uniqueId[4]
   * type = #uri
