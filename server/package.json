@@ -1,0 +1,9 @@
+{
+  "main": "index.js",
+  "type": "module",
+  "scripts": {},
+  "dependencies": {
+    "express": "^4.19.1",
+    "fsh-sushi": "^3.8.0"
+  }
+}

@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install ruby-full build-essential zlib1g-dev make 
 RUN gem install jekyll bundler
 RUN npm install -g fsh-sushi@latest
 
-ARG CACHE_DATE;
+RUN cd ./server && npm ci
 
 RUN clojure -M:download-deps
 
@@ -25,5 +25,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 8080
 EXPOSE 8081
 EXPOSE 8082
- 
-ENTRYPOINT nginx -g 'daemon off;' & clojure -M:run-cloud
+EXPOSE 8083
+
+ENTRYPOINT nginx -g 'daemon off;' & node ./server/src/index.js & clojure -M:run-cloud
