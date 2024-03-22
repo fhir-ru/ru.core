@@ -4,6 +4,7 @@
   "scripts": {},
   "dependencies": {
     "express": "^4.19.1",
-    "fsh-sushi": "^3.8.0"
+    "fsh-sushi": "^3.8.0",
+    "js-yaml": "^4.1.0"
   }
 }
