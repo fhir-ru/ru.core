@@ -1,6 +1,12 @@
 {:ns fhir-ru
  :import #{zen-web zd zd.events}
 
+ zendoc
+ {:zen/tags #{zd/zendoc}
+  :dir "docs"
+  :validator {:type "fsh"
+              :endpoint "http://localhost:8083/api/v1/validators/fsh"}}
+
  on-fsh-compile
  {:zen/tags #{zen/event :zen/schema}
   :zen/desc "compile fsh document field into FHIR profile"
@@ -18,7 +24,7 @@
  {:zen/tags #{zen/start zen-web/http zd.engines/http}
   :engine zen-web/httpkit
   :port 3344
-  :zendoc zd/zendoc
+  :zendoc zendoc
   :api zd/api}
 
  system
