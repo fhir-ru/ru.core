@@ -63,6 +63,7 @@ export const fshToFhirOverride = async (input, options) => {
         },
     );
 
+    // Override the return value for further use in bulding the validation result
     return {
         fhir,
         errors: utils.errorsAndWarnings.errors,

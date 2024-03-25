@@ -25,30 +25,43 @@ const normalizeSushiConfig = (config) => {
     };
 };
 
-const enrhichDataWithFilePath = (fshFileNames) => {
+const enrichDataWithFilePath = (fshFileNames) => {
     return (data) => {
         const [, fileIndex] = data.input.split('_');
+        const documentName = fshFileNames[fileIndex].slice(0, fshFileNames[fileIndex].length - 4).split('_')[0];
 
         return {
             message: data.message,
             location: data.location,
-            input: fshFileNames[fileIndex],
+            input: documentName,
         };
     };
 };
 
 const buildWarningErrorMessage = (type) => {
-    return (data) =>
-        [
-            `${type} message: ${data.message}`,
-            `fileName: ${data.input}`,
-            `location: Start line: ${data.location.startLine}; End line: ${data.location.endLine}`,
-        ].join('\n');
+    return (data) => [
+        `${type} message: ${data.message}`,
+        `fileName: ${data.input}`,
+        `location: Start line: ${data.location.startLine}; End line: ${data.location.endLine}`,
+        '',
+    ];
 };
 
-const buildFhirResultMessage = (fhirResult) => {
-    const errorsInformationMessage = fhirResult.errors.map(buildWarningErrorMessage('error')).join('\n\n');
-    const warningsInformationMessage = fhirResult.warnings.map(buildWarningErrorMessage('warn')).join('\n\n');
+const getImplementationGuideId = (documentName) => {
+    if (documentName.startsWith('core')) {
+        return 'core';
+    }
+
+    if (documentName.startsWith('lab')) {
+        return 'lab';
+    }
+
+    return documentName;
+};
+
+const buildValidationResult = (fhirResult) => {
+    const errorsInformationMessage = fhirResult.errors.map(buildWarningErrorMessage('error'));
+    const warningsInformationMessage = fhirResult.warnings.map(buildWarningErrorMessage('warn'));
 
     const warningsNumber = fhirResult.warnings.length;
     const errorsNumber = fhirResult.errors.length;
@@ -80,12 +93,17 @@ const buildFhirResultMessage = (fhirResult) => {
         '╠' + '═════════════════════════════════════════════════════════════════' + '╣',
         '║' + ` ${'HL7 FHIR Russia'.padEnd(36)} ${errorsOutput} ${warningsOutput} ` + '║',
         '╚' + '═════════════════════════════════════════════════════════════════' + '╝',
-    ].join('\n');
+    ];
 
-    return [errorsInformationMessage, warningsInformationMessage, message].filter(Boolean).join('\n\n');
+    return {
+        problemsNumber: warningsNumber + errorsNumber,
+        messageLines: [errorsInformationMessage, warningsInformationMessage, message].flat(Infinity),
+    };
 };
 
-export const validateFsh = async (implementationGuideId, currentFshDocumentContent) => {
+export const validateFsh = async (documentName, documentContent) => {
+    const implementationGuideId = getImplementationGuideId(documentName);
+
     const folderNameByIG = {
         core: 'RuCoreIG',
         lab: 'RuLabIG',
@@ -94,7 +112,7 @@ export const validateFsh = async (implementationGuideId, currentFshDocumentConte
     const implementationGuideName = folderNameByIG[implementationGuideId];
 
     if (!implementationGuideName) {
-        throw new Error(`Implementation guide with id "${implementationGuideId}" does not exist`);
+        throw new Error(`Implementation guide "${implementationGuideId}" does not exist`);
     }
 
     const sushiConfigYaml = await readFile(getAbsolutePath(`${implementationGuideName}/sushi-config.yaml`), {
@@ -103,7 +121,9 @@ export const validateFsh = async (implementationGuideId, currentFshDocumentConte
 
     const sushiConfig = normalizeSushiConfig(parse(sushiConfigYaml));
 
-    const fshFileNames = await readdir(getAbsolutePath(`${implementationGuideName}/input/fsh`));
+    const fshFileNames = (await readdir(getAbsolutePath(`${implementationGuideName}/input/fsh`))).filter(
+        (fshFileName) => !fshFileName.includes(documentName),
+    );
 
     const fshFilePaths = fshFileNames.map((fileName) =>
         getAbsolutePath(`${implementationGuideName}/input/fsh/${fileName}`),
@@ -114,16 +134,18 @@ export const validateFsh = async (implementationGuideId, currentFshDocumentConte
     );
 
     const { fhir, warnings, errors, $$package } = await fshToFhirOverride(
-        fshDocumentContents.concat(currentFshDocumentContent),
+        fshDocumentContents.concat(documentContent),
         sushiConfig,
     );
+
+    const documentPath = `${documentName}.fsh`;
 
     const fhirResult = {
         fhir,
         $$package,
-        warnings: warnings.map(enrhichDataWithFilePath(fshFileNames)),
-        errors: errors.map(enrhichDataWithFilePath(fshFileNames)),
+        warnings: warnings.map(enrichDataWithFilePath(fshFileNames.concat(documentPath))),
+        errors: errors.map(enrichDataWithFilePath(fshFileNames.concat(documentPath))),
     };
 
-    return buildFhirResultMessage(fhirResult);
+    return buildValidationResult(fhirResult);
 };
