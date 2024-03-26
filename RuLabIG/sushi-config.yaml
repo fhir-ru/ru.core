@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ru.lab
-canonical: http://fhir.ru/lab
+canonical: http://fhir.ru/ig/lab/v1
 name: RuLabIG
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
