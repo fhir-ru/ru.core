@@ -25,38 +25,74 @@ const normalizeSushiConfig = (config) => {
     };
 };
 
-const enrichDataWithFilePath = (fshFileNames) => {
-    return (data) => {
-        const [, fileIndex] = data.input.split('_');
-        const documentName = fshFileNames[fileIndex].slice(0, fshFileNames[fileIndex].length - 4).split('_')[0];
+const enrichProblemWithFilePath = (zenDocumentNames) => {
+    return (problemEntry) => {
+        const [, fileIndex] = problemEntry.input.split('_');
+        const zenDocumentName = zenDocumentNames[fileIndex];
 
         return {
-            message: data.message,
-            location: data.location,
-            input: documentName,
+            message: problemEntry.message,
+            location: problemEntry.location,
+            input: zenDocumentName,
         };
     };
 };
 
-const buildWarningErrorMessage = (type) => {
-    return (data) => [
-        `${type} message: ${data.message}`,
-        `fileName: ${data.input}`,
-        `location: Start line: ${data.location.startLine}; End line: ${data.location.endLine}`,
+const buildWarningErrorMessage = (problemTypeName) => {
+    return (problemEntry) => [
+        `${problemTypeName} message: ${problemEntry.message}`,
+        `fileName: ${problemEntry.input}`,
+        `location: Start line: ${problemEntry.location.startLine}; End line: ${problemEntry.location.endLine}`,
         '',
     ];
 };
 
-const getImplementationGuideId = (documentName) => {
-    if (documentName.startsWith('core')) {
+const getImplementationGuideId = (zenDocumentName) => {
+    if (zenDocumentName.startsWith('core')) {
         return 'core';
     }
 
-    if (documentName.startsWith('lab')) {
+    if (zenDocumentName.startsWith('lab')) {
         return 'lab';
     }
 
-    return documentName;
+    return zenDocumentName;
+};
+
+const sanitizeFshContent = (zenDocumentContent) => {
+    let isMultiLineKeywordContinues = false;
+
+    return zenDocumentContent
+        .split('\n')
+        .map((line) => {
+            const trimmedLine = line.trim();
+            const isAnnotationLine = trimmedLine.startsWith('^');
+            const isSingleKeywordLine = trimmedLine.startsWith(':') && !trimmedLine.endsWith('/');
+            const isFshProfileStarts = trimmedLine.startsWith(':') && trimmedLine.endsWith('fsh/');
+
+            if (isAnnotationLine || isSingleKeywordLine || isFshProfileStarts) {
+                isMultiLineKeywordContinues = false;
+
+                return '';
+            }
+
+            const isMultiKeywordLine = trimmedLine.startsWith(':') && trimmedLine.endsWith('/');
+
+            if (isMultiKeywordLine) {
+                isMultiLineKeywordContinues = true;
+
+                return '';
+            }
+
+            if (isMultiLineKeywordContinues) {
+                return '';
+            }
+
+            isMultiLineKeywordContinues = false;
+
+            return line;
+        })
+        .join('\n');
 };
 
 const buildValidationResult = (fhirResult) => {
@@ -104,47 +140,57 @@ const buildValidationResult = (fhirResult) => {
 export const validateFsh = async (documentName, documentContent) => {
     const implementationGuideId = getImplementationGuideId(documentName);
 
-    const folderNameByIG = {
+    const folderNameByImplementationGuideId = {
         core: 'RuCoreIG',
         lab: 'RuLabIG',
     };
 
-    const implementationGuideName = folderNameByIG[implementationGuideId];
+    const implementationGuideFolderName = folderNameByImplementationGuideId[implementationGuideId];
 
-    if (!implementationGuideName) {
+    if (!implementationGuideFolderName) {
         throw new Error(`Implementation guide "${implementationGuideId}" does not exist`);
     }
 
-    const sushiConfigYaml = await readFile(getAbsolutePath(`${implementationGuideName}/sushi-config.yaml`), {
+    const sushiConfigYaml = await readFile(getAbsolutePath(`${implementationGuideFolderName}/sushi-config.yaml`), {
         encoding: 'utf8',
     });
 
     const sushiConfig = normalizeSushiConfig(parse(sushiConfigYaml));
 
-    const fshFileNames = (await readdir(getAbsolutePath(`${implementationGuideName}/input/fsh`))).filter(
-        (fshFileName) => !fshFileName.includes(documentName),
+    const zenDocumentNames = (await readdir(getAbsolutePath(`${implementationGuideFolderName}/input/fsh`))).map(
+        (zenDocumentFileName) => zenDocumentFileName.split('.').slice(0, -1).join('.').split('_')[0],
     );
 
-    const fshFilePaths = fshFileNames.map((fileName) =>
-        getAbsolutePath(`${implementationGuideName}/input/fsh/${fileName}`),
+    const uniqueZenDocumentNames = [...new Set(zenDocumentNames)].filter(
+        (zenDocumentName) => zenDocumentName !== documentName,
     );
 
-    const fshDocumentContents = await Promise.all(
-        fshFilePaths.map((filePath) => readFile(filePath, { encoding: 'utf8' })),
+    const zenDocumentRelativePaths = uniqueZenDocumentNames.map(
+        (zenDocumentName) => `${zenDocumentName.replace(/\./g, '/')}.zd`,
     );
+
+    const zenDocumentAbsolutePaths = zenDocumentRelativePaths.map((zenDocumentRelativePath) =>
+        getAbsolutePath(`docs/${zenDocumentRelativePath}`),
+    );
+
+    const fshDocumentContents = (
+        await Promise.all(
+            zenDocumentAbsolutePaths.map((zenDocumentAbsolutePath) =>
+                readFile(zenDocumentAbsolutePath, { encoding: 'utf8' }),
+            ),
+        )
+    ).map((zenDocumentContent) => sanitizeFshContent(':zd/docname "docname"\n' + zenDocumentContent));
 
     const { fhir, warnings, errors, $$package } = await fshToFhirOverride(
-        fshDocumentContents.concat(documentContent),
+        fshDocumentContents.concat(sanitizeFshContent(documentContent)),
         sushiConfig,
     );
-
-    const documentPath = `${documentName}.fsh`;
 
     const fhirResult = {
         fhir,
         $$package,
-        warnings: warnings.map(enrichDataWithFilePath(fshFileNames.concat(documentPath))),
-        errors: errors.map(enrichDataWithFilePath(fshFileNames.concat(documentPath))),
+        warnings: warnings.map(enrichProblemWithFilePath(uniqueZenDocumentNames.concat(documentName))),
+        errors: errors.map(enrichProblemWithFilePath(uniqueZenDocumentNames.concat(documentName))),
     };
 
     return buildValidationResult(fhirResult);

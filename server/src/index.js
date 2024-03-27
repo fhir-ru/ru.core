@@ -11,10 +11,8 @@ app.use(express.json());
 app.post('/api/v1/validators/fsh', async (req, res) => {
     const { documentName, documentContent } = req.body;
 
-    const fshDocumentContent = documentContent.replace(/^[:\^].*/gm, '').trim();
-
     try {
-        const validationResult = await validateFsh(documentName, fshDocumentContent);
+        const validationResult = await validateFsh(documentName, documentContent);
 
         res.send(validationResult);
     } catch (error) {
