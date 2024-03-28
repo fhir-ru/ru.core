@@ -1,4 +1,5 @@
 import { readFile, readdir } from 'node:fs/promises';
+import { sushiClient } from 'fsh-sushi';
 import { fshToFhirOverride } from './override.js';
 import { getAbsolutePath, pad } from '../utils.js';
 import { parse } from '../parsers/index.js';
@@ -25,17 +26,29 @@ const normalizeSushiConfig = (config) => {
     };
 };
 
-const enrichProblemWithFilePath = (zenDocumentNames) => {
-    return (problemEntry) => {
-        const [, fileIndex] = problemEntry.input.split('_');
+const enrichProblems = (problems, zenDocumentNames) => {
+    const uniqueProblems = [];
+
+    problems.forEach((problem) => {
+        const isAlreadyPassedProblem = uniqueProblems.find(
+            (uniqueProblem) => uniqueProblem.message === problem.message && uniqueProblem.input === problem.input,
+        );
+
+        if (!isAlreadyPassedProblem) {
+            uniqueProblems.push(problem);
+        }
+    });
+
+    return uniqueProblems.map((problem) => {
+        const [, fileIndex] = problem.input.split('_');
         const zenDocumentName = zenDocumentNames[fileIndex];
 
         return {
-            message: problemEntry.message,
-            location: problemEntry.location,
+            message: problem.message,
+            location: problem.location,
             input: zenDocumentName,
         };
-    };
+    });
 };
 
 const buildWarningErrorMessage = (problemTypeName) => {
@@ -189,8 +202,8 @@ export const validateFsh = async (documentName, documentContent) => {
     const fhirResult = {
         fhir,
         $$package,
-        warnings: warnings.map(enrichProblemWithFilePath(uniqueZenDocumentNames.concat(documentName))),
-        errors: errors.map(enrichProblemWithFilePath(uniqueZenDocumentNames.concat(documentName))),
+        warnings: enrichProblems(warnings, uniqueZenDocumentNames.concat(documentName)),
+        errors: enrichProblems(errors, uniqueZenDocumentNames.concat(documentName)),
     };
 
     return buildValidationResult(fhirResult);
