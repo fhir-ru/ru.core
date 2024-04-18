@@ -12,6 +12,7 @@ Description: "Заказ услуги"
 * subject ^short = "Пациент"
 * subject only Reference(Core_Patient)
 
+//----------instance-full-------------------------------
 
 Instance:   core-servicerequest-instance-full
 InstanceOf: Core_ServiceRequest
