@@ -1,4 +1,8 @@
 
+:title "Федеральный реестр медицинских организаций (ФРМО)"
+
+:naming-system fsh/
+
 Instance:   core-ns-nsi-register-of-medical-organizations
 InstanceOf: NamingSystem
 Usage: #definition
@@ -17,6 +21,8 @@ Usage: #definition
   * type = #oid
   * value = "1.2.643.5.1.13.13.11.1461"
   * comment = "Основной"
+
+:code-system fsh/
 
 Alias: $МЗРФ_Справочник_РеестрМедицинскихОрганизаций = Core_Cs_Nsi_Register_Of_Medical_Organizations
 CodeSystem: Core_Cs_Nsi_Register_Of_Medical_Organizations
