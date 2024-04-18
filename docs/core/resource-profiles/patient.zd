@@ -1,3 +1,9 @@
+:title "Core Patient"
+
+:profile fsh/
+
+
+
 Profile: Core_Patient
 Id:      core-patient
 Parent:       Patient
