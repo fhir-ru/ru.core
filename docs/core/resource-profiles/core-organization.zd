@@ -1,4 +1,8 @@
 
+:title "Core Organization"
+
+:profile fsh/
+
 Profile: Core_Organization
 Id: core-organization
 Parent: Organization
