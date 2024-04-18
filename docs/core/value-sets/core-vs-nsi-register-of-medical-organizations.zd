@@ -1,5 +1,7 @@
 
+:title "Набор значений - ФРМО"
 
+:text fsh/
 
 Alias: $Ядро_НаборЗначений_РеестрМедицинскихОрганизаций = Core_Vs_Nsi_Register_Of_Medical_Organizations
 ValueSet: Core_Vs_Nsi_Register_Of_Medical_Organizations
