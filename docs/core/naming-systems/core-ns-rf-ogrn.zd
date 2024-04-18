@@ -1,4 +1,8 @@
 
+:title "Основной государственный регистрационный номер (ОГРН)"
+
+:text fsh/
+
 Instance:   core-ns-rf-ogrn
 InstanceOf: NamingSystem
 Usage: #definition
