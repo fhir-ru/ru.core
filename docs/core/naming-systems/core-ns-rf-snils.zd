@@ -1,4 +1,8 @@
 
+:title "СНИЛС"
+
+:text fsh/
+
 Instance:   core-ns-rf-snils
 InstanceOf: NamingSystem
 Usage: #definition
