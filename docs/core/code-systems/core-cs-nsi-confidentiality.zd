@@ -43,7 +43,7 @@ Description: "НСИ МЗ РФ справочник [Уровень конфид
 
 * ^caseSensitive = false
 
-* ^content = #all
+* ^content = #complete
 
 * #1 "Обычный доступ"
 * #2 "Ограниченный доступ"
