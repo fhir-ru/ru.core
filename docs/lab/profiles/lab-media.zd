@@ -1,0 +1,43 @@
+
+:title "Lab Media"
+^hide
+:fsh/dir "RuLabIG"
+:profile fsh/
+
+Profile: Lab_Media
+Id:      lab-media
+Parent:  Media
+Title: "Фотография, видео или аудиозапись, приобретенная или использованная в здравоохранении"
+Description: "Фотография, видео или аудиозапись, приобретенная или использованная в здравоохранении"
+
+* content 1..1 MS
+  * data 0..1 MS
+  
+* created[x] 0..1 MS
+
+* basedOn 0..*
+* basedOn ^short = "На основе "
+* basedOn only Reference(Core_ServiceRequest) //CarePlan)
+
+* encounter 0..1
+* encounter only Reference(Core_Encounter)
+
+* operator 0..1 MS
+* operator only Reference(Core_Practitioner or Core_Practitioner_Role or Core_Organization or CareTeam or Core_Patient or Lab_Device or Core_Related_Person)
+
+* device 0..1 MS
+* device only Reference(Lab_Device or DeviceMetric)
+
+* subject 0..1
+* subject only Reference(Core_Patient or Core_Practitioner_Role or Core_Practitioner or Lab_Device or Location) //or CoreSpecimen
+
+* status 1..1 MS
+//----------instance-full-------------------------------
+//Instance:   lab-media-instance-full
+//InstanceOf:  Lab_Media
+//Usage: #example
+//* basedOn = Reference(core-servicerequest-instance-full)
+//* status = #final
+//* operator = Reference(core-practitioner-instance-full)
+//* device = Reference(lab-device-instance-full)
+//* content = ???
