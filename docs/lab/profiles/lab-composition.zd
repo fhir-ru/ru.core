@@ -1,0 +1,38 @@
+
+:title "Lab Composition"
+^hide
+:fsh/dir "RuLabIG"
+:profile fsh/
+
+Profile: Lab_Composition
+Id:      lab-composition
+Parent:  Composition
+Title: "Протокол лабораторного исследования"
+Description: "Протокол лабораторного исследования"
+
+* author 1..*
+* author only Reference(Core_Organization or Core_Practitioner or Core_Related_Person_Payer or Core_Practitioner_Role or Core_Patient or Lab_Device)
+
+* confidentiality 0..1 MS
+ // * system 1..1
+ // * system = "http://fhir.ru/core/systems/confidentiality"
+  
+* date 1..1
+* date ^short = "Дата последнего изменения"
+
+* identifier 0..1
+* identifier ^short = "Идентификатор"
+  * value 0..1
+  * value ^short = "Идентификатор документа с учетом версии"
+  * system 0..1
+  * system ^short = "Система выдачи номеров документов: OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.50"
+
+
+//----------instance-full-------------------------------
+//Instance:   lab-composition-instance-full
+//InstanceOf:  Lab_Composition
+//Usage: #example
+//* author = Reference(core-organization-instance-full)
+//* date = "2018-12-20T12:20:00.000+03:00"
+//* status = #final
+//* title = "Протокол лабораторного исследования"
