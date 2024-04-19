@@ -1,0 +1,39 @@
+
+:title "Lab Substance"
+^hide
+:fsh/dir "RuLabIG"
+
+:profile fsh/
+
+Profile: Lab_Substance
+Id:      lab-substance
+Parent:  Substance
+Title: "Субстанция/Вещество"
+Description: "Субстанция/Вещество"
+
+* code  1..1 MS
+  * text 0..1 MS
+  
+* description 0..1 MS
+
+* identifier ^short = "Идентификатор Субстанции. Используется в ПЛИ"
+* identifier 0..* MS
+  * system 0..1
+  * system ^short = "Система выдачи идентификаторов: OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.67"
+  * value 0..1
+  * value only string
+  * value ^short = " Используется в ПЛИ"
+
+//----------instance-full-------------------------------
+Instance:   lab-substance-instance-full
+InstanceOf:  Lab_Substance
+Usage: #example
+
+* code
+  * text = "Гелевые карты для иммуногематологических исследований HEMOS SP" 
+
+* description = "Гелевые карты для иммуногематологических исследований HEMOS SP"
+
+* identifier
+  * system = "1.2.643.5.1.13.13.12.2.77.8312.100.1.1.67"
+  * value = "9874"
