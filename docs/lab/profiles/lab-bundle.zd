@@ -1,0 +1,27 @@
+:title "Lab Bundle"
+^hide
+:fsh/dir "RuLabIG"
+
+:profile fsh/
+
+Profile: Lab_Bundle
+Id:      lab-bundle
+Parent:  Bundle
+Title: "Пакет (Ru Lab)"
+Description: "Передача лабораторных исследований КДЛ"
+
+* type 1..1
+* type ^short = "Тип пакета. Фиксированное значение: document"
+
+* entry 0..*
+* entry ^short = "Вложенный ресурс. Ссылки на профили  Lab или RuCore"
+
+* entry.resource 0..1
+* entry.resource ^short = "Ресурс"
+
+//----------instance-full-------------------------------
+Instance:   lab-bundle-instance-full
+InstanceOf: Lab_Bundle
+Usage: #example
+
+* type = #document
