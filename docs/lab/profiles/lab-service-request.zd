@@ -9,7 +9,20 @@ Parent:  Core_ServiceRequest
 Title: "Заказ услуги (Ru Lab)"
 Description: "Заказ лабораторного исследования"
 
+* status 1..1 MS
 
+* intent 1..1 MS
+
+* subject 1..1 MS
+* subject only Reference(Core_Patient) // or Location or Lab_Device)
+
+* code 0..1 MS
+  * coding 1..* MS
+    * code 0..1 MS
+    * display 0..1 MS
+    * system 0..1 MS
+
+//----------instance-full-------------------------------
 Instance:   lab-servicerequest-instance-full
 InstanceOf: Lab_ServiceRequest
 Usage: #example
