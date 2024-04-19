@@ -43,4 +43,4 @@ Description: "НСИ МЗ РФ справочник [Виды медицинск
 
 * ^caseSensitive = false
 
-* ^content = #all
+* ^content = #not-present
