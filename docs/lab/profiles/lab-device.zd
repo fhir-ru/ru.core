@@ -1,0 +1,41 @@
+
+:title "Lab Device"
+^hide
+:fsh/dir "RuLabIG"
+:profile fsh/
+
+Profile: Lab_Device
+Id:      lab-device
+Parent:  Device
+Title: "Описание лабораторного прибора (Lab Device)"
+Description: "Описание лабораторного прибора"
+
+* deviceName 0..* MS
+* deviceName ^short = "Наименование из справочника оборудования ЛИС.Используется в ПЛИ"
+  * name 1..1 MS
+  * name ^short = "Имя, которое идентифицирует устройство. Используется в ПЛИ"
+  * type 1..1 MS
+  * type ^short = "Тип названия: udi-label-name | user-friendly-name | patient-reported-name | manufacturer-name | model-name | other"
+
+* identifier 0..* MS
+* identifier ^short = "Идентификатор экземпляра. Используется в ПЛИ"
+  * system 0..1
+  * system ^short = "Система выдачи идентификаторов: OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.67"
+  * value 0..1
+  * value only string
+  * value ^short = "Идентификатор устройства из справочника оборудования ЛИС. Используется в ПЛИ"
+
+
+
+//----------instance-full-------------------------------
+Instance:   lab-device-instance-full
+InstanceOf:  Lab_Device
+Usage: #example
+
+* deviceName
+  * name = "Гематологический анализатор Sysmex KX21"
+  * type = #manufacturer-name
+  
+* identifier
+  * system = "1.2.643.5.1.13.13.12.2.77.8312.100.1.1.67"
+  * value = "1234"
