@@ -34,4 +34,4 @@ Description: "НСИ МЗ РФ справочник [Реестр медицин
 
 * ^caseSensitive = false
 
-* ^content = #all
+* ^content = #not-present
