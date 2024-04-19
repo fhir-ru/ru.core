@@ -1,0 +1,56 @@
+
+:title "Lab DiagnosticReport"
+^hide
+:fsh/dir "RuLabIG"
+:profile fsh/
+
+Profile: Lab_DiagnosticReport
+Id:      lab-diagnostic-report
+Parent:  DiagnosticReport
+Title: "Результат лабораторного исследования (Ru Core)"
+Description: "Результат лабораторного исследования"
+
+* category 0..* MS
+  * coding 1..* MS
+    * code 0..1 MS
+    * display 0..1 MS
+    * system 0..1 MS
+    * version 0..1 MS
+    
+* basedOn 0..*
+* basedOn ^short = "Основан на"
+* basedOn only Reference(Core_ServiceRequest)
+
+* code 1..1 MS
+* code ^short = "Код результата"
+  * coding 1..* MS
+  * coding ^short = "Код результата. Кодирование"
+    * code 0..1 MS
+    * code ^short = "Код результата. Код"
+    * system 0..1 MS
+    * system ^short = "Код результата. Система"
+    * display 0..1 MS
+    * display ^short = "Код результата.Название"
+    * version 0..1 MS
+    * version ^short = "Код результата. Версия"
+ 
+* conclusion 0..1
+* conclusion ^short = "Время получения результата"
+  
+* performer 0..* MS
+* performer ^short = "Исполнитель"
+* performer only Reference(Core_Practitioner or Core_Practitioner_Role)
+
+* result 0..* MS
+* result ^short = "Измерения"
+* result only Reference(Core_Observation)
+
+* status 1..1 MS
+* status ^short = "DiagnosticReport.status"
+
+* media 0..* MS
+  * link 1..1 MS
+  
+* subject 0..1 
+* subject ^short = "Субъект"
+* subject only Reference(Core_Patient) // or Core_Group)???
