@@ -54,3 +54,24 @@ Description: "Результат лабораторного исследован
 * subject 0..1 
 * subject ^short = "Субъект"
 * subject only Reference(Core_Patient) // or Core_Group)???
+
+//----------instance-full-------------------------------
+Instance:   lab-diagnostic-report-instance-full
+InstanceOf:  Lab_DiagnosticReport
+Usage: #example
+
+* basedOn = Reference(core-servicerequest-instance-full)
+
+* performer = Reference(core-practitioner-instance-full)
+
+* result = Reference(core-observation-instance-full)
+
+* subject = Reference(core-patient-payer-instance-full)
+
+* status = #final
+
+* code
+  * coding
+    * code = #260385009
+    * system = "http://snomed.info/sct"
+    * display = "Negative"
