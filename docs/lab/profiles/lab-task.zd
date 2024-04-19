@@ -1,0 +1,105 @@
+
+:title "Lab Task"
+^hide
+:fsh/dir "RuLabIG"
+
+:profile fsh/
+
+Profile: Lab_Task 
+Id:      lab-task
+Parent:  Task
+Title: "Задание/Заказ"
+Description: "Задание/Заказ"
+
+
+* basedOn 0..* MS
+* basedOn only Reference(Lab_Task)
+
+* code 0..1 MS
+  * coding
+    * code 0..1 MS
+    * system 0..1 MS
+    * system = "http://fhir.ru/core/systems/types-medical-documentation"
+    * version 0..1 MS
+    
+* encounter 0..1 MS
+* encounter only Reference(Core_Encounter)
+ 
+* executionPeriod 0..1 MS
+* executionPeriod only Period
+  * end 0..1 MS
+  * start 0..1 MS
+  
+* groupIdentifier
+  * type 0..1 MS
+    * coding 1..* MS
+      * version 0..1 MS
+  * value 0..1 MS
+  
+* identifier 0..* MS
+  * system 0..1 MS
+  * system ^short = "ОИД МО направителя"
+  * value 0..1 MS
+  
+* insurance 0..* MS
+* insurance only Reference(Core_Coverage or ClaimResponse)
+
+* intent 1..1 MS
+* intent ^short = "Task.intent"
+
+* output 0..* MS
+  * type 1..1 MS
+    * coding.code 0..1 MS
+  * valueReference 1..1 MS
+  
+* performerType 0..* MS
+
+* priority 0..1 MS
+
+* status 1..1 MS
+* status ^short = "Task.status" 
+
+* requester 0..1 MS
+* requester ^short = "Заказчик"
+* requester only Reference(Core_Patient or Core_Practitioner_Role or Core_Organization or Core_Practitioner or Core_Related_Person or Lab_Device)
+
+* restriction 0..1
+  * recipient 0..*
+  * recipient only Reference(Core_Patient or Core_Practitioner_Role or Core_Organization or Core_Practitioner or Core_Related_Person or Group)
+
+* partOf 0..*
+* partOf ^short = "Часть от"
+* partOf only Reference(Lab_Task)
+
+* owner 0..1
+* owner ^short = "Ответственный"
+* owner only Reference(CareTeam or Core_Patient or Core_Practitioner_Role or HealthcareService or Core_Organization or Lab_Device or Core_Practitioner or Core_Related_Person)
+//----------instance-full-------------------------------
+Instance:   lab-task-instance-full
+InstanceOf:  Lab_Task
+Usage: #example
+
+* status = #completed
+
+* intent = #order
+
+* id = "EB3C807C-6E85-DAEB-904D-CF95FAAE375A"
+
+* code
+  * coding
+    * system = "http://fhir.ru/core/systems/types-medical-documentation"
+    * code = #107
+    * version = "4.45"
+  
+* identifier
+  * system = "urn:oid:1.2.643.5.1.13.13.12.2.77.7809.100.1.1.51"
+  * value = "987964"
+  
+* restriction
+  * recipient = Reference(core-patient-instance-full)
+//* encounter = Reference(  
+* requester = Reference(core-practitioner-instance-fulll)
+
+* insurance = Reference(core-coverage-instance-full)
+
+* owner = Reference(core-organization-instance-full)
