@@ -1,0 +1,99 @@
+
+:title "Lab Observation"
+^hide
+:fsh/dir "RuLabIG"
+:profile fsh/
+
+Profile: Lab_Observation
+Id:      lab-observation
+Parent:  Core_Observation
+Title: "Результат наблюдения"
+Description: "Результат наблюдения"
+
+* code 1..1 MS
+  * coding 0..*
+    * system 0..1 MS
+    * version 0..1 MS
+    * code 0..1 MS
+    * display 0..1 MS
+
+* derivedFrom only Reference(DocumentReference or ImagingStudy or Lab_Media or QuestionnaireResponse or Lab_Observation or MolecularSequence)   
+
+* device 0..1 MS
+* device only Reference(Lab_Device or DeviceMetric) 
+
+* effective[x] MS
+
+* hasMember 0..1 MS
+* hasMember only Reference(Lab_Observation or MolecularSequence) /// or QuestionnaireRespons)
+
+* identifier.assigner only Reference(Core_Organization)
+
+* interpretation 0..* MS
+  * coding 1..*
+    * system 0..1 MS
+    * code 0..1 MS
+
+* note 0..* MS
+  * authorReference 0..1 MS
+  * authorReference only Reference(Practitioner or Patient or RelatedPerson or Organization)
+  * time 0..1 MS
+  * text 1..1 MS
+
+* performer 0..* MS
+* performer ^short = "Исполнитель"
+* performer only Reference(Core_Practitioner or Core_Practitioner_Role)
+
+* referenceRange 0..* MS
+  * low 0..1 MS
+    * value MS
+    * unit MS
+    * system MS
+    * code MS
+  * high MS
+    * value MS
+    * unit MS
+    * system MS
+    * code MS
+  * type 1..1 MS
+    * coding 1..*
+      * system 0..1 MS
+      * code 0..1 MS
+  * text 0..1 MS  
+
+* subject 0..1
+* subject only Reference(Core_Patient) 
+
+* value[x] MS
+
+* encounter 0..1
+* encounter only Reference(Core_Encounter)
+
+* device 0..1 MS 
+* device only Reference(Lab_Device or DeviceMetric)
+
+* status 1..1 MS
+
+* specimen 0..1 MS
+* specimen only Reference(Lab_Specimen)
+
+//----------instance-full-------------------------------
+Instance:   lab-observation-instance-full
+InstanceOf:  Lab_Observation
+Usage: #example
+
+* code
+  * coding
+    * code = #260385009
+
+* status = #final
+
+* device = Reference(lab-device-instance-full) 
+
+* hasMember = Reference(lab-observation-instance-full)
+
+* subject = Reference(core-patient-instance-full)
+//* encounter = Reference(
+* performer = Reference(core-practitioner-instance-full)
+
+* specimen = Reference(lab-specimen-instance-full)
