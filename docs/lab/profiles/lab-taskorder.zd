@@ -1,0 +1,51 @@
+
+:title "Lab ServiceRequest"
+^hide
+:fsh/dir "RuLabIG"
+
+:profile fsh/
+
+Profile: Lab_TaskOrder 
+Id:      lab-taskorder
+Parent:  Lab_Task
+Title: "Task Направления"
+Description: "Task Направления"
+
+* identifier.assigner  0..1
+* identifier.assigner only Reference(Core_Organization)
+
+
+//----------instance-full-------------------------------
+Instance:   lab-taskorder-instance-full
+InstanceOf:  Lab_TaskOrder 
+Usage: #example
+
+* intent = #order
+
+* status = #completed
+
+* insurance = Reference(core-coverage-instance-full)
+
+* requester = Reference(core-practitioner-instance-full)
+
+* id = "EB3C807C-6E85-DAEB-9041-CF95FAAE375A"
+
+* code
+  * coding
+    * system = "http://fhir.ru/core/systems/types-medical-documentation"
+    * code = #107
+    * version = "4.45"
+  
+* identifier
+  * system = "urn:oid:1.2.643.5.1.13.13.12.2.77.7809.100.1.1.51"
+  * value = "987964"
+  * assigner = Reference(core-organization-instance-full)
+  
+* restriction
+  * recipient = Reference(core-patient-instance-full)
+//* encounter = Reference(  
+* requester = Reference(core-practitioner-instance-full)
+
+* insurance = Reference(core-coverage-instance-full)
+
+* owner = Reference(core-organization-instance-full)
