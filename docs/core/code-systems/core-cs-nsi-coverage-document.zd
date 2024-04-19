@@ -43,7 +43,7 @@ Description: "НСИ МЗ РФ справочник [Документы-осно
 
 * ^caseSensitive = false
 
-* ^content = #all
+* ^content = #complete
 
 * #1 "Полис ОМС"
 * #2 "Полис ДМС"
