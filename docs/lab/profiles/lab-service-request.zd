@@ -1,4 +1,4 @@
-:title "LabServiceRequest"
+:title "Lab ServiceRequest"
 ^hide
 :fsh/dir "RuLabIG"
 :profile fsh/
