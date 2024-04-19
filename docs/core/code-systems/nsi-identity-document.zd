@@ -52,7 +52,7 @@ Description: "НСИ МЗ РФ справочник [документы удос
 
 * ^caseSensitive = false
 
-* ^content = #fragment
+* ^content = #example
 
 * #100 "Общегражданские документы"
   * #1 "Паспорт гражданина Российской Федерации"
