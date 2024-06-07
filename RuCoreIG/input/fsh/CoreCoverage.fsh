@@ -58,9 +58,9 @@ Usage: #example
 
 * type = $МЗРФ_Справочник_ИсточникиОплаты#1
 
-* payor = Reference(core-patient-payer-instance-ful)
+* payor = Reference(core-patient-payer-instance-full)
 
-* beneficiary = Reference(core-patient-instance-ful)
+* beneficiary = Reference(core-patient-instance-full)
 
 * identifier[OMS]
   * system = "http://fhir.ru/core/systems/OMS"
