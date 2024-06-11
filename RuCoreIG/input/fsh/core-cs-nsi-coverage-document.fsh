@@ -3,7 +3,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 
 * name =   "core-ns-nsi-coverage-document"
-
+ 
 * status = #active
 
 * kind = #codesystem
