@@ -1,7 +1,7 @@
 Profile: Core_Observation
 Id:      core-observation
 Parent:       Observation
-Title: " Измерения и простые утверждения о пациенте (Ru Core)"
+Title: "Core Observation (Измерения и простые утверждения о пациенте)"
 Description: " Измерения и простые утверждения о пациенте, устройстве или других объектах"
 
 * subject only Reference(Core_Patient)
@@ -14,14 +14,14 @@ Description: " Измерения и простые утверждения о п
 Instance: core-observation-instance-full
 InstanceOf: Core_Observation
 Usage: #example
-* subject = Reference(core-patient-full)
+* subject = Reference(core-patient-instance-full)
 
-* encounter = Reference(core-encounter-full)
+//* encounter = Reference(core-encounter-instance-full)
 
-* performer = Reference(core-practitioner-full)
+* performer = Reference(core-practitioner-instance-full)
 
 * status = #final
 
 * code
   * coding.system = "http://loinc.org"
-  * coding.code = #26038500
+  * coding.code = #10414-1
