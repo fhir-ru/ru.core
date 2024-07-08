@@ -1,7 +1,7 @@
 Profile: Core_Related_Person
 Id: core-related-person
 Parent: RelatedPerson
-Title: "Лицо, имеющее связь с пациентом(Ru Core)"
+Title: "Core Related Person (Лицо, имеющее связь с пациентом)"
 Description: "Лицо, имеющее связь с пациентом"
 
 * patient only Reference(Core_Patient)
