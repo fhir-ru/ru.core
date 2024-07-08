@@ -1,7 +1,7 @@
 Profile: Core_Patient_Payer
 Id: core-patient-payer
 Parent: Core_Patient
-Title: "Пациент - плательщик (Ru Core)"
+Title: "Core Patient Payer (Пациент - плательщик)"
 Description: "Пациент – плательщик, передача ИНН обязательна"
 
 * identifier[INN] 1..1
