@@ -1,7 +1,7 @@
 Profile: Core_Patient
 Id:      core-patient
 Parent:       Patient
-Title: "Пациент (Ru Core)"
+Title: "Core Patient (Пациент)"
 Description: "Пациент"
 
 * address ^short = "Адрес пациента"
@@ -34,7 +34,7 @@ Description: "Пациент"
   * type 1..1
   * type ^short = "Тип идентификатора, кодируется по Fixed value: http://terminology.hl7.org/CodeSystem/v2-0203" 
   * type = #TAX
-  * type from http://terminology.hl7.org/CodeSystem/v2-0203
+//  * type from http://terminology.hl7.org/CodeSystem/v2-0203
 
 * identifier[passportRF] ^short = "Паспорт гражданина Российской Федерации"
   * value only string
@@ -52,7 +52,7 @@ Description: "Пациент"
   * type 1..1
   * type ^short = "Тип идентификатора, кодируется по Fixed value: http://terminology.hl7.org/CodeSystem/v2-0203" 
   * type = #SB
-  * type from http://terminology.hl7.org/CodeSystem/v2-0203
+//  * type from http://terminology.hl7.org/CodeSystem/v2-0203
   
 * name ^short = "ФИО пациента"
   * family ^short = "Фамилия пациента"
