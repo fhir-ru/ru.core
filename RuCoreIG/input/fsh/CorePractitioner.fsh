@@ -1,7 +1,7 @@
 Profile: Core_Practitioner
 Id:      core-practitioner
 Parent:       Practitioner
-Title: "Врач/сотрудник (Ru Core)"
+Title: "Core Practitioner (Врач/сотрудник)"
 Description: "Врач, медицинский работник, специалист"
 
 * address only Core_Address
@@ -40,7 +40,9 @@ Description: "Врач, медицинский работник, специал�
   
 * gender ^short = "Пол специалиста. Используются позиции: male | female | unknown. Other - не используется для совместимости со Справочником НСИМЗ Пол пациента"
 * gender 0..1
-  
+
+* qualification.code from http://terminology.hl7.org/ValueSet/v2-0360  
+
 //----------instance-full-------------------------------
 Instance: core-practitioner-instance-full
 InstanceOf: Core_Practitioner
