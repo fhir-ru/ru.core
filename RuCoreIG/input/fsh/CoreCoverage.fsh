@@ -1,7 +1,7 @@
 Profile: Core_Coverage
 Id:      core-coverage
 Parent:       Coverage
-Title: "Источник финансирования (Ru Core)"
+Title: "Core Coverage (Источник финансирования)"
 Description: "Источник финансирования"
 
 * type ^short = "Тип страхового покрытия. Binding:  Core_Vs_Nsi_Sources_Of_Paymente(required) Справочник НСИ Минздрава Источники оплаты медицинской помощи"
