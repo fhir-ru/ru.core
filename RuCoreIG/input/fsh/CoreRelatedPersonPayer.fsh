@@ -1,8 +1,8 @@
 Profile: Core_Related_Person_Payer
 Id: core-related-person-payer
 Parent: Core_Related_Person
-Title: "Лицо, имеющее связь с пациентом-плательщик(Ru Core)"
-Description: "Лицо, имеющее связь с пациентом с обязательным указанием ИНН"
+Title: "Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)"
+Description: "Лицо-плательщик, имеющее связь с пациентом"
 * identifier 1..1
 * identifier ^short = "Государственный идентификационный номер налогоплательщика (ИНН)"
   * value only string
