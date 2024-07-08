@@ -1,7 +1,7 @@
 Profile: Core_Organization
 Id: core-organization
 Parent: Organization
-Title: "Организация (Ru Core)"
+Title: "Core Organization (Организация)"
 Description: "Организация"
 
 * name 1..1 MS
@@ -31,7 +31,7 @@ Description: "Организация"
   * type 1..1
   * type ^short = "Тип идентификатора, кодируется по Fixed value: http://terminology.hl7.org/CodeSystem/v2-0203" 
   * type = #TAX
-  * type from http://terminology.hl7.org/CodeSystem/v2-0203
+//  * type from http://terminology.hl7.org/CodeSystem/v2-0203
 
 * identifier[FRMO] ^short = "Федеральный реестр медицинских органзаций МЗ РФ (ФРМО)"
   * value only string
