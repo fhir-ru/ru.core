@@ -30,7 +30,7 @@ Usage: #definition
 Alias: $МЗРФ_Справочник_УровеньКонфиденциальностиМедицинскогоДокумента = Core_Cs_Nsi_Confidentiality
 CodeSystem: Core_Cs_Nsi_Confidentiality
 Id:         core-cs-nsi-confidentiality
-Title: "Уровень конфиденциальности медицинского документа"
+Title: "Core CodeSystem NSI Confidentiality (Уровень конфиденциальности медицинского документа)"
 Description: "НСИ МЗ РФ справочник [Уровень конфиденциальности медицинского документа](http://fhir.ru/core/CodeSystem/core-cs-nsi-confidentiality)"
 
 * ^experimental = false
