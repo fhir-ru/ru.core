@@ -30,7 +30,7 @@ Usage: #definition
 Alias: $МЗРФ_Справочник_ДокументыОснованияОплаты = Core_Cs_Nsi_Coverage_Document
 CodeSystem: Core_Cs_Nsi_Coverage_Document
 Id:         core-cs-nsi-coverage-document
-Title: "Документы-основания для оплаты медицинских услуг"
+Title: "Core CodeSystem NSI coverage document (Документы-основания для оплаты медицинских услуг)"
 Description: "НСИ МЗ РФ справочник [Документы-основания для оплаты](http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document)"
 
 * ^experimental = false
