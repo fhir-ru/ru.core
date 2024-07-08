@@ -1,7 +1,7 @@
 Profile: Core_ServiceRequest
 Id:      core-servicerequest
 Parent:       ServiceRequest
-Title: "Заказ услуги (Ru Core)"
+Title: "Core Service Request (Заказ услуги)"
 Description: "Заказ услуги"
 
 * subject 1..1
