@@ -40,7 +40,7 @@ Usage: #definition
 Alias: $МЗРФ_Справочник_ДокументыУдостоверяющиеЛичность = Core_Cs_Nsi_Identity_Document
 CodeSystem: Core_Cs_Nsi_Identity_Document
 Id:         core-cs-nsi-identity-document
-Title: "Документы удостоверяющие личность"
+Title: "Core CodeSystem NSI Identity Documents (Документы удостоверяющие личность)"
 Description: "НСИ МЗ РФ справочник [документы удостоверяющие личность](http://fhir.ru/core/NamingSystem/core-ns-nsi-identity-document)"
 
 * ^experimental = false
