@@ -31,7 +31,7 @@ Usage: #definition
 Alias: $МЗРФ_Справочник_ВидыМедицинскойДокументации = Core_Cs_Nsi_Types_Medical_Documentation
 CodeSystem: Core_Cs_Nsi_Types_Medical_Documentation
 Id:         core-cs-nsi-types-medical-documentation
-Title: "Виды медицинской документации"
+Title: "Core CodeSystem NSI types of medical documentation (Виды медицинской документации)"
 Description: "НСИ МЗ РФ справочник [Виды медицинской документации](http://fhir.ru/core/CodeSystem/core-cs-nsi-types-medical-documentation)"
 
 * ^experimental = false
