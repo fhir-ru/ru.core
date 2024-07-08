@@ -29,7 +29,7 @@ Usage: #definition
 Alias: $МЗРФ_Справочник_ИсточникиОплаты = Core_Cs_Nsi_Sources_Of_Payment
 CodeSystem: Core_Cs_Nsi_Sources_Of_Payment
 Id:         core-cs-nsi-sources-of-payment
-Title: "<Источники оплаты медицинской помощи"
+Title: "Core CodeSystem NSI sources of payment (Источники оплаты медицинской помощи)"
 Description: "НСИ МЗ РФ справочник [Источники оплаты медицинской помощи](http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment)"
 
 * ^experimental = false
