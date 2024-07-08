@@ -1,7 +1,7 @@
 Alias: $Ядро_Расширение_КодыФИАС = Core_Ex_Address_Fias
 Extension: Core_Ex_Address_Fias
 Id:        core-ex-address-fias
-Title: "Кодирование адреса по ФИАС"
+Title: "Core Extension address fias (Кодирование адреса по ФИАС)"
 Description: "Кодирование адреса по ФИАС. При маппинге на СЭМД данный url соответствует urn:hl7-ru:fias"
 
 * extension contains
