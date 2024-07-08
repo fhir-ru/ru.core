@@ -30,7 +30,7 @@ Usage: #definition
 Alias: $МЗРФ_Справочник_ДолжностиМедицинскихРаботников = Core_Cs_Nsi_Medical_Workers_Positions
 CodeSystem: Core_Cs_Nsi_Medical_Workers_Positions
 Id:         core-cs-nsi-medical-workers-positions
-Title: "Должности медицинских работников"
+Title: "Core CodeSystem NSI medical workers positions (Должности медицинских работников)"
 Description: "НСИ МЗ РФ справочник [Должности медицинских и фармацевтических работников](http://fhir.ru/core/CodeSystem/core-cs-nsi-medical-workers-positions)"
 
 * ^experimental = false
