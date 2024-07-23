@@ -1,5 +1,8 @@
 :title "Core Patient"
 
+
+https://github.com/fhir-ru/RuCoreIG/blob/main/input/fsh/CorePatient.fsh
+
 :profile fsh/
 
 
