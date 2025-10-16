@@ -22,11 +22,8 @@ RUN cd RuCoreIG && ./_genonce.sh
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 8080
 EXPOSE 8081
-EXPOSE 8082
-EXPOSE 8083
 EXPOSE 8084
 EXPOSE 8085
 
-ENTRYPOINT nginx -g 'daemon off;' & node ./server/src/index.js & clojure -M:run-cloud
+ENTRYPOINT nginx -g 'daemon off;'
