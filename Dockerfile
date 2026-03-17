@@ -1,18 +1,14 @@
-FROM clojure:temurin-17-tools-deps-jammy
+FROM eclipse-temurin:17-jdk-jammy
 
 WORKDIR /app
 
+RUN curl -fsSL https://deb.nodesource.com/setup_21.x | bash && \
+    apt-get update && apt-get install -y ruby-full build-essential zlib1g-dev nginx nodejs && \
+    gem install jekyll bundler && \
+    npm install -g fsh-sushi@latest && \
+    rm -rf /var/lib/apt/lists/*
+
 COPY . .
-
-RUN curl -fsSL https://deb.nodesource.com/setup_21.x | bash
-RUN apt-get update && apt-get install ruby-full build-essential zlib1g-dev make nginx nodejs -y
-
-RUN gem install jekyll bundler
-RUN npm install -g fsh-sushi@latest
-
-RUN cd ./server && npm ci
-
-RUN clojure -M:download-deps
 
 RUN cd RuCoreIG && ./_updatePublisher.sh -y
 RUN cd RuCoreIG && ./_genonce.sh
@@ -26,4 +22,4 @@ EXPOSE 8081
 EXPOSE 8084
 EXPOSE 8085
 
-ENTRYPOINT nginx -g 'daemon off;'
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
