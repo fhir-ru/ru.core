@@ -23,8 +23,15 @@ jobs:
         with:
           node-version: 21
 
-      - name: Install SUSHI
-        run: npm install -g fsh-sushi@latest
+      - name: Install Ruby and Jekyll
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Install SUSHI and Jekyll
+        run: |
+          npm install -g fsh-sushi@latest
+          gem install jekyll bundler
 
       - name: Download IG Publisher
         run: cd RuCoreIG && ./_updatePublisher.sh -y
