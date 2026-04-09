@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="core-vs-nsi-types-medical-documentation"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet core-vs-nsi-types-medical-documentation</b></p><a name="core-vs-nsi-types-medical-documentation"> </a><a name="hccore-vs-nsi-types-medical-documentation"> </a><ul><li>Include all codes defined in <a href="CodeSystem-core-cs-nsi-types-medical-documentation.html"><code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li></ul></div>
+  </text>
+  <url value="https://fhir.ru/ig/core/ValueSet/core-vs-nsi-types-medical-documentation"/>
+  <version value="1"/>
+  <name value="Core_Vs_Nsi_Types_Medical_Documentation"/>
+  <title value="Core ValueSet types medical documentation (Виды медицинской документации)"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-09T17:27:53+00:00"/>
+  <publisher value="HL7 FHIR Россия"/>
+  <contact>
+    <name value="HL7 FHIR Россия"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://fhir.ru"/>
+    </telecom>
+  </contact>
+  <description value="Виды медицинской документации - набор из всех значений системы кодирования"/>
+  <compose>
+    <include>
+      <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,1624 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 0, errors = 4, warn = 92, info = 3-->
+<head>
+  <title>RuCoreIG : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    button { padding: 0px 8px; font-size: 12px; cursor: pointer; border-radius: 2px; border: 1px solid #ccc; background-color: #f0f0f0 }
+    button:hover { background-color: #e0e0e0; }
+    .code-value { display: inline; }
+    .code-hidden { display: none; }
+    span.toggle  { font-size: 10px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
+    function toggleCodes() {
+      const codes = document.getElementsByClassName('code-value');
+      for (let code of codes) {
+        code.classList.toggle('code-hidden');
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for RuCoreIG</h1>
+ <p>Generated Thu Apr 09 17:29:54 UTC 2026, FHIR version 4.3.0 for ru.core#1 (canonical = <a href="https://fhir.ru/ig/core">https://fhir.ru/ig/core</a> (<a href="https://fhir.ru/ig/core/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.2.5</span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ru.core, Canonical = https://fhir.ru/ig/core</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Language Info:</td><td>This IG has no language information</td></tr>
+ <tr><td><a href="https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation">Publication Request</a>:</td><td><ul><li>Version '1' does not conform to semver rules <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li><span title="Not Found">This IG has never been published</span> <img src="information.png" height="16px" width="16px"/></li>
+<li>This IG has never been published, so the version should start with '0.' or include a patch version e.g. '-ballot' <img src="icon-warning.png" height="16px" width="16px"/></li>
+<li>No publication request found <img src="information.png" height="16px" width="16px"/></li>
+</ul>
+</td></tr>
+ <tr><td>Supressed Messages:</td><td>No Suppressed Issues
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="dep" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ru.core/ru.core/RuCoreIG/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> ru.core</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4B">R4B</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">https://fhir.ru/ig/core</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ru.core/ru.core/RuCoreIG/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACwSURBVDhP7ZLBDsIwCIaLZz34xG3f2cQYo5UfYalJoY07ePFL4GcbpZSVWmvJgwifG+njkLDACgfVIehAQ5ffdMDvxSS2Dmqty62UUmS1rIWD8UuWd9xxVt1AnoaSGx6Buap+0G80K3BTtbtwhLPZQL0CSIA9OwUXON7dZkBeASTAThb3bffMjnCHGy00ZgUeqi5f3YOcsw01vsqYMrMljwgLrBDOwP53xL+D3R2k9ALHsmr3Yu73+gAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.terminology.r4</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">7.1.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="background-color: #ffcccc; background-color: #ffcccc" href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org/7.1.0</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">FHIR Version Mismatch</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aaa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ru.core/ru.core/RuCoreIG/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.extensions.r4</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">5.2.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="background-color: #ffcccc; background-color: #ffcccc" href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions/5.2.0</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">FHIR Version Mismatch</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ru.core/ru.core/RuCoreIG/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.extensions.r4</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">5.2.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="background-color: #ffcccc; background-color: #ffcccc" href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions/5.2.0</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">FHIR Version Mismatch (as above)</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #fcf7c0" id="ac" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ru.core/ru.core/RuCoreIG/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAEvnpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjarVdbdsQmDP1nFV0CEojHcnie0x10+b14EM5kkmbS1k4sLGQk7pVEYsZff07zBy4mScZLTCGHYHH57DMXDJJ9XPV6kvXXc79YHTzpzZlgqByke7xm3voBPca03/N2QmqvCx1PBSO5J0rZ+vqsr3tBTp8X2hE4eni2fX+wF3K8I/KP97YjCjnFp631tj37rUr3r3eRgwSKHk/PNsaQMU5sfQSefQXq4uUeGG1PqtB3NWXExMORs3g6t6N069e7ApnxJMcGhuQiXtilayJdwFtQiRCwcH4sPIs9YH7E5sbom+udbVk4mWMZf2DtTpDn/Dgj+ka/0+CwlsKecM+02nDkl3oSXUgn3PHDHz2ndjw/6cF2+AiF+Uj3nD3Na9PYRfEBWIS9Kd3KNYJdXSheXwXc0QaDrE0YrDvjTrbYhhTotqHSKsaZGNxP8tSp0KRxyUYNIXoeHCGZm2F3KRNIytzcSga/bpockSMdScGuXTnkHZ9Y6HKbL3eNku3GdoIpExZDWv3727xrOOeqJSKbDlaIi1c1IApLoH8JmIERmhtUuQDW+/O1eHVgUC6YEzZYbDWPJarQnVzuItrBUCAftUex7wUAEVwLgiEHBmwgJxQQUWSORAAygaCC0FGNXMEAiXBHkOydCyAH1QHf+CbSZcrCDzW6qvPGiQso2rSqGGR5L8if6BNyqIgTLyJBoiTJUoILq/JCiGG15xJd9FFiiDEmE3MsySWfJIUUU0o5lczZoX1LRp3mlHMuBU4LVi74usCglMrVVV+lhhprqtnU0pA+zTdpocWWWm6lc3cdBd5Djz313MuggVQafsgII4408igTqTbd9FNmmNHMNPMsh7VN68v9C9Zos8YXU8swHtagjVGXoNVOZHEGxtgTCI9gDYwhsRdnNpH3vJhbnOE8QlUII0hZ5HRajIFBP4hl0uFuM2eA4v/Cm4np4o3/K3NmUfcmc6+8fcVaX6dEuxh7lOEC1TpU34yzcMIPjt/vpflqgi6BlVvdGkC8VVHIyzr8Pkljv5n4rbwXykvgtAK0/aGiPvYklbhn6TtpfjJ4UzoT9t6n7YpHLS8j+6M07xp+LdGpdiBm2qzKcmLqQUnid6X55QfphsJpsvSFkwFQkk4kg38byU8RHb7jw+EaWR2JqOeoARZT92Somj2jaEq58n5c5knRmrpqVXXdqy67A8EpomE3LcaOqX5RzMcyqxJ2b4VlbsXx3OQs7Q8aLdzKoXwpQoOKgj36sXMn2/pJt+l/Sk3zkqs8zk4VMZobfT6EpMMlPejC1px+2e7EP1jWE6j8c0zmi/pJCgxXbSPtTo6ssYRwZtF4zO48RQ2bNig66Ha+Qft1Zg+vy5STsvZG6HRBq7Mmxnpa49Rg6vlY9ON4XIwvE8v8Q6YVeYklO/UqGpSQgs25P/dxqodbPrXrtanevULCB8/mnZq8TyV7CNAmzLsg1v8i45SVfhl0K0m34g9q46AW3sXodEX1VHRZOXXp1cicDhaSQpTn5wbGdyf7rheY3/bUl6Nys4Bak/FSEScb+4kp/Lb6f5Lsjtv+8bBfp4jXxJP5uW/8dFLHiT+IsvkbxL7pfRLafrkAAAEiaUNDUElDQyBwcm9maWxlAAB4nJ2Qv0rDUBTGf6niP+qkOKhDBteCg2ZyqQqhoBBjBatTmqRYTGJIUopv4Jvow3QQBJ/BWcHZ70YHB7N44eP8OJzzffdeaNlJmJbzu5BmVeH63cHl4MpefGOZtrTFXhCWedfzTmg8n69Ypr50jFfz3J9nIYrLUHUmZWFeVGAdiJ1plRuWWL/t+0fiB7EdpVkkfhLvRGlk2Oz6aTIJfzzNbdpxdnFu+tI2Lj1O8bAZMmFMQkVHNVPnGId9VZeCgHtKQtWEWL2pZipuRKWcXA5FfZFu05C3Wed5ShnKYywvk3BHKk+Th/nf77WPs3rT2pjlQRHUrTmpNRrB+yOsDmDtGVauG7KWfr+tYcapZ/75xi8Ik1B1a4BIzwAADRxpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6ZjNlMmQ5MzgtMDE4Yi00YmEyLThiMzQtNDBiM2Q4MmJjZDMzIgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0ZTMwYzM5LTllYWItNGJjZS1hMjU0LTUxOGY3ODRjODg0NiIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmUxNzgzM2U1LWQ1ZWMtNDM3NC1hYzJlLTk0YzVlN2I5OGUzNyIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09Ik1hYyBPUyIKICAgR0lNUDpUaW1lU3RhbXA9IjE3MjYxMzMyOTE1MjEwMDciCiAgIEdJTVA6VmVyc2lvbj0iMi4xMC4zMCIKICAgdGlmZjpPcmllbnRhdGlvbj0iMSIKICAgeG1wOkNyZWF0b3JUb29sPSJHSU1QIDIuMTAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmN2Q4YzdkZC1mMGNlLTQxNWYtOWQ1ZS04NGE2YThmNGZkMDUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTWFjIE9TKSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyNC0wOS0xMlQxNzoyODoxMSswODowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz7Mhr9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH6AkMCRwLD3FR3AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC8SURBVBjTY/gPAf9e/YUwmBig4Nh7CA0T+H/7JqrAhzf3UQR+TeB4DGEx/mdgYPhy/vg32W/iIUxQFW+Xvf7h9tb03AOolv8rHU84/Wf69fsRVOAt80F1+Tcal/k/QAVuqfx0e/tRmVmBBSrAyyPG8zTglpmEEFRAgUfkj8Z9BUVO2ddQFeIC/wQYFBj4PnMwMDCwMDAwCDB95RJj+8DDygsVYBFiY2Bj4f4nCncpA8OfH/9/8zMzMDAwAAB49kdRfpOTuAAAAABJRU5ErkJggg==" alt="." style="background-color: #fcf7c0; background-color: inherit" title="NPM Package IG Dependency" class="hierarchy"/> hl7.fhir.uv.tools.r4</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1.1.2 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="background-color: #ffcccc; background-color: #ffcccc" href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/tools</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/tools/1.1.2</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Internal Dependency. FHIR Version Mismatch</td></tr>
+</table><para>Templates: fhir.base.template#current</para></div></td></tr>
+ <tr><td>Related IGs:</td><td>n/a</td></tr>
+ <tr><td>Dependent IGs:</td><td><a href="qa-dep.html">no references</a></td></tr>
+ <tr><td>Global Profiles:</td><td>(none declared)</td></tr>
+ <tr><td>Terminology Server(s):</td><td><a href="https://tx.fhir.org/r4">https://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>R5 Dependencies:</td><td><ul><li><a href="http://build.fhir.org/namingsystem.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version</a></li><li><a href="http://build.fhir.org/namingsystem.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url</a></li></ul></td></tr>
+ <tr><td>Draft Dependencies:</td><td><ul>
+  <li>
+hl7.fhir.r4b.core#4.3.0:     <a href="http://hl7.org/fhir/R4B/codesystem-guide-parameter-code.html">GuideParameterCode</a>
+ (15 uses),     <a href="http://hl7.org/fhir/R4B/coverage.html">Coverage</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4B/valueset-languages.html">CommonLanguages</a>
+ (17 uses),     <a href="http://hl7.org/fhir/R4B/organization.html">Organization</a>
+ (47 uses),     <a href="http://hl7.org/fhir/R4B/valueset-fm-status.html">FinancialResourceStatusCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-coverage-type.html">CoverageTypeAndSelf-PayCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/relatedperson.html">RelatedPerson</a>
+ (10 uses),     <a href="http://hl7.org/fhir/R4B/valueset-subscriber-relationship.html">SubscriberRelationshipCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-coverage-class.html">CoverageClassCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-coverage-copay-type.html">CoverageCopayTypeCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-coverage-financial-exception.html">ExampleCoverageFinancialExceptionCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/contract.html">Contract</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/encounter.html">Encounter</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4B/valueset-encounter-status.html">EncounterStatus</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/valueset-encounter-type.html">EncounterType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-service-type.html">ServiceType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/group.html">Group</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/episodeofcare.html">EpisodeOfCare</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/servicerequest.html">ServiceRequest</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4B/valueset-encounter-participant-type.html">ParticipantType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/practitioner.html">Practitioner</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4B/practitionerrole.html">PractitionerRole</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4B/appointment.html">Appointment</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-encounter-reason.html">EncounterReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/condition.html">Condition</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4B/procedure.html">Procedure</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4B/immunizationrecommendation.html">ImmunizationRecommendation</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/valueset-diagnosis-role.html">DiagnosisRole</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/account.html">Account</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/location.html">Location</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4B/valueset-encounter-admit-source.html">AdmitSource</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-encounter-diet.html">Diet</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-encounter-special-courtesy.html">SpecialCourtesy</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-encounter-special-arrangements.html">SpecialArrangements</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-encounter-discharge-disposition.html">DischargeDisposition</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-encounter-location-status.html">EncounterLocationStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-location-physical-type.html">LocationType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/careplan.html">CarePlan</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/devicerequest.html">DeviceRequest</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/medicationrequest.html">MedicationRequest</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/nutritionorder.html">NutritionOrder</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/medicationadministration.html">MedicationAdministration</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/medicationdispense.html">MedicationDispense</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/medicationstatement.html">MedicationStatement</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/immunization.html">Immunization</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/imagingstudy.html">ImagingStudy</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/valueset-observation-status.html">ObservationStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-observation-category.html">ObservationCategoryCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-observation-codes.html">LOINCCodes</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/valueset-body-site.html">SNOMEDCTBodyStructures</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/valueset-observation-methods.html">ObservationMethods</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/specimen.html">Specimen</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/device.html">Device</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4B/devicemetric.html">DeviceMetric</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-referencerange-meaning.html">ObservationReferenceRangeMeaningCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-referencerange-appliesto.html">ObservationReferenceRangeAppliesToCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/questionnaireresponse.html">QuestionnaireResponse</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/molecularsequence.html">MolecularSequence</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/documentreference.html">DocumentReference</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/media.html">Media</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-organization-type.html">OrganizationType</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/valueset-contactentity-type.html">ContactEntityType</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/endpoint.html">Endpoint</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4B/valueset-c80-practice-codes.html">PracticeSettingCodeValueSet</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/healthcareservice.html">HealthcareService</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/valueset-relatedperson-relationshiptype.html">PatientRelationshipType</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4B/activitydefinition.html">ActivityDefinition</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/plandefinition.html">PlanDefinition</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-request-status.html">RequestStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-request-intent.html">RequestIntent</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-servicerequest-category.html">ServiceRequestCategoryCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-request-priority.html">RequestPriority</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-procedure-code.html">ProcedureCodes(SNOMEDCT)</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-servicerequest-orderdetail.html">ServiceRequestOrderDetailsCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-medication-as-needed-reason.html">SNOMEDCTMedicationAsNeededReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/careteam.html">CareTeam</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/valueset-procedure-reason.html">ProcedureReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/diagnosticreport.html">DiagnosticReport</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/claimresponse.html">ClaimResponse</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4B/provenance.html">Provenance</a>
+ (1 uses)
+  </li>
+</ul>
+</td></tr>
+ <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://fhir.ru/ig/core (Problem #1 with package-list.json at https://fhir.ru/ig/core: Not Found)</td></tr>
+ <tr><td>IPA Comparison:</td><td> n/a</td></tr>
+ <tr><td>IPS Comparison:</td><td> n/a</td></tr>
+ <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
+ <tr><td>Summary:</td><td> errors = 4, warn = 92, info = 3, broken links = 0, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>3</b></td><td><b>20</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_includes_fsh-link-references"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/includes/fsh-link-references</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_includes_menu"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/includes/menu</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-confidentiality"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-confidentiality</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-coverage-document"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-coverage-document</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-identity-document"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-identity-document</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-medical-workers-positions"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-medical-workers-positions</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-register-of-medical-organizations"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-register-of-medical-organizations</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-sources-of-payment"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-sources-of-payment</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-types-medical-documentation"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-types-medical-documentation</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Coverage-core-coverage-instance-full"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Coverage-core-coverage-instance-full</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ImplementationGuide-ru.core"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ImplementationGuide-ru.core</b></a></td><td><b>1</b></td><td><b>12</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-fias-aoguid"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-fias-aoguid</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-fias-houseguid"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-fias-houseguid</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-confidentiality"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-confidentiality</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-coverage-document"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-coverage-document</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-identity-document"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-identity-document</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-medical-workers-positions"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-medical-workers-positions</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-register-of-medical-organizations"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-register-of-medical-organizations</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-sources-of-payment"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-sources-of-payment</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-types-medical-documentation"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-types-medical-documentation</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-rf-birth-certificate"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-rf-birth-certificate</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-rf-inn"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-rf-inn</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-rf-ogrn"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-rf-ogrn</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-rf-snils"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-rf-snils</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Observation-core-observation-instance-full"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Observation-core-observation-instance-full</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Organization-core-organization-instance-full"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Organization-core-organization-instance-full</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Patient-core-patient-instance-full"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Patient-core-patient-instance-full</b></a></td><td><b>0</b></td><td><b>5</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Patient-core-patient-payer-instance-full"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Patient-core-patient-payer-instance-full</b></a></td><td><b>0</b></td><td><b>3</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Practitioner-core-practitioner-instance-full"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Practitioner-core-practitioner-instance-full</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_PractitionerRole-core-practitioner-role-instance-full"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/PractitionerRole-core-practitioner-role-instance-full</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_RelatedPerson-core-related-person-instance-full"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/RelatedPerson-core-related-person-instance-full</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_RelatedPerson-core-related-person-payer-instance-full"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/RelatedPerson-core-related-person-payer-instance-full</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ServiceRequest-core-servicerequest-instance-full"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ServiceRequest-core-servicerequest-instance-full</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-address"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-address</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-coverage"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-coverage</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-encounter"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-encounter</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-ex-address-fias"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-ex-address-fias</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-observation"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-observation</b></a></td><td><b>0</b></td><td><b>3</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-organization"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-organization</b></a></td><td><b>0</b></td><td><b>3</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-organization-payer"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-organization-payer</b></a></td><td><b>0</b></td><td><b>4</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-patient"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-patient</b></a></td><td><b>0</b></td><td><b>8</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-patient-payer"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-patient-payer</b></a></td><td><b>0</b></td><td><b>4</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-practitioner"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-practitioner</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-practitioner-role"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-practitioner-role</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-related-person"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-related-person</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-related-person-payer"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-related-person-payer</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-servicerequest"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-servicerequest</b></a></td><td><b>0</b></td><td><b>3</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-coverage-document"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-coverage-document</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-identity-documents"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-identity-documents</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-medical-workers-positions"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-medical-workers-positions</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-register-of-medical-organizations"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-register-of-medical-organizations</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-sources-of-payment"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-sources-of-payment</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-types-medical-documentation"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-types-medical-documentation</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-address-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-address-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-coverage-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-coverage-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-encounter-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-encounter-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-observation-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-observation-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-organization-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-organization-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-organizationpayer-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-organizationpayer-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-patient-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-patient-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-patientpayer-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-patientpayer-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-practitioner-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-practitioner-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-practitionerrole-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-practitionerrole-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-relatedperson-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-relatedperson-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-relatedpersonpayer-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-relatedpersonpayer-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-servicerequest-intro"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/StructureDefinition-core-servicerequest-intro</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_index"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/input/pagecontent/index</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_temp_pages__includes_artifacts"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/temp/pages/_includes/artifacts</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_template_config"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/template/config</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ru.core_ru.core_RuCoreIG_template_config__config"><b>/home/runner/work/ru.core/ru.core/RuCoreIG/template/config/_config</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
+ <table class="grid">
+   <tr style="background-color: #ffcccc">
+     <td><b>ImplementationGuide/ru.core</b></td><td><b>error</b></td><td><b>This IG is version 4.3.0, while the IG 'hl7.terminology.r4' is from version 4.0.1</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ImplementationGuide/ru.core</b></td><td><b>error</b></td><td><b>This IG is version 4.3.0, while the IG 'hl7.fhir.uv.extensions.r4' is from version 4.0.1</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ImplementationGuide/ru.core</b></td><td><b>error</b></td><td><b>This IG is version 4.3.0, while the IG 'hl7.fhir.uv.tools.r4' is from version 4.0.1</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Coverage/core-coverage-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Observation/core-observation-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Organization/core-organization-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/core-patient-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/core-patient-payer-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/core-practitioner-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource PractitionerRole/core-practitioner-role-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource RelatedPerson/core-related-person-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource RelatedPerson/core-related-person-payer-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource ServiceRequest/core-servicerequest-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/NamingSystem-core-ns-nsi-confidentiality&#8203;.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: Уровень (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.285, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/NamingSystem-core-ns-nsi-coverage-document&#8203;.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: Типы (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.724, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/NamingSystem-core-ns-nsi-medical-workers-positions&#8203;.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: Должности (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1002, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/NamingSystem-core-ns-nsi-register-of-medical-organizations&#8203;.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: Реестр (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1461, Дополнительный OID:???, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-ns-nsi-register_of_ medical_organizations)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/NamingSystem-core-ns-nsi-sources-of-payment&#8203;.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: Источники (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1039, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/NamingSystem-core-ns-nsi-types-medical-documentation&#8203;.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: illegal html element: Виды (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1522, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>1</b></td><td><b>warning</b></td><td><b>The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>2</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>3</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>4</b></td><td><b>warning</b></td><td><b>The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_includes_fsh-link-references"> </a>
+<h2><a href="">fsh-generated/includes/fsh-link-references.md</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_includes_menu"> </a>
+<h2><a href="">fsh-generated/includes/menu.xml</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-confidentiality"> </a>
+<h2><a href="CodeSystem-core-cs-nsi-confidentiality.html">fsh-generated/resources/CodeSystem-core-cs-nsi-confidentiality.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-coverage-document"> </a>
+<h2><a href="CodeSystem-core-cs-nsi-coverage-document.html">fsh-generated/resources/CodeSystem-core-cs-nsi-coverage-document.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-identity-document"> </a>
+<h2><a href="CodeSystem-core-cs-nsi-identity-document.html">fsh-generated/resources/CodeSystem-core-cs-nsi-identity-document.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem</b></td><td><b>information</b></td><td><b>CodeSystems SHOULD have a stated value for the hierarchyMeaning element so that users know the status and meaning of the code system clearly</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_CS_NONHL7_MISSING_ELEMENT</span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-medical-workers-positions"> </a>
+<h2><a href="CodeSystem-core-cs-nsi-medical-workers-positions.html">fsh-generated/resources/CodeSystem-core-cs-nsi-medical-workers-positions.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-register-of-medical-organizations"> </a>
+<h2><a href="CodeSystem-core-cs-nsi-register-of-medical-organizations.html">fsh-generated/resources/CodeSystem-core-cs-nsi-register-of-medical-organizations.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-sources-of-payment"> </a>
+<h2><a href="CodeSystem-core-cs-nsi-sources-of-payment.html">fsh-generated/resources/CodeSystem-core-cs-nsi-sources-of-payment.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_CodeSystem-core-cs-nsi-types-medical-documentation"> </a>
+<h2><a href="CodeSystem-core-cs-nsi-types-medical-documentation.html">fsh-generated/resources/CodeSystem-core-cs-nsi-types-medical-documentation.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Coverage-core-coverage-instance-full"> </a>
+<h2><a href="Coverage-core-coverage-instance-full.html">fsh-generated/resources/Coverage-core-coverage-instance-full.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>Coverage: Validated against <i>this.</i><a href="StructureDefinition-core-coverage.html">Core Coverage (Источник финансирования)</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Coverage.identifier[0].system (l24/c50)</b></td><td><b>warning</b></td><td><b>No definition could be found for URL value 'http://fhir.ru/core/systems/OMS'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_URL_Resolve</span></td><td><a href="StructureDefinition-core-coverage.html">Core Coverage (Источник финансирования)</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ImplementationGuide-ru.core"> </a>
+<h2><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>ImplementationGuide/ru.core: ImplementationGuide: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide.version</b></td><td><b>warning</b></td><td><b>The version 1 is not a valid semantic version and will not be acceptible to the ci-build, nor will it be a valid vesion in the NPM package system</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[0]&#8203;.name (l1&#8203;/c10415)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Core Encounter (Случай обслуживания)'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[11]&#8203;.description (l1&#8203;/c15157)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Измерения и простые утверждения о пациенте, устройстве или других объектах'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[17]&#8203;.description (l1&#8203;/c17097)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Роль (должность) врача, медицинского работника, специалиста'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[30]&#8203;.description (l1&#8203;/c21986)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Уровень конфиденциальности медицинского документа&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.285, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[31]&#8203;.description (l1&#8203;/c22480)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Типы документов оснований&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.724, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[32]&#8203;.description (l1&#8203;/c23055)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Документы, удостоверяющие личность&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.48, Дополнительный OID: 1.2.643.5.1.13.13.11.1011, 1.2.643.5.1.13.2.1.1.736, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-identity-document'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[33]&#8203;.description (l1&#8203;/c23632)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Должности медицинских и фармацевтических работников&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1002, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[34]&#8203;.description (l1&#8203;/c24224)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Реестр медицинских организаций Российской Федерации&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1461, Дополнительный OID:???, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-ns-nsi-register_of_ medical_organizations'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[35]&#8203;.description (l1&#8203;/c24730)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Источники оплаты медицинской помощи&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1039, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.resource[36]&#8203;.description (l1&#8203;/c25290)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Виды медицинской документации&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1522, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.dependsOn[0] (l1&#8203;/c1101)</b></td><td><b>warning</b></td><td><b>The ImplementationGuide is based on FHIR version 4.3.0 but package hl7.terminology.r4#7.1.0 is based on FHIR version 4.0.1. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">IG_DEPENDENCY_VERSION_WARNING</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ImplementationGuide&#8203;.dependsOn[1] (l1&#8203;/c1463)</b></td><td><b>error</b></td><td><b>The canonical URL http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions points to the package hl7.fhir.uv.extensions which is inconsistent with the stated packageId of hl7.fhir.uv.extensions.r4</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">IG_DEPENDENCY_CLASH_PACKAGEID</span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-fias-aoguid"> </a>
+<h2><a href="NamingSystem-core-ns-fias-aoguid.html">fsh-generated/resources/NamingSystem-core-ns-fias-aoguid.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-fias-houseguid"> </a>
+<h2><a href="NamingSystem-core-ns-fias-houseguid.html">fsh-generated/resources/NamingSystem-core-ns-fias-houseguid.json</a> <span id="svi13" class="toggle" onclick="toggle('vi13')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi13')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi13"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-confidentiality"> </a>
+<h2><a href="NamingSystem-core-ns-nsi-confidentiality.html">fsh-generated/resources/NamingSystem-core-ns-nsi-confidentiality.json</a> <span id="svi14" class="toggle" onclick="toggle('vi14')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi14')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi14"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>NamingSystem (l1/c2574)</b></td><td><b>warning</b></td><td><b>Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/NamingSystem#nsd-0</span></td><td><a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-coverage-document"> </a>
+<h2><a href="NamingSystem-core-ns-nsi-coverage-document.html">fsh-generated/resources/NamingSystem-core-ns-nsi-coverage-document.json</a> <span id="svi15" class="toggle" onclick="toggle('vi15')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi15')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi15"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>NamingSystem (l1/c2461)</b></td><td><b>warning</b></td><td><b>Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/NamingSystem#nsd-0</span></td><td><a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-identity-document"> </a>
+<h2><a href="NamingSystem-core-ns-nsi-identity-document.html">fsh-generated/resources/NamingSystem-core-ns-nsi-identity-document.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>NamingSystem (l1/c2907)</b></td><td><b>warning</b></td><td><b>Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/NamingSystem#nsd-0</span></td><td><a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-medical-workers-positions"> </a>
+<h2><a href="NamingSystem-core-ns-nsi-medical-workers-positions.html">fsh-generated/resources/NamingSystem-core-ns-nsi-medical-workers-positions.json</a> <span id="svi17" class="toggle" onclick="toggle('vi17')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi17')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi17"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>NamingSystem (l1/c2670)</b></td><td><b>warning</b></td><td><b>Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/NamingSystem#nsd-0</span></td><td><a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-register-of-medical-organizations"> </a>
+<h2><a href="NamingSystem-core-ns-nsi-register-of-medical-organizations.html">fsh-generated/resources/NamingSystem-core-ns-nsi-register-of-medical-organizations.json</a> <span id="svi18" class="toggle" onclick="toggle('vi18')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi18')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi18"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>NamingSystem (l1/c2253)</b></td><td><b>warning</b></td><td><b>Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/NamingSystem#nsd-0</span></td><td><a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-sources-of-payment"> </a>
+<h2><a href="NamingSystem-core-ns-nsi-sources-of-payment.html">fsh-generated/resources/NamingSystem-core-ns-nsi-sources-of-payment.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi19"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>NamingSystem (l1/c2498)</b></td><td><b>warning</b></td><td><b>Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/NamingSystem#nsd-0</span></td><td><a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-nsi-types-medical-documentation"> </a>
+<h2><a href="NamingSystem-core-ns-nsi-types-medical-documentation.html">fsh-generated/resources/NamingSystem-core-ns-nsi-types-medical-documentation.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi20"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>NamingSystem (l1/c2650)</b></td><td><b>warning</b></td><td><b>Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/NamingSystem#nsd-0</span></td><td><a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-rf-birth-certificate"> </a>
+<h2><a href="NamingSystem-core-ns-rf-birth-certificate.html">fsh-generated/resources/NamingSystem-core-ns-rf-birth-certificate.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-rf-inn"> </a>
+<h2><a href="NamingSystem-core-ns-rf-inn.html">fsh-generated/resources/NamingSystem-core-ns-rf-inn.json</a> <span id="svi22" class="toggle" onclick="toggle('vi22')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi22')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi22"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-rf-ogrn"> </a>
+<h2><a href="NamingSystem-core-ns-rf-ogrn.html">fsh-generated/resources/NamingSystem-core-ns-rf-ogrn.json</a> <span id="svi23" class="toggle" onclick="toggle('vi23')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi23')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi23"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_NamingSystem-core-ns-rf-snils"> </a>
+<h2><a href="NamingSystem-core-ns-rf-snils.html">fsh-generated/resources/NamingSystem-core-ns-rf-snils.json</a> <span id="svi24" class="toggle" onclick="toggle('vi24')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi24')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi24"><ul style="font-size: 7px"><li>NamingSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/namingsystem.html">NamingSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Observation-core-observation-instance-full"> </a>
+<h2><a href="Observation-core-observation-instance-full.html">fsh-generated/resources/Observation-core-observation-instance-full.json</a> <span id="svi25" class="toggle" onclick="toggle('vi25')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi25')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi25"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-core-observation.html">Core Observation (Измерения и простые утверждения о пациенте)</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Observation (l1/c2)</b></td><td><b>warning</b></td><td><b>Best Practice Recommendation: In general, all observations should have an effective[x] ()</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">All_observations_should_have_an_effectiveDateTime_or_an_effectivePeriod</span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Organization-core-organization-instance-full"> </a>
+<h2><a href="Organization-core-organization-instance-full.html">fsh-generated/resources/Organization-core-organization-instance-full.json</a> <span id="svi26" class="toggle" onclick="toggle('vi26')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi26')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi26"><ul style="font-size: 7px"><li>Organization: Validated against <i>this.</i><a href="StructureDefinition-core-organization.html">Core Organization (Организация)</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Organization&#8203;.identifier[0]&#8203;.type&#8203;.coding[0] (l45&#8203;/c8)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="StructureDefinition-core-organization.html">Core Organization (Организация)</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Organization&#8203;.identifier[1]&#8203;.system (l56&#8203;/c51)</b></td><td><b>warning</b></td><td><b>No definition could be found for URL value 'http://fhir.ru/core/systems/frmo'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_URL_Resolve</span></td><td><a href="StructureDefinition-core-organization.html">Core Organization (Организация)</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Patient-core-patient-instance-full"> </a>
+<h2><a href="Patient-core-patient-instance-full.html">fsh-generated/resources/Patient-core-patient-instance-full.json</a> <span id="svi27" class="toggle" onclick="toggle('vi27')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi27')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi27"><ul style="font-size: 7px"><li>Patient: Validated against <i>this.</i><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Patient&#8203;.identifier[0]&#8203;.type&#8203;.coding[0]&#8203;.system (l46&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Patient&#8203;.identifier[1]&#8203;.type&#8203;.coding[0] (l58&#8203;/c8)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Patient&#8203;.identifier[2]&#8203;.type&#8203;.coding[0]&#8203;.system (l69&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Patient.identifier[2].system (l77/c58)</b></td><td><b>warning</b></td><td><b>No definition could be found for URL value 'http://fhir.ru/core/systems/passport-RF'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_URL_Resolve</span></td><td><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Patient&#8203;.identifier[3]&#8203;.type&#8203;.coding[0] (l81&#8203;/c8)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Patient-core-patient-payer-instance-full"> </a>
+<h2><a href="Patient-core-patient-payer-instance-full.html">fsh-generated/resources/Patient-core-patient-payer-instance-full.json</a> <span id="svi28" class="toggle" onclick="toggle('vi28')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi28')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi28"><ul style="font-size: 7px"><li>Patient: Validated against <i>this.</i><a href="StructureDefinition-core-patient-payer.html">Core Patient Payer (Пациент - плательщик)</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Patient&#8203;.identifier[0]&#8203;.type&#8203;.coding[0]&#8203;.system (l46&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="StructureDefinition-core-patient-payer.html">Core Patient Payer (Пациент - плательщик)</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Patient.identifier[0].system (l54/c58)</b></td><td><b>warning</b></td><td><b>No definition could be found for URL value 'http://fhir.ru/core/systems/passport-RF'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_URL_Resolve</span></td><td><a href="StructureDefinition-core-patient-payer.html">Core Patient Payer (Пациент - плательщик)</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Patient&#8203;.identifier[1]&#8203;.type&#8203;.coding[0] (l58&#8203;/c8)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="StructureDefinition-core-patient-payer.html">Core Patient Payer (Пациент - плательщик)</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_Practitioner-core-practitioner-instance-full"> </a>
+<h2><a href="Practitioner-core-practitioner-instance-full.html">fsh-generated/resources/Practitioner-core-practitioner-instance-full.json</a> <span id="svi29" class="toggle" onclick="toggle('vi29')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi29')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi29"><ul style="font-size: 7px"><li>Practitioner: Validated against <i>this.</i><a href="StructureDefinition-core-practitioner.html">Core Practitioner (Врач/сотрудник)</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Practitioner&#8203;.identifier[1]&#8203;.type&#8203;.coding[0]&#8203;.system (l15&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="StructureDefinition-core-practitioner.html">Core Practitioner (Врач/сотрудник)</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Practitioner&#8203;.identifier[1]&#8203;.system (l23&#8203;/c58)</b></td><td><b>warning</b></td><td><b>No definition could be found for URL value 'http://fhir.ru/core/systems/passport-RF'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_URL_Resolve</span></td><td><a href="StructureDefinition-core-practitioner.html">Core Practitioner (Врач/сотрудник)</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_PractitionerRole-core-practitioner-role-instance-full"> </a>
+<h2><a href="PractitionerRole-core-practitioner-role-instance-full.html">fsh-generated/resources/PractitionerRole-core-practitioner-role-instance-full.json</a> <span id="svi30" class="toggle" onclick="toggle('vi30')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi30')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi30"><ul style="font-size: 7px"><li>PractitionerRole: Validated against <i>this.</i><a href="StructureDefinition-core-practitioner-role.html">Core PractitionerRole (Роль/должность сотрудника)</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>PractitionerRole&#8203;.code[0]&#8203;.coding[0]&#8203;.system (l10&#8203;/c6)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://fhir.ru/core/systems/medical-workers-positions' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="StructureDefinition-core-practitioner-role.html">Core PractitionerRole (Роль/должность сотрудника)</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_RelatedPerson-core-related-person-instance-full"> </a>
+<h2><a href="RelatedPerson-core-related-person-instance-full.html">fsh-generated/resources/RelatedPerson-core-related-person-instance-full.json</a> <span id="svi31" class="toggle" onclick="toggle('vi31')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi31')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi31"><ul style="font-size: 7px"><li>RelatedPerson: Validated against <i>this.</i><a href="StructureDefinition-core-related-person.html">Core Related Person (Лицо, имеющее связь с пациентом)</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_RelatedPerson-core-related-person-payer-instance-full"> </a>
+<h2><a href="RelatedPerson-core-related-person-payer-instance-full.html">fsh-generated/resources/RelatedPerson-core-related-person-payer-instance-full.json</a> <span id="svi32" class="toggle" onclick="toggle('vi32')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi32')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi32"><ul style="font-size: 7px"><li>RelatedPerson: Validated against <i>this.</i><a href="StructureDefinition-core-related-person-payer.html">Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>RelatedPerson&#8203;.identifier[0]&#8203;.type&#8203;.coding[0] (l57&#8203;/c8)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="StructureDefinition-core-related-person-payer.html">Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ServiceRequest-core-servicerequest-instance-full"> </a>
+<h2><a href="ServiceRequest-core-servicerequest-instance-full.html">fsh-generated/resources/ServiceRequest-core-servicerequest-instance-full.json</a> <span id="svi33" class="toggle" onclick="toggle('vi33')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi33')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi33"><ul style="font-size: 7px"><li>ServiceRequest: Validated against <i>this.</i><a href="StructureDefinition-core-servicerequest.html">Core Service Request (Заказ услуги)</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-address"> </a>
+<h2><a href="StructureDefinition-core-address.html">fsh-generated/resources/StructureDefinition-core-address.json</a> <span id="svi34" class="toggle" onclick="toggle('vi34')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi34')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi34"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-coverage"> </a>
+<h2><a href="StructureDefinition-core-coverage.html">fsh-generated/resources/StructureDefinition-core-coverage.json</a> <span id="svi35" class="toggle" onclick="toggle('vi35')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi35')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi35"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[4]&#8203;.binding&#8203;.extension[0] (l1&#8203;/c61390)</b></td><td><b>information</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DEPENDS_ON_DEPRECATED</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[37]&#8203;.binding</b></td><td><b>warning</b></td><td><b>The definition for the element 'Coverage.status' binds to the value set 'http://hl7.org/fhir/ValueSet/fm-status|4.3.0' which is experimental, but this structure is not labeled as experimental</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_EXPERIMENTAL_BINDING</span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-encounter"> </a>
+<h2><a href="StructureDefinition-core-encounter.html">fsh-generated/resources/StructureDefinition-core-encounter.json</a> <span id="svi36" class="toggle" onclick="toggle('vi36')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi36')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi36"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.title (l1/c6619)</b></td><td><b>warning</b></td><td><b>value should not start or finish with whitespace ' Core Encounter (Случай обслуживания)'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_String_WS</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'https:&#8203;/&#8203;/fhir&#8203;.ru&#8203;/ig&#8203;/core&#8203;/StructureDefinition&#8203;/core-encounter')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-ex-address-fias"> </a>
+<h2><a href="StructureDefinition-core-ex-address-fias.html">fsh-generated/resources/StructureDefinition-core-ex-address-fias.json</a> <span id="svi37" class="toggle" onclick="toggle('vi37')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi37')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi37"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.context[0]</b></td><td><b>warning</b></td><td><b>Review the extension type for core-ex-address-fias: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_CONTEXT_SHOULD_NOT_BE_ELEMENT</span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-observation"> </a>
+<h2><a href="StructureDefinition-core-observation.html">fsh-generated/resources/StructureDefinition-core-observation.json</a> <span id="svi38" class="toggle" onclick="toggle('vi38')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi38')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi38"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[12]&#8203;.binding</b></td><td><b>warning</b></td><td><b>The definition for the element 'Observation.status' binds to the value set 'http://hl7.org/fhir/ValueSet/observation-status|4.3.0' which is experimental, but this structure is not labeled as experimental</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_EXPERIMENTAL_BINDING</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[13]&#8203;.binding</b></td><td><b>warning</b></td><td><b>The definition for the element 'Observation.category' binds to the value set 'http://hl7.org/fhir/ValueSet/observation-category|4.3.0' which is experimental, but this structure is not labeled as experimental</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_EXPERIMENTAL_BINDING</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[35]&#8203;.binding</b></td><td><b>warning</b></td><td><b>The definition for the element 'Observation.referenceRange.type' binds to the value set 'http://hl7.org/fhir/ValueSet/referencerange-meaning|4.3.0' which is experimental, but this structure is not labeled as experimental</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_EXPERIMENTAL_BINDING</span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-organization"> </a>
+<h2><a href="StructureDefinition-core-organization.html">fsh-generated/resources/StructureDefinition-core-organization.json</a> <span id="svi39" class="toggle" onclick="toggle('vi39')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi39')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi39"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[14]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c61103)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[3]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c109734)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[48]&#8203;.binding</b></td><td><b>warning</b></td><td><b>The definition for the element 'Organization.contact.purpose' binds to the value set 'http://hl7.org/fhir/ValueSet/contactentity-type|4.3.0' which is experimental, but this structure is not labeled as experimental</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_EXPERIMENTAL_BINDING</span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-organization-payer"> </a>
+<h2><a href="StructureDefinition-core-organization-payer.html">fsh-generated/resources/StructureDefinition-core-organization-payer.json</a> <span id="svi40" class="toggle" onclick="toggle('vi40')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi40')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi40"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[14]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c45442)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[40]&#8203;.pattern&#8203;.ofType(string)</b></td><td><b>information</b></td><td><b>The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_VALUE_TYPE_REPEAT_HINT</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[40]&#8203;.pattern&#8203;.ofType(string)</b></td><td><b>warning</b></td><td><b>The repeating element has a pattern value for a primitive type. The DotNet validator will not apply this to all the repeats - this is an error</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_VALUE_TYPE_REPEAT_WARNING_DOTNET</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[48]&#8203;.binding</b></td><td><b>warning</b></td><td><b>The definition for the element 'Organization.contact.purpose' binds to the value set 'http://hl7.org/fhir/ValueSet/contactentity-type|4.3.0' which is experimental, but this structure is not labeled as experimental</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_EXPERIMENTAL_BINDING</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'https:&#8203;/&#8203;/fhir&#8203;.ru&#8203;/ig&#8203;/core&#8203;/StructureDefinition&#8203;/core-organization-payer')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-patient"> </a>
+<h2><a href="StructureDefinition-core-patient.html">fsh-generated/resources/StructureDefinition-core-patient.json</a> <span id="svi41" class="toggle" onclick="toggle('vi41')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi41')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi41"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[14]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c88835)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[23]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c99624)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[32]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c110781)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[41]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c121865)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[3]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c184247)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[6]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c184918)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[9]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c185565)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[12]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c186118)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-patient-payer"> </a>
+<h2><a href="StructureDefinition-core-patient-payer.html">fsh-generated/resources/StructureDefinition-core-patient-payer.json</a> <span id="svi42" class="toggle" onclick="toggle('vi42')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi42')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi42"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[14]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c35919)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[23]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c46708)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[32]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c57865)</b></td><td><b>warning</b></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Coding_has_no_system__cannot_validate</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[41]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c68949)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-practitioner"> </a>
+<h2><a href="StructureDefinition-core-practitioner.html">fsh-generated/resources/StructureDefinition-core-practitioner.json</a> <span id="svi43" class="toggle" onclick="toggle('vi43')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi43')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi43"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[32]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c87454)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[9]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c113291)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-practitioner-role"> </a>
+<h2><a href="StructureDefinition-core-practitioner-role.html">fsh-generated/resources/StructureDefinition-core-practitioner-role.json</a> <span id="svi44" class="toggle" onclick="toggle('vi44')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi44')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi44"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[26]&#8203;.binding</b></td><td><b>warning</b></td><td><b>The definition for the element 'PractitionerRole.specialty' binds to the value set 'http://hl7.org/fhir/ValueSet/c80-practice-codes|4.3.0' which is experimental, but this structure is not labeled as experimental</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_EXPERIMENTAL_BINDING</span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-related-person"> </a>
+<h2><a href="StructureDefinition-core-related-person.html">fsh-generated/resources/StructureDefinition-core-related-person.json</a> <span id="svi45" class="toggle" onclick="toggle('vi45')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi45')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi45"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-related-person-payer"> </a>
+<h2><a href="StructureDefinition-core-related-person-payer.html">fsh-generated/resources/StructureDefinition-core-related-person-payer.json</a> <span id="svi46" class="toggle" onclick="toggle('vi46')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi46')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi46"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_StructureDefinition-core-servicerequest"> </a>
+<h2><a href="StructureDefinition-core-servicerequest.html">fsh-generated/resources/StructureDefinition-core-servicerequest.json</a> <span id="svi47" class="toggle" onclick="toggle('vi47')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi47')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi47"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[15]&#8203;.binding</b></td><td><b>warning</b></td><td><b>The definition for the element 'ServiceRequest.status' binds to the value set 'http://hl7.org/fhir/ValueSet/request-status|4.3.0' which is experimental, but this structure is not labeled as experimental</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_EXPERIMENTAL_BINDING</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[16]&#8203;.binding</b></td><td><b>warning</b></td><td><b>The definition for the element 'ServiceRequest.intent' binds to the value set 'http://hl7.org/fhir/ValueSet/request-intent|4.3.0' which is experimental, but this structure is not labeled as experimental</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_EXPERIMENTAL_BINDING</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[18]&#8203;.binding</b></td><td><b>warning</b></td><td><b>The definition for the element 'ServiceRequest.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|4.3.0' which is experimental, but this structure is not labeled as experimental</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_EXPERIMENTAL_BINDING</span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-coverage-document"> </a>
+<h2><a href="ValueSet-core-vs-nsi-coverage-document.html">fsh-generated/resources/ValueSet-core-vs-nsi-coverage-document.json</a> <span id="svi48" class="toggle" onclick="toggle('vi48')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi48')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi48"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-identity-documents"> </a>
+<h2><a href="ValueSet-core-vs-nsi-identity-documents.html">fsh-generated/resources/ValueSet-core-vs-nsi-identity-documents.json</a> <span id="svi49" class="toggle" onclick="toggle('vi49')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi49')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi49"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0] (l1/c1285)</b></td><td><b>warning</b></td><td><b>The value set references CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' which has status 'example'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet&#8203;.where(id = 'core-vs-nsi-identity-documents')</b></td><td><b>warning</b></td><td><b>Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the value set cannot be expanded</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l27">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-medical-workers-positions"> </a>
+<h2><a href="ValueSet-core-vs-nsi-medical-workers-positions.html">fsh-generated/resources/ValueSet-core-vs-nsi-medical-workers-positions.json</a> <span id="svi50" class="toggle" onclick="toggle('vi50')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi50')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi50"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet&#8203;.where(id = 'core-vs-nsi-medical-workers-positions')</b></td><td><b>warning</b></td><td><b>Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions' could not be found, so the value set cannot be expanded</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l37">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-register-of-medical-organizations"> </a>
+<h2><a href="ValueSet-core-vs-nsi-register-of-medical-organizations.html">fsh-generated/resources/ValueSet-core-vs-nsi-register-of-medical-organizations.json</a> <span id="svi51" class="toggle" onclick="toggle('vi51')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi51')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi51"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet&#8203;.where(id = 'core-vs-nsi-register-of-medical-organizations')</b></td><td><b>warning</b></td><td><b>Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-register-of-medical-organizations' could not be found, so the value set cannot be expanded</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l38">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-sources-of-payment"> </a>
+<h2><a href="ValueSet-core-vs-nsi-sources-of-payment.html">fsh-generated/resources/ValueSet-core-vs-nsi-sources-of-payment.json</a> <span id="svi52" class="toggle" onclick="toggle('vi52')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi52')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi52"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_fsh-generated_resources_ValueSet-core-vs-nsi-types-medical-documentation"> </a>
+<h2><a href="ValueSet-core-vs-nsi-types-medical-documentation.html">fsh-generated/resources/ValueSet-core-vs-nsi-types-medical-documentation.json</a> <span id="svi53" class="toggle" onclick="toggle('vi53')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi53')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi53"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4B/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet&#8203;.where(id = 'core-vs-nsi-types-medical-documentation')</b></td><td><b>warning</b></td><td><b>Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation' could not be found, so the value set cannot be expanded</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l39">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-address-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-address-intro.md</a> <span id="svi54" class="toggle" onclick="toggle('vi54')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi54')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi54"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-coverage-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-coverage-intro.md</a> <span id="svi55" class="toggle" onclick="toggle('vi55')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi55')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi55"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-encounter-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-encounter-intro.md</a> <span id="svi56" class="toggle" onclick="toggle('vi56')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi56')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi56"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-observation-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-observation-intro.md</a> <span id="svi57" class="toggle" onclick="toggle('vi57')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi57')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi57"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-organization-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-organization-intro.md</a> <span id="svi58" class="toggle" onclick="toggle('vi58')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi58')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi58"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-organizationpayer-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-organizationpayer-intro.md</a> <span id="svi59" class="toggle" onclick="toggle('vi59')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi59')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi59"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-patient-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-patient-intro.md</a> <span id="svi60" class="toggle" onclick="toggle('vi60')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi60')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi60"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-patientpayer-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-patientpayer-intro.md</a> <span id="svi61" class="toggle" onclick="toggle('vi61')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi61')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi61"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-practitioner-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-practitioner-intro.md</a> <span id="svi62" class="toggle" onclick="toggle('vi62')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi62')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi62"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-practitionerrole-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-practitionerrole-intro.md</a> <span id="svi63" class="toggle" onclick="toggle('vi63')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi63')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi63"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-relatedperson-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-relatedperson-intro.md</a> <span id="svi64" class="toggle" onclick="toggle('vi64')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi64')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi64"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-relatedpersonpayer-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-relatedpersonpayer-intro.md</a> <span id="svi65" class="toggle" onclick="toggle('vi65')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi65')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi65"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_StructureDefinition-core-servicerequest-intro"> </a>
+<h2><a href="">input/pagecontent/StructureDefinition-core-servicerequest-intro.md</a> <span id="svi66" class="toggle" onclick="toggle('vi66')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi66')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi66"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_input_pagecontent_index"> </a>
+<h2><a href="">input/pagecontent/index.md</a> <span id="svi67" class="toggle" onclick="toggle('vi67')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi67')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi67"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_temp_pages__includes_artifacts"> </a>
+<h2><a href="">temp/pages/_includes/artifacts.xml</a> <span id="svi68" class="toggle" onclick="toggle('vi68')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi68')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi68"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_template_config"> </a>
+<h2><a href="">template/config</a> <span id="svi69" class="toggle" onclick="toggle('vi69')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi69')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi69"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ru.core_ru.core_RuCoreIG_template_config__config"> </a>
+<h2><a href="">template/config/_config.yml</a> <span id="svi70" class="toggle" onclick="toggle('vi70')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi70')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi70"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="All_observations_should_have_an_effectiveDateTime_or_an_effectivePeriod"> </a>
+<h2>All_observations_should_have_an_effectiveDateTime_or_an_effectivePeriod</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Observation-core-observation-instance-full.html">fsh-generated/resources/Observation-core-observation-instance-full.json</a></td><td><b>Best Practice Recommendation: In general, all observations should have an effective[x] ()</b></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="CODESYSTEM_CS_NONHL7_MISSING_ELEMENT"> </a>
+<h2>CODESYSTEM_CS_NONHL7_MISSING_ELEMENT</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-core-cs-nsi-identity-document.html">fsh-generated/resources/CodeSystem-core-cs-nsi-identity-document.json</a></td><td><b>CodeSystems SHOULD have a stated value for the hierarchyMeaning element so that users know the status and meaning of the code system clearly</b></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="Coding_has_no_system__cannot_validate"> </a>
+<h2>Coding_has_no_system__cannot_validate</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Organization-core-organization-instance-full.html">fsh-generated/resources/Organization-core-organization-instance-full.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="StructureDefinition-core-organization.html">Core Organization (Организация)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Patient-core-patient-instance-full.html">fsh-generated/resources/Patient-core-patient-instance-full.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Patient-core-patient-instance-full.html">fsh-generated/resources/Patient-core-patient-instance-full.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Patient-core-patient-payer-instance-full.html">fsh-generated/resources/Patient-core-patient-payer-instance-full.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="StructureDefinition-core-patient-payer.html">Core Patient Payer (Пациент - плательщик)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="RelatedPerson-core-related-person-payer-instance-full.html">fsh-generated/resources/RelatedPerson-core-related-person-payer-instance-full.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="StructureDefinition-core-related-person-payer.html">Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-organization.html">fsh-generated/resources/StructureDefinition-core-organization.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-organization.html">fsh-generated/resources/StructureDefinition-core-organization.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-organization-payer.html">fsh-generated/resources/StructureDefinition-core-organization-payer.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient.html">fsh-generated/resources/StructureDefinition-core-patient.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient.html">fsh-generated/resources/StructureDefinition-core-patient.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient.html">fsh-generated/resources/StructureDefinition-core-patient.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient.html">fsh-generated/resources/StructureDefinition-core-patient.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient-payer.html">fsh-generated/resources/StructureDefinition-core-patient-payer.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient-payer.html">fsh-generated/resources/StructureDefinition-core-patient-payer.json</a></td><td><b>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="IG_DEPENDENCY_CLASH_PACKAGEID"> </a>
+<h2>IG_DEPENDENCY_CLASH_PACKAGEID</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>The canonical URL http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions points to the package hl7.fhir.uv.extensions which is inconsistent with the stated packageId of hl7.fhir.uv.extensions.r4</b></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="IG_DEPENDENCY_VERSION_WARNING"> </a>
+<h2>IG_DEPENDENCY_VERSION_WARNING</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>The ImplementationGuide is based on FHIR version 4.3.0 but package hl7.terminology.r4#7.1.0 is based on FHIR version 4.0.1. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try</b></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="MSG_DEPENDS_ON_DEPRECATED"> </a>
+<h2>MSG_DEPENDS_ON_DEPRECATED</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-core-coverage.html">fsh-generated/resources/StructureDefinition-core-coverage.json</a></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="SD_CONTEXT_SHOULD_NOT_BE_ELEMENT"> </a>
+<h2>SD_CONTEXT_SHOULD_NOT_BE_ELEMENT</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-ex-address-fias.html">fsh-generated/resources/StructureDefinition-core-ex-address-fias.json</a></td><td><b>Review the extension type for core-ex-address-fias: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="SD_ED_EXPERIMENTAL_BINDING"> </a>
+<h2>SD_ED_EXPERIMENTAL_BINDING</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-coverage.html">fsh-generated/resources/StructureDefinition-core-coverage.json</a></td><td><b>The definition for the element 'Coverage.status' binds to the value set 'http://hl7.org/fhir/ValueSet/fm-status|4.3.0' which is experimental, but this structure is not labeled as experimental</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-observation.html">fsh-generated/resources/StructureDefinition-core-observation.json</a></td><td><b>The definition for the element 'Observation.status' binds to the value set 'http://hl7.org/fhir/ValueSet/observation-status|4.3.0' which is experimental, but this structure is not labeled as experimental</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-observation.html">fsh-generated/resources/StructureDefinition-core-observation.json</a></td><td><b>The definition for the element 'Observation.category' binds to the value set 'http://hl7.org/fhir/ValueSet/observation-category|4.3.0' which is experimental, but this structure is not labeled as experimental</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-observation.html">fsh-generated/resources/StructureDefinition-core-observation.json</a></td><td><b>The definition for the element 'Observation.referenceRange.type' binds to the value set 'http://hl7.org/fhir/ValueSet/referencerange-meaning|4.3.0' which is experimental, but this structure is not labeled as experimental</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-organization.html">fsh-generated/resources/StructureDefinition-core-organization.json</a></td><td><b>The definition for the element 'Organization.contact.purpose' binds to the value set 'http://hl7.org/fhir/ValueSet/contactentity-type|4.3.0' which is experimental, but this structure is not labeled as experimental</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-organization-payer.html">fsh-generated/resources/StructureDefinition-core-organization-payer.json</a></td><td><b>The definition for the element 'Organization.contact.purpose' binds to the value set 'http://hl7.org/fhir/ValueSet/contactentity-type|4.3.0' which is experimental, but this structure is not labeled as experimental</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-practitioner-role.html">fsh-generated/resources/StructureDefinition-core-practitioner-role.json</a></td><td><b>The definition for the element 'PractitionerRole.specialty' binds to the value set 'http://hl7.org/fhir/ValueSet/c80-practice-codes|4.3.0' which is experimental, but this structure is not labeled as experimental</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-servicerequest.html">fsh-generated/resources/StructureDefinition-core-servicerequest.json</a></td><td><b>The definition for the element 'ServiceRequest.status' binds to the value set 'http://hl7.org/fhir/ValueSet/request-status|4.3.0' which is experimental, but this structure is not labeled as experimental</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-servicerequest.html">fsh-generated/resources/StructureDefinition-core-servicerequest.json</a></td><td><b>The definition for the element 'ServiceRequest.intent' binds to the value set 'http://hl7.org/fhir/ValueSet/request-intent|4.3.0' which is experimental, but this structure is not labeled as experimental</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-servicerequest.html">fsh-generated/resources/StructureDefinition-core-servicerequest.json</a></td><td><b>The definition for the element 'ServiceRequest.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|4.3.0' which is experimental, but this structure is not labeled as experimental</b></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="SD_VALUE_TYPE_REPEAT_HINT"> </a>
+<h2>SD_VALUE_TYPE_REPEAT_HINT</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-core-organization-payer.html">fsh-generated/resources/StructureDefinition-core-organization-payer.json</a></td><td><b>The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)</b></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="SD_VALUE_TYPE_REPEAT_WARNING_DOTNET"> </a>
+<h2>SD_VALUE_TYPE_REPEAT_WARNING_DOTNET</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-organization-payer.html">fsh-generated/resources/StructureDefinition-core-organization-payer.json</a></td><td><b>The repeating element has a pattern value for a primitive type. The DotNet validator will not apply this to all the repeats - this is an error</b></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="Type_Specific_Checks_DT_String_WS"> </a>
+<h2>Type_Specific_Checks_DT_String_WS</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>value should not start or finish with whitespace ' Core Encounter (Случай обслуживания)'</b></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>value should not start or finish with whitespace ' Измерения и простые утверждения о пациенте, устройстве или других объектах'</b></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>value should not start or finish with whitespace ' Роль (должность) врача, медицинского работника, специалиста'</b></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Уровень конфиденциальности медицинского документа&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.285, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2'</b></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Типы документов оснований&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.724, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document'</b></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Документы, удостоверяющие личность&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.48, Дополнительный OID: 1.2.643.5.1.13.13.11.1011, 1.2.643.5.1.13.2.1.1.736, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-identity-document'</b></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Должности медицинских и фармацевтических работников&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1002, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5'</b></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Реестр медицинских организаций Российской Федерации&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1461, Дополнительный OID:???, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-ns-nsi-register_of_ medical_organizations'</b></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Источники оплаты медицинской помощи&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1039, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment'</b></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ru.core.json</a></td><td><b>value should not start or finish with whitespace ' Справочник НСИ Минздрава &lt;Виды медицинской документации&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1522, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24'</b></td><td><a href="http://hl7.org/fhir/R4B/implementationguide.html">ImplementationGuide</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-encounter.html">fsh-generated/resources/StructureDefinition-core-encounter.json</a></td><td><b>value should not start or finish with whitespace ' Core Encounter (Случай обслуживания)'</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="Type_Specific_Checks_DT_URL_Resolve"> </a>
+<h2>Type_Specific_Checks_DT_URL_Resolve</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Coverage-core-coverage-instance-full.html">fsh-generated/resources/Coverage-core-coverage-instance-full.json</a></td><td><b>No definition could be found for URL value 'http://fhir.ru/core/systems/OMS'</b></td><td><a href="StructureDefinition-core-coverage.html">Core Coverage (Источник финансирования)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Organization-core-organization-instance-full.html">fsh-generated/resources/Organization-core-organization-instance-full.json</a></td><td><b>No definition could be found for URL value 'http://fhir.ru/core/systems/frmo'</b></td><td><a href="StructureDefinition-core-organization.html">Core Organization (Организация)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Patient-core-patient-instance-full.html">fsh-generated/resources/Patient-core-patient-instance-full.json</a></td><td><b>No definition could be found for URL value 'http://fhir.ru/core/systems/passport-RF'</b></td><td><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Patient-core-patient-payer-instance-full.html">fsh-generated/resources/Patient-core-patient-payer-instance-full.json</a></td><td><b>No definition could be found for URL value 'http://fhir.ru/core/systems/passport-RF'</b></td><td><a href="StructureDefinition-core-patient-payer.html">Core Patient Payer (Пациент - плательщик)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Practitioner-core-practitioner-instance-full.html">fsh-generated/resources/Practitioner-core-practitioner-instance-full.json</a></td><td><b>No definition could be found for URL value 'http://fhir.ru/core/systems/passport-RF'</b></td><td><a href="StructureDefinition-core-practitioner.html">Core Practitioner (Врач/сотрудник)</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="UNKNOWN_CODESYSTEM"> </a>
+<h2>UNKNOWN_CODESYSTEM</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Patient-core-patient-instance-full.html">fsh-generated/resources/Patient-core-patient-instance-full.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Patient-core-patient-instance-full.html">fsh-generated/resources/Patient-core-patient-instance-full.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="StructureDefinition-core-patient.html">Core Patient (Пациент)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Patient-core-patient-payer-instance-full.html">fsh-generated/resources/Patient-core-patient-payer-instance-full.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="StructureDefinition-core-patient-payer.html">Core Patient Payer (Пациент - плательщик)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Practitioner-core-practitioner-instance-full.html">fsh-generated/resources/Practitioner-core-practitioner-instance-full.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="StructureDefinition-core-practitioner.html">Core Practitioner (Врач/сотрудник)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="PractitionerRole-core-practitioner-role-instance-full.html">fsh-generated/resources/PractitionerRole-core-practitioner-role-instance-full.json</a></td><td><b>A definition for CodeSystem 'http://fhir.ru/core/systems/medical-workers-positions' could not be found, so the code cannot be validated</b></td><td><a href="StructureDefinition-core-practitioner-role.html">Core PractitionerRole (Роль/должность сотрудника)</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient.html">fsh-generated/resources/StructureDefinition-core-patient.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient.html">fsh-generated/resources/StructureDefinition-core-patient.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient.html">fsh-generated/resources/StructureDefinition-core-patient.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient.html">fsh-generated/resources/StructureDefinition-core-patient.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient-payer.html">fsh-generated/resources/StructureDefinition-core-patient-payer.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-patient-payer.html">fsh-generated/resources/StructureDefinition-core-patient-payer.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-practitioner.html">fsh-generated/resources/StructureDefinition-core-practitioner.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-core-practitioner.html">fsh-generated/resources/StructureDefinition-core-practitioner.json</a></td><td><b>A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated</b></td><td><a href="http://hl7.org/fhir/R4B/structuredefinition.html">StructureDefinition</a></td>
+   </tr>
+</table>
+</body>
+</html>

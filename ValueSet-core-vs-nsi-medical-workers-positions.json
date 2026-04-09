@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "core-vs-nsi-medical-workers-positions",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet core-vs-nsi-medical-workers-positions</b></p><a name=\"core-vs-nsi-medical-workers-positions\"> </a><a name=\"hccore-vs-nsi-medical-workers-positions\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-core-cs-nsi-medical-workers-positions.html\"><code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span></li></ul></div>"
+  },
+  "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-medical-workers-positions",
+  "version" : "1",
+  "name" : "Core_Vs_Nsi_Medical_Workers_Position",
+  "title" : "Core ValueSet NSI medical workers positions (Должности медицинских работников)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-09T17:27:53+00:00",
+  "publisher" : "HL7 FHIR Россия",
+  "contact" : [{
+    "name" : "HL7 FHIR Россия",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://fhir.ru"
+    }]
+  }],
+  "description" : "Должности медицинских работников - набор из всех значений системы кодирования",
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions"
+    }]
+  }
+}

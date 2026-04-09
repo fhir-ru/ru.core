@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ru/ig/core/Practitioner/core-practitioner-instance-full> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "core-practitioner-instance-full"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.ru/ig/core/StructureDefinition/core-practitioner"^^xsd:anyURI ;
+       fhir:l <https://fhir.ru/ig/core/StructureDefinition/core-practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner core-practitioner-instance-full</b></p><a name=\"core-practitioner-instance-full\"> </a><a name=\"hccore-practitioner-instance-full\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-core-practitioner.html\">Core Practitioner (Врач/сотрудник)</a></p></div><p><b>identifier</b>: <a href=\"NamingSystem-core-ns-rf-inn.html\" title=\"Государственные идентификационные номера налогоплательщика, формируются государственной федеральной налоговой службой (ФНС России). Уникальный неизменяемый.. Используется на всей территории РФ и не меняется, даже если налогоплательщик меняет место жительства, фамилию и другие паспортные данные.\">Core_Ns_Rf_INN</a>/463217055385, 1/7412 809982, <a href=\"NamingSystem-core-ns-rf-snils.html\" title=\"Страховой номер индивидуального лицевого счёта, СНИЛС — уникальный номер индивидуального лицевого счёта застрахованного лица в системе обязательного пенсионного страхования\">Core_Ns_Rf_SNILS</a>/152-873-614 14</p><p><b>name</b>: Мария Ивановна Иванова (Official)</p><p><b>address</b>: Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987(home)</p><p><b>gender</b>: Female</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://fhir.ru/core/systems/inn"^^xsd:anyURI ;
+       fhir:l <http://fhir.ru/core/systems/inn>
+     ] ;
+     fhir:value [ fhir:v "463217055385" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document"^^xsd:anyURI ;
+           fhir:l <https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document>
+         ] ;
+         fhir:code [ fhir:v "1" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://fhir.ru/core/systems/passport-RF"^^xsd:anyURI ;
+       fhir:l <http://fhir.ru/core/systems/passport-RF>
+     ] ;
+     fhir:value [ fhir:v "7412 809982" ]
+  ] [
+     fhir:system [
+       fhir:v "http://fhir.ru/core/systems/snils"^^xsd:anyURI ;
+       fhir:l <http://fhir.ru/core/systems/snils>
+     ] ;
+     fhir:value [ fhir:v "152-873-614 14" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Иванова" ] ;
+     fhir:given ( [ fhir:v "Мария" ] [ fhir:v "Ивановна" ] )
+  ] ) ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "aoguid"^^xsd:anyURI ;
+           fhir:l fhir:aoguid
+         ] ;
+         fhir:value [
+           a fhir:Identifier ;
+           fhir:system [
+             fhir:v "urn:hl7-ru:fias:aoguid"^^xsd:anyURI ;
+             fhir:l <urn:hl7-ru:fias:aoguid>
+           ] ;
+           fhir:value [ fhir:v "7b1996be-c0fe-4797-bedc-f503e31a83fd" ]
+         ]
+       ] [
+         fhir:url [
+           fhir:v "houseguid"^^xsd:anyURI ;
+           fhir:l fhir:houseguid
+         ] ;
+         fhir:value [
+           a fhir:Identifier ;
+           fhir:system [
+             fhir:v "urn:hl7-ru:fias:houseguid"^^xsd:anyURI ;
+             fhir:l <urn:hl7-ru:fias:houseguid>
+           ] ;
+           fhir:value [ fhir:v "7b1996be-c0fe-4797-bedc-f503e31a83fd" ]
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "https://fhir.ru/ig/core/StructureDefinition/core-ex-address-fias"^^xsd:anyURI ;
+         fhir:l <https://fhir.ru/ig/core/StructureDefinition/core-ex-address-fias>
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:text [ fhir:v "Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987" ] ;
+     fhir:line ( [ fhir:v "Софийская 32-1-987" ] ) ;
+     fhir:city [ fhir:v "Санкт-Петербург" ] ;
+     fhir:state [ fhir:v "Санкт-Петербург" ] ;
+     fhir:postalCode [ fhir:v "192236" ] ;
+     fhir:country [ fhir:v "Россия" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] . # 
+
+# -------------------------------------------------------------------------------------
+

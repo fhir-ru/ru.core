@@ -1,0 +1,1260 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "ru.core",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ru.core</b></p><a name=\"ru.core\"> </a><a name=\"hcru.core\"> </a><h2>RuCoreIG</h2><p>The official URL for this implementation guide is: </p><pre>https://fhir.ru/ig/core/ImplementationGuide/ru.core</pre></div>"
+  },
+  "url" : "https://fhir.ru/ig/core/ImplementationGuide/ru.core",
+  "version" : "1",
+  "name" : "RuCoreIG",
+  "status" : "active",
+  "date" : "2026-04-09T17:27:53+00:00",
+  "publisher" : "HL7 FHIR Россия",
+  "contact" : [{
+    "name" : "HL7 FHIR Россия",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://fhir.ru"
+    }]
+  }],
+  "packageId" : "ru.core",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.3.0"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "7.1.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "5.2.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2023+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://fhir.ru/ig/core/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.2"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2023+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://fhir.ru/ig/core/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-encounter"
+      },
+      "name" : " Core Encounter (Случай обслуживания)",
+      "description" : "Cлучай оказания медицинской помощи, то есть взаимодействия между пациентом и системой здравоохранения с целью оказания медицинских услуг или оценки состояния здоровья пациентах",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-address"
+      },
+      "name" : "Core Address (Адрес)",
+      "description" : "Адрес",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/core-cs-nsi-confidentiality"
+      },
+      "name" : "Core CodeSystem NSI Confidentiality (Уровень конфиденциальности медицинского документа)",
+      "description" : "НСИ МЗ РФ справочник [Уровень конфиденциальности медицинского документа](http://fhir.ru/core/CodeSystem/core-cs-nsi-confidentiality)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/core-cs-nsi-coverage-document"
+      },
+      "name" : "Core CodeSystem NSI coverage document (Документы-основания для оплаты медицинских услуг)",
+      "description" : "НСИ МЗ РФ справочник [Документы-основания для оплаты](http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/core-cs-nsi-identity-document"
+      },
+      "name" : "Core CodeSystem NSI Identity Documents (Документы удостоверяющие личность)",
+      "description" : "НСИ МЗ РФ справочник [документы удостоверяющие личность](http://fhir.ru/core/NamingSystem/core-ns-nsi-identity-document)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/core-cs-nsi-medical-workers-positions"
+      },
+      "name" : "Core CodeSystem NSI medical workers positions (Должности медицинских работников)",
+      "description" : "НСИ МЗ РФ справочник [Должности медицинских и фармацевтических работников](http://fhir.ru/core/CodeSystem/core-cs-nsi-medical-workers-positions)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/core-cs-nsi-register-of-medical-organizations"
+      },
+      "name" : "Core CodeSystem NSI register of medical organizations (Реестр медицинских организаций)",
+      "description" : "НСИ МЗ РФ справочник [Реестр медицинских организаций](http://fhir.ru/core/CodeSystem/core-cs-nsi-register_of_ medical_organizations)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/core-cs-nsi-sources-of-payment"
+      },
+      "name" : "Core CodeSystem NSI sources of payment (Источники оплаты медицинской помощи)",
+      "description" : "НСИ МЗ РФ справочник [Источники оплаты медицинской помощи](http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/core-cs-nsi-types-medical-documentation"
+      },
+      "name" : "Core CodeSystem NSI types of medical documentation (Виды медицинской документации)",
+      "description" : "НСИ МЗ РФ справочник [Виды медицинской документации](http://fhir.ru/core/CodeSystem/core-cs-nsi-types-medical-documentation)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-coverage"
+      },
+      "name" : "Core Coverage (Источник финансирования)",
+      "description" : "Источник финансирования",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-ex-address-fias"
+      },
+      "name" : "Core Extension address fias (Кодирование адреса по ФИАС)",
+      "description" : "Кодирование адреса по ФИАС. При маппинге на СЭМД данный url соответствует urn:hl7-ru:fias",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-observation"
+      },
+      "name" : "Core Observation (Измерения и простые утверждения о пациенте)",
+      "description" : " Измерения и простые утверждения о пациенте, устройстве или других объектах",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-organization-payer"
+      },
+      "name" : "Core Organisation Payer (Организация-плательщик)",
+      "description" : "Организация плательщик",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-organization"
+      },
+      "name" : "Core Organization (Организация)",
+      "description" : "Организация",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-patient"
+      },
+      "name" : "Core Patient (Пациент)",
+      "description" : "Пациент",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-patient-payer"
+      },
+      "name" : "Core Patient Payer (Пациент - плательщик)",
+      "description" : "Пациент – плательщик, передача ИНН обязательна",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-practitioner"
+      },
+      "name" : "Core Practitioner (Врач/сотрудник)",
+      "description" : "Врач, медицинский работник, специалист",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-practitioner-role"
+      },
+      "name" : "Core PractitionerRole (Роль/должность сотрудника)",
+      "description" : " Роль (должность) врача, медицинского работника, специалиста",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-related-person"
+      },
+      "name" : "Core Related Person (Лицо, имеющее связь с пациентом)",
+      "description" : "Лицо, имеющее связь с пациентом",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-related-person-payer"
+      },
+      "name" : "Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)",
+      "description" : "Лицо-плательщик, имеющее связь с пациентом",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/core-servicerequest"
+      },
+      "name" : "Core Service Request (Заказ услуги)",
+      "description" : "Заказ услуги",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/core-vs-nsi-coverage-document"
+      },
+      "name" : "Core ValueSet NSI coverage document (документы-основания для оплаты медицинских услуг)",
+      "description" : "документы-основания для оплаты медицинских услуг - набор из всех значений системы кодирования",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/core-vs-nsi-identity-documents"
+      },
+      "name" : "Core ValueSet NSI identity documents (Документы удостоверяющие личность)",
+      "description" : "Документы, удостоверяющие личность - набор из всех значений системы кодирования",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/core-vs-nsi-medical-workers-positions"
+      },
+      "name" : "Core ValueSet NSI medical workers positions (Должности медицинских работников)",
+      "description" : "Должности медицинских работников - набор из всех значений системы кодирования",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/core-vs-nsi-register-of-medical-organizations"
+      },
+      "name" : "Core ValueSet NSI register of medical organizations (Реестр медицинских организаций Российской Федерации)",
+      "description" : "Реестр медицинских организаций МЗРФ - набор из всех значений системы кодирования",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/core-vs-nsi-sources-of-payment"
+      },
+      "name" : "Core ValueSet NSI sources of payment (Источники оплаты медицинской помощи)",
+      "description" : "Источники оплаты медицинской помощи - набор из всех значений системы кодирования",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/core-vs-nsi-types-medical-documentation"
+      },
+      "name" : "Core ValueSet types medical documentation (Виды медицинской документации)",
+      "description" : "Виды медицинской документации - набор из всех значений системы кодирования",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Coverage"
+      }],
+      "reference" : {
+        "reference" : "Coverage/core-coverage-instance-full"
+      },
+      "name" : "core-coverage-instance-full",
+      "exampleCanonical" : "https://fhir.ru/ig/core/StructureDefinition/core-coverage"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-fias-aoguid"
+      },
+      "name" : "core-ns-fias-aoguid",
+      "description" : "Идентификатор адресного объекта по справочнику ФИАС",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-fias-houseguid"
+      },
+      "name" : "core-ns-fias-houseguid",
+      "description" : "Идентификатор дома по справочнику ФИАС",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-nsi-confidentiality"
+      },
+      "name" : "core-ns-nsi-confidentiality",
+      "description" : " Справочник НСИ Минздрава <Уровень конфиденциальности медицинского документа>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.285, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-nsi-coverage-document"
+      },
+      "name" : "core-ns-nsi-coverage-document",
+      "description" : " Справочник НСИ Минздрава <Типы документов оснований>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.724, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-nsi-identity-document"
+      },
+      "name" : "core-ns-nsi-identity-document",
+      "description" : " Справочник НСИ Минздрава <Документы, удостоверяющие личность>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.48, Дополнительный OID: 1.2.643.5.1.13.13.11.1011, 1.2.643.5.1.13.2.1.1.736, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-identity-document",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-nsi-medical-workers-positions"
+      },
+      "name" : "core-ns-nsi-medical-workers-positions",
+      "description" : " Справочник НСИ Минздрава <Должности медицинских и фармацевтических работников>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1002, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-nsi-register-of-medical-organizations"
+      },
+      "name" : "core-ns-nsi-register-of-medical-organizations",
+      "description" : " Справочник НСИ Минздрава <Реестр медицинских организаций Российской Федерации>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1461, Дополнительный OID:???, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-ns-nsi-register_of_ medical_organizations",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-nsi-sources-of-payment"
+      },
+      "name" : "core-ns-nsi-sources-of-payment",
+      "description" : " Справочник НСИ Минздрава <Источники оплаты медицинской помощи>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1039, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-nsi-types-medical-documentation"
+      },
+      "name" : "core-ns-nsi-types-medical-documentation",
+      "description" : " Справочник НСИ Минздрава <Виды медицинской документации>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1522, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-rf-birth-certificate"
+      },
+      "name" : "core-ns-rf-birth-certificate",
+      "description" : "Номера государственных свидетельств о рождении формируются государственной системой органов записи актов гражданского состояния (ЗАГС), с внесением в единый реестр записей актов гражданского состояния (ЕГР ЗАГС). Предполагается, что номер уникален, сведений об ограничении срока уникальности номера нет.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-rf-inn"
+      },
+      "name" : "core-ns-rf-inn",
+      "description" : "Государственные идентификационные номера налогоплательщика, формируются государственной федеральной налоговой службой (ФНС России). Уникальный неизменяемый.. Используется на всей территории РФ и не меняется, даже если налогоплательщик меняет место жительства, фамилию и другие паспортные данные.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-rf-ogrn"
+      },
+      "name" : "core-ns-rf-ogrn",
+      "description" : "Основной государственный регистрационный номер юридического лица (индивидуального предпринимателя) (ОГРН)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/core-ns-rf-snils"
+      },
+      "name" : "core-ns-rf-snils",
+      "description" : "Страховой номер индивидуального лицевого счёта, СНИЛС — уникальный номер индивидуального лицевого счёта застрахованного лица в системе обязательного пенсионного страхования",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/core-observation-instance-full"
+      },
+      "name" : "core-observation-instance-full",
+      "exampleCanonical" : "https://fhir.ru/ig/core/StructureDefinition/core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/core-organization-instance-full"
+      },
+      "name" : "core-organization-instance-full",
+      "exampleCanonical" : "https://fhir.ru/ig/core/StructureDefinition/core-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/core-patient-instance-full"
+      },
+      "name" : "core-patient-instance-full",
+      "exampleCanonical" : "https://fhir.ru/ig/core/StructureDefinition/core-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/core-patient-payer-instance-full"
+      },
+      "name" : "core-patient-payer-instance-full",
+      "exampleCanonical" : "https://fhir.ru/ig/core/StructureDefinition/core-patient-payer"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/core-practitioner-instance-full"
+      },
+      "name" : "core-practitioner-instance-full",
+      "exampleCanonical" : "https://fhir.ru/ig/core/StructureDefinition/core-practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/core-practitioner-role-instance-full"
+      },
+      "name" : "core-practitioner-role-instance-full",
+      "exampleCanonical" : "https://fhir.ru/ig/core/StructureDefinition/core-practitioner-role"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "RelatedPerson"
+      }],
+      "reference" : {
+        "reference" : "RelatedPerson/core-related-person-instance-full"
+      },
+      "name" : "core-related-person-instance-full",
+      "exampleCanonical" : "https://fhir.ru/ig/core/StructureDefinition/core-related-person"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "RelatedPerson"
+      }],
+      "reference" : {
+        "reference" : "RelatedPerson/core-related-person-payer-instance-full"
+      },
+      "name" : "core-related-person-payer-instance-full",
+      "exampleCanonical" : "https://fhir.ru/ig/core/StructureDefinition/core-related-person-payer"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/core-servicerequest-instance-full"
+      },
+      "name" : "core-servicerequest-instance-full",
+      "exampleCanonical" : "https://fhir.ru/ig/core/StructureDefinition/core-servicerequest"
+    }],
+    "page" : {
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "nameUrl" : "index.html",
+        "title" : "Home",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}

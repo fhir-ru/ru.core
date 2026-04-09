@@ -1,0 +1,906 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/address-type",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "AddressType",
+    "title" : "AddressType",
+    "description" : "The type of an address (physical / postal).",
+    "systems" : ["http://hl7.org/fhir/address-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.69"],
+    "sources" : ["2.16.840.1.113883.4.642.3.69"],
+    "uses" : {
+    },
+    "StructureDefinition-core-address.html" : "Core Address (Адрес)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/address-use",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "AddressUse",
+    "title" : "AddressUse",
+    "description" : "The use of an address.",
+    "systems" : ["http://hl7.org/fhir/address-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.67"],
+    "sources" : ["2.16.840.1.113883.4.642.3.67"],
+    "uses" : {
+    },
+    "StructureDefinition-core-address.html" : "Core Address (Адрес)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "systems" : ["http://hl7.org/fhir/administrative-gender"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1"],
+    "uses" : {
+    },
+    "StructureDefinition-core-related-person.html" : "Core Related Person (Лицо, имеющее связь с пациентом)",
+    "StructureDefinition-core-patient.html" : "Core Patient (Пациент)",
+    "StructureDefinition-core-related-person-payer.html" : "Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)",
+    "StructureDefinition-core-patient-payer.html" : "Core Patient Payer (Пациент - плательщик)",
+    "StructureDefinition-core-practitioner.html" : "Core Practitioner (Врач/сотрудник)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/body-site",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "SNOMEDCTBodyStructures",
+    "title" : "SNOMED CT Body Structures",
+    "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.141"],
+    "sources" : ["2.16.840.1.113883.4.642.3.141"],
+    "uses" : {
+    },
+    "StructureDefinition-core-observation.html" : "Core Observation (Измерения и простые утверждения о пациенте)",
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/c80-practice-codes",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "PracticeSettingCodeValueSet",
+    "title" : "Practice Setting Code Value Set",
+    "description" : "This is the code representing the clinical specialty of the clinician or provider who interacted with, treated, or provided a service to/for the patient. The value set used for clinical specialty has been limited by HITSP to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty Value Set Definition.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.3.88.12.80.72"],
+    "sources" : ["2.16.840.1.113883.3.88.12.80.72"],
+    "uses" : {
+    },
+    "StructureDefinition-core-practitioner-role.html" : "Core PractitionerRole (Роль/должность сотрудника)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/contactentity-type",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ContactEntityType",
+    "title" : null,
+    "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/contactentity-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.416"],
+    "sources" : ["2.16.840.1.113883.4.642.3.416"],
+    "uses" : {
+    },
+    "StructureDefinition-core-organization-payer.html" : "Core Organisation Payer (Организация-плательщик)",
+    "StructureDefinition-core-organization.html" : "Core Organization (Организация)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/coverage-class",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "CoverageClassCodes",
+    "title" : "Coverage Class Codes",
+    "description" : "This value set includes Coverage Class codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/coverage-class"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1009"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1009"],
+    "uses" : {
+    },
+    "StructureDefinition-core-coverage.html" : "Core Coverage (Источник финансирования)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/coverage-copay-type",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "CoverageCopayTypeCodes",
+    "title" : "Coverage Copay Type Codes",
+    "description" : "This value set includes sample Coverage Copayment Type codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/coverage-copay-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.527"],
+    "sources" : ["2.16.840.1.113883.4.642.3.527"],
+    "uses" : {
+    },
+    "StructureDefinition-core-coverage.html" : "Core Coverage (Источник финансирования)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/coverage-financial-exception",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ExampleCoverageFinancialExceptionCodes",
+    "title" : "Example Coverage Financial Exception Codes",
+    "description" : "This value set includes Example Coverage Financial Exception Codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1328"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1328"],
+    "uses" : {
+    },
+    "StructureDefinition-core-coverage.html" : "Core Coverage (Источник финансирования)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/coverage-type",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "CoverageTypeAndSelf-PayCodes",
+    "title" : "Coverage Type and Self-Pay Codes",
+    "description" : "This value set includes Coverage Type codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/coverage-selfpay",
+    "http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.4.642.3.520"],
+    "sources" : ["2.16.840.1.113883.4.642.3.520"],
+    "uses" : {
+    },
+    "StructureDefinition-core-coverage.html" : "Core Coverage (Источник финансирования)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "DataAbsentReason",
+    "title" : "DataAbsentReason",
+    "description" : "Used to specify why the normally expected content of the data element is missing.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/data-absent-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.5"],
+    "sources" : ["2.16.840.1.113883.4.642.3.5"],
+    "uses" : {
+    },
+    "StructureDefinition-core-observation.html" : "Core Observation (Измерения и простые утверждения о пациенте)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "DaysOfWeek",
+    "title" : "DaysOfWeek",
+    "description" : "The days of the week.",
+    "systems" : ["http://hl7.org/fhir/days-of-week"],
+    "oids" : ["2.16.840.1.113883.4.642.3.512"],
+    "sources" : ["2.16.840.1.113883.4.642.3.512"],
+    "uses" : {
+    },
+    "StructureDefinition-core-practitioner-role.html" : "Core PractitionerRole (Роль/должность сотрудника)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/diagnosis-role",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "DiagnosisRole",
+    "title" : "DiagnosisRole",
+    "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/diagnosis-role"],
+    "oids" : ["2.16.840.1.113883.4.642.3.49"],
+    "sources" : ["2.16.840.1.113883.4.642.3.49"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-admit-source",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "AdmitSource",
+    "title" : null,
+    "description" : "This value set defines a set of codes that can be used to indicate from where the patient came in.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/admit-source"],
+    "oids" : ["2.16.840.1.113883.4.642.3.257"],
+    "sources" : ["2.16.840.1.113883.4.642.3.257"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-diet",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "Diet",
+    "title" : null,
+    "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/diet"],
+    "oids" : ["2.16.840.1.113883.4.642.3.255"],
+    "sources" : ["2.16.840.1.113883.4.642.3.255"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-discharge-disposition",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "DischargeDisposition",
+    "title" : null,
+    "description" : "This value set defines a set of codes that can be used to where the patient left the hospital.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/discharge-disposition"],
+    "oids" : ["2.16.840.1.113883.4.642.3.259"],
+    "sources" : ["2.16.840.1.113883.4.642.3.259"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-location-status",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "EncounterLocationStatus",
+    "title" : "EncounterLocationStatus",
+    "description" : "The status of the location.",
+    "systems" : ["http://hl7.org/fhir/encounter-location-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.262"],
+    "sources" : ["2.16.840.1.113883.4.642.3.262"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ParticipantType",
+    "title" : null,
+    "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/participant-type",
+    "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+    "oids" : ["2.16.840.1.113883.4.642.3.250"],
+    "sources" : ["2.16.840.1.113883.4.642.3.250"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "EncounterReasonCodes",
+    "title" : "Encounter Reason Codes",
+    "description" : "This examples value set defines the set of codes that can be used to indicate reasons for an encounter.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.261"],
+    "sources" : ["2.16.840.1.113883.4.642.3.261"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "SpecialArrangements",
+    "title" : null,
+    "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/encounter-special-arrangements"],
+    "oids" : ["2.16.840.1.113883.4.642.3.253"],
+    "sources" : ["2.16.840.1.113883.4.642.3.253"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-special-courtesy",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "SpecialCourtesy",
+    "title" : null,
+    "description" : "This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.252"],
+    "sources" : ["2.16.840.1.113883.4.642.3.252"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-status",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "EncounterStatus",
+    "title" : "EncounterStatus",
+    "description" : "Current state of the encounter.",
+    "systems" : ["http://hl7.org/fhir/encounter-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.246"],
+    "sources" : ["2.16.840.1.113883.4.642.3.246"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-type",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "EncounterType",
+    "title" : null,
+    "description" : "This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/encounter-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.248"],
+    "sources" : ["2.16.840.1.113883.4.642.3.248"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/fm-status",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "FinancialResourceStatusCodes",
+    "title" : "Financial Resource Status Codes",
+    "description" : "This value set includes Status codes.",
+    "systems" : ["http://hl7.org/fhir/fm-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.592"],
+    "sources" : ["2.16.840.1.113883.4.642.3.592"],
+    "uses" : {
+    },
+    "StructureDefinition-core-coverage.html" : "Core Coverage (Источник финансирования)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "Identifier Type Codes",
+    "title" : "IdentifierType",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+    "oids" : ["2.16.840.1.113883.4.642.3.45"],
+    "sources" : ["2.16.840.1.113883.4.642.3.45"],
+    "uses" : {
+    },
+    "StructureDefinition-core-ex-address-fias.html" : "Core Extension address fias (Кодирование адреса по ФИАС)",
+    "StructureDefinition-core-organization-payer.html" : "Core Organisation Payer (Организация-плательщик)",
+    "StructureDefinition-core-patient.html" : "Core Patient (Пациент)",
+    "StructureDefinition-core-related-person-payer.html" : "Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)",
+    "StructureDefinition-core-patient-payer.html" : "Core Patient Payer (Пациент - плательщик)",
+    "StructureDefinition-core-organization.html" : "Core Organization (Организация)",
+    "StructureDefinition-core-practitioner.html" : "Core Practitioner (Врач/сотрудник)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "IdentifierUse",
+    "title" : "IdentifierUse",
+    "description" : "Identifies the purpose for this identifier, if known .",
+    "systems" : ["http://hl7.org/fhir/identifier-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.57"],
+    "sources" : ["2.16.840.1.113883.4.642.3.57"],
+    "uses" : {
+    },
+    "StructureDefinition-core-ex-address-fias.html" : "Core Extension address fias (Кодирование адреса по ФИАС)",
+    "StructureDefinition-core-organization-payer.html" : "Core Organisation Payer (Организация-плательщик)",
+    "StructureDefinition-core-patient.html" : "Core Patient (Пациент)",
+    "StructureDefinition-core-related-person-payer.html" : "Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)",
+    "StructureDefinition-core-patient-payer.html" : "Core Patient Payer (Пациент - плательщик)",
+    "StructureDefinition-core-coverage.html" : "Core Coverage (Источник финансирования)",
+    "StructureDefinition-core-organization.html" : "Core Organization (Организация)",
+    "StructureDefinition-core-practitioner.html" : "Core Practitioner (Врач/сотрудник)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/languages",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "CommonLanguages",
+    "title" : "Common Languages",
+    "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["2.16.840.1.113883.4.642.3.20"],
+    "sources" : ["2.16.840.1.113883.4.642.3.20"],
+    "uses" : {
+    },
+    "StructureDefinition-core-related-person.html" : "Core Related Person (Лицо, имеющее связь с пациентом)",
+    "StructureDefinition-core-observation.html" : "Core Observation (Измерения и простые утверждения о пациенте)",
+    "StructureDefinition-core-organization-payer.html" : "Core Organisation Payer (Организация-плательщик)",
+    "StructureDefinition-core-patient.html" : "Core Patient (Пациент)",
+    "StructureDefinition-core-related-person-payer.html" : "Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)",
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)",
+    "StructureDefinition-core-patient-payer.html" : "Core Patient Payer (Пациент - плательщик)",
+    "StructureDefinition-core-coverage.html" : "Core Coverage (Источник финансирования)",
+    "StructureDefinition-core-organization.html" : "Core Organization (Организация)",
+    "StructureDefinition-core-practitioner.html" : "Core Practitioner (Врач/сотрудник)",
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)",
+    "StructureDefinition-core-practitioner-role.html" : "Core PractitionerRole (Роль/должность сотрудника)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/link-type",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "LinkType",
+    "title" : "LinkType",
+    "description" : "The type of link between this patient resource and another patient resource.",
+    "systems" : ["http://hl7.org/fhir/link-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.423"],
+    "sources" : ["2.16.840.1.113883.4.642.3.423"],
+    "uses" : {
+    },
+    "StructureDefinition-core-patient.html" : "Core Patient (Пациент)",
+    "StructureDefinition-core-patient-payer.html" : "Core Patient Payer (Пациент - плательщик)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/location-physical-type",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "LocationType",
+    "title" : null,
+    "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/location-physical-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.328"],
+    "sources" : ["2.16.840.1.113883.4.642.3.328"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/marital-status",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "Marital Status Codes",
+    "title" : "MaritalStatus",
+    "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.29"],
+    "sources" : ["2.16.840.1.113883.4.642.3.29"],
+    "uses" : {
+    },
+    "StructureDefinition-core-patient.html" : "Core Patient (Пациент)",
+    "StructureDefinition-core-patient-payer.html" : "Core Patient Payer (Пациент - плательщик)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "SNOMEDCTMedicationAsNeededReasonCodes",
+    "title" : "SNOMED CT Medication As Needed Reason Codes",
+    "description" : "This value set includes all clinical findings from SNOMED CT - provided as an exemplar value set.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.96"],
+    "sources" : ["2.16.840.1.113883.4.642.3.96"],
+    "uses" : {
+    },
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/name-use",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "NameUse",
+    "title" : "NameUse",
+    "description" : "The use of a human name.",
+    "systems" : ["http://hl7.org/fhir/name-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.65"],
+    "sources" : ["2.16.840.1.113883.4.642.3.65"],
+    "uses" : {
+    },
+    "StructureDefinition-core-patient.html" : "Core Patient (Пациент)",
+    "StructureDefinition-core-patient-payer.html" : "Core Patient Payer (Пациент - плательщик)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-category",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ObservationCategoryCodes",
+    "title" : "Observation Category Codes",
+    "description" : "Observation Category codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.403"],
+    "sources" : ["2.16.840.1.113883.4.642.3.403"],
+    "uses" : {
+    },
+    "StructureDefinition-core-observation.html" : "Core Observation (Измерения и простые утверждения о пациенте)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "LOINCCodes",
+    "title" : "LOINC Codes",
+    "description" : "This value set includes all LOINC codes",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.4.642.3.396"],
+    "sources" : ["2.16.840.1.113883.4.642.3.396"],
+    "uses" : {
+    },
+    "StructureDefinition-core-observation.html" : "Core Observation (Измерения и простые утверждения о пациенте)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "ObservationInterpretationCodes",
+    "title" : "Observation Interpretation Codes",
+    "description" : "A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.   \r\n   \r\n   Notes:\r\n   \r\n   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"],
+    "oids" : ["2.16.840.1.113883.4.642.3.399"],
+    "sources" : ["2.16.840.1.113883.4.642.3.399"],
+    "uses" : {
+    },
+    "StructureDefinition-core-observation.html" : "Core Observation (Измерения и простые утверждения о пациенте)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ObservationMethods",
+    "title" : "Observation Methods",
+    "description" : "Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.395"],
+    "sources" : ["2.16.840.1.113883.4.642.3.395"],
+    "uses" : {
+    },
+    "StructureDefinition-core-observation.html" : "Core Observation (Измерения и простые утверждения о пациенте)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-status",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "ObservationStatus",
+    "title" : "ObservationStatus",
+    "description" : "Codes providing the status of an observation.",
+    "systems" : ["http://hl7.org/fhir/observation-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.400"],
+    "sources" : ["2.16.840.1.113883.4.642.3.400"],
+    "uses" : {
+    },
+    "StructureDefinition-core-observation.html" : "Core Observation (Измерения и простые утверждения о пациенте)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/organization-type",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "OrganizationType",
+    "title" : null,
+    "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/organization-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.414"],
+    "sources" : ["2.16.840.1.113883.4.642.3.414"],
+    "uses" : {
+    },
+    "StructureDefinition-core-organization-payer.html" : "Core Organisation Payer (Организация-плательщик)",
+    "StructureDefinition-core-organization.html" : "Core Organization (Организация)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
+    "version" : "4.3.0",
+    "status" : "active",
+    "name" : "PatientContactRelationship",
+    "title" : "Patient Contact Relationship",
+    "description" : "The nature of the relationship between the patient and the contact person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1130"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1130"],
+    "uses" : {
+    },
+    "StructureDefinition-core-patient.html" : "Core Patient (Пациент)",
+    "StructureDefinition-core-patient-payer.html" : "Core Patient Payer (Пациент - плательщик)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ProcedureCodes(SNOMEDCT)",
+    "title" : "Procedure Codes (SNOMED CT)",
+    "description" : "Procedure Code: All SNOMED CT procedure codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.427"],
+    "sources" : ["2.16.840.1.113883.4.642.3.427"],
+    "uses" : {
+    },
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ProcedureReasonCodes",
+    "title" : "Procedure Reason Codes",
+    "description" : "This example value set defines the set of codes that can be used to indicate a reason for a procedure.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.432"],
+    "sources" : ["2.16.840.1.113883.4.642.3.432"],
+    "uses" : {
+    },
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ObservationReferenceRangeAppliesToCodes",
+    "title" : "Observation Reference Range Applies To Codes",
+    "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Race",
+    "http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.407"],
+    "sources" : ["2.16.840.1.113883.4.642.3.407"],
+    "uses" : {
+    },
+    "StructureDefinition-core-observation.html" : "Core Observation (Измерения и простые утверждения о пациенте)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ObservationReferenceRangeMeaningCodes",
+    "title" : "Observation Reference Range Meaning Codes",
+    "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/referencerange-meaning"],
+    "oids" : ["2.16.840.1.113883.4.642.3.397"],
+    "sources" : ["2.16.840.1.113883.4.642.3.397"],
+    "uses" : {
+    },
+    "StructureDefinition-core-observation.html" : "Core Observation (Измерения и простые утверждения о пациенте)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "PatientRelationshipType",
+    "title" : null,
+    "description" : "A set of codes that can be used to indicate the relationship between a Patient and a Related Person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "http://terminology.hl7.org/CodeSystem/v2-0131"],
+    "oids" : ["2.16.840.1.113883.4.642.3.449"],
+    "sources" : ["2.16.840.1.113883.4.642.3.449"],
+    "uses" : {
+    },
+    "StructureDefinition-core-related-person.html" : "Core Related Person (Лицо, имеющее связь с пациентом)",
+    "StructureDefinition-core-related-person-payer.html" : "Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/request-intent",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "RequestIntent",
+    "title" : "RequestIntent",
+    "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+    "systems" : ["http://hl7.org/fhir/request-intent"],
+    "oids" : ["2.16.840.1.113883.4.642.3.113"],
+    "sources" : ["2.16.840.1.113883.4.642.3.113"],
+    "uses" : {
+    },
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "RequestPriority",
+    "title" : "RequestPriority",
+    "description" : "Identifies the level of importance to be assigned to actioning the request.",
+    "systems" : ["http://hl7.org/fhir/request-priority"],
+    "oids" : ["2.16.840.1.113883.4.642.3.115"],
+    "sources" : ["2.16.840.1.113883.4.642.3.115"],
+    "uses" : {
+    },
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/request-status",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "RequestStatus",
+    "title" : "RequestStatus",
+    "description" : "Codes identifying the lifecycle stage of a request.",
+    "systems" : ["http://hl7.org/fhir/request-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.111"],
+    "sources" : ["2.16.840.1.113883.4.642.3.111"],
+    "uses" : {
+    },
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/service-type",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ServiceType",
+    "title" : null,
+    "description" : "This value set defines an example set of codes of service-types.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/service-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.518"],
+    "sources" : ["2.16.840.1.113883.4.642.3.518"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/servicerequest-category",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ServiceRequestCategoryCodes",
+    "title" : "Service Request Category Codes",
+    "description" : "An example value set of SNOMED CT concepts that can classify a requested service",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.434"],
+    "sources" : ["2.16.840.1.113883.4.642.3.434"],
+    "uses" : {
+    },
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "ServiceRequestOrderDetailsCodes",
+    "title" : "Service Request Order Details Codes",
+    "description" : "An example value set of Codified order entry details concepts.  These concepts only make sense in the context of what is being ordered.  This example is for a patient ventilation order",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.435"],
+    "sources" : ["2.16.840.1.113883.4.642.3.435"],
+    "uses" : {
+    },
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/subscriber-relationship",
+    "version" : "4.3.0",
+    "status" : "draft",
+    "name" : "SubscriberRelationshipCodes",
+    "title" : "SubscriberPolicyholder Relationship Codes",
+    "description" : "This value set includes codes for the relationship between the Subscriber and the Beneficiary (insured/covered party/patient).",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/subscriber-relationship"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1385"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1385"],
+    "uses" : {
+    },
+    "StructureDefinition-core-coverage.html" : "Core Coverage (Источник финансирования)"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/action-participant-role",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "ActionParticipantRole",
+    "title" : "Action Participant Role",
+    "description" : "Either a practitioner role or a relationship type.  Note from UTG import - may have been a temporary entry that subsequently disappeared from the FHIR source; unable to locate.   Version set to 0.1.0",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "http://terminology.hl7.org/CodeSystem/v2-0131",
+    "http://terminology.hl7.org/CodeSystem/practitioner-role",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0092",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSReAdmissionIndicator",
+    "title" : "hl7VS-re-admissionIndicator",
+    "description" : "Value Set of codes which are used to specify that a patient is being re-admitted to a healthcare facility from which they were discharged, and indicates the circumstances around such re-admission.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0092"],
+    "oids" : ["2.16.840.1.113883.21.40"],
+    "sources" : ["2.16.840.1.113883.21.40"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0360",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSDegreeLicenseCertificate",
+    "title" : "hl7VS-degreeLicenseCertificate",
+    "description" : "Concepts specifying an educational degree (e.g., MD).  Used in the CNN datatype (names and identifiers of clinicians) in Version 2 messaging.  Used in Version 2 messaging; note that in releases of HL7 prior to 2.3.1, was also used in person names (XPN), but this use was deprecated, then withdrawn in 2.7.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0360"],
+    "oids" : ["2.16.840.1.113883.21.236"],
+    "sources" : ["2.16.840.1.113883.21.236"],
+    "uses" : {
+    },
+    "StructureDefinition-core-practitioner.html" : "Core Practitioner (Врач/сотрудник)",
+    "StructureDefinition-core-practitioner-role.html" : "Core PractitionerRole (Роль/должность сотрудника)"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActEncounterCode",
+    "title" : "ActEncounterCode",
+    "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["2.16.840.1.113883.1.11.13955"],
+    "sources" : ["2.16.840.1.113883.1.11.13955"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActPriority",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActPriority",
+    "title" : "ActPriority",
+    "description" : "A code or set of codes (e.g., for routine, emergency,) specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.\r\n\r\n*Discussion:* This attribute is used in orders to indicate the ordered priority, and in event documentation it indicates the actual priority used to perform the act. In definition mood it indicates the available priorities.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
+    "oids" : ["2.16.840.1.113883.1.11.16866"],
+    "sources" : ["2.16.840.1.113883.1.11.16866"],
+    "uses" : {
+    },
+    "StructureDefinition-core-encounter.html" : " Core Encounter (Случай обслуживания)"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ServiceDeliveryLocationRoleType",
+    "title" : "ServiceDeliveryLocationRoleType",
+    "description" : "A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+    "oids" : ["2.16.840.1.113883.1.11.17660"],
+    "sources" : ["2.16.840.1.113883.1.11.17660"],
+    "uses" : {
+    },
+    "StructureDefinition-core-servicerequest.html" : "Core Service Request (Заказ услуги)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-coverage-document",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Coverage_Document",
+    "title" : "Core ValueSet NSI coverage document (документы-основания для оплаты медицинских услуг)",
+    "description" : "документы-основания для оплаты медицинских услуг - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document"],
+    "uses" : {
+    },
+    "StructureDefinition-core-coverage.html" : "Core Coverage (Источник финансирования)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-identity-documents",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Identity_Documents",
+    "title" : "Core ValueSet NSI identity documents (Документы удостоверяющие личность)",
+    "description" : "Документы, удостоверяющие личность - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document"],
+    "uses" : {
+    },
+    "StructureDefinition-core-patient.html" : "Core Patient (Пациент)",
+    "StructureDefinition-core-patient-payer.html" : "Core Patient Payer (Пациент - плательщик)",
+    "StructureDefinition-core-practitioner.html" : "Core Practitioner (Врач/сотрудник)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-medical-workers-positions",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Medical_Workers_Position",
+    "title" : "Core ValueSet NSI medical workers positions (Должности медицинских работников)",
+    "description" : "Должности медицинских работников - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-register-of-medical-organizations",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Register_Of_Medical_Organizations",
+    "title" : "Core ValueSet NSI register of medical organizations (Реестр медицинских организаций Российской Федерации)",
+    "description" : "Реестр медицинских организаций МЗРФ - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-register-of-medical-organizations"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-sources-of-payment",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Sources_Of_Payment",
+    "title" : "Core ValueSet NSI sources of payment (Источники оплаты медицинской помощи)",
+    "description" : "Источники оплаты медицинской помощи - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-types-medical-documentation",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Types_Medical_Documentation",
+    "title" : "Core ValueSet types medical documentation (Виды медицинской документации)",
+    "description" : "Виды медицинской документации - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation"]
+  }]
+}

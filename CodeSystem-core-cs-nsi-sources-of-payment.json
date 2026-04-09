@@ -1,0 +1,67 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "core-cs-nsi-sources-of-payment",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem core-cs-nsi-sources-of-payment</b></p><a name=\"core-cs-nsi-sources-of-payment\"> </a><a name=\"hccore-cs-nsi-sources-of-payment\"> </a><p>This case-insensitive code system <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"core-cs-nsi-sources-of-payment-1\"> </a></td><td>Средства обязательного медицинского страхования</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"core-cs-nsi-sources-of-payment-3\"> </a></td><td>Средства добровольного медицинского страхования</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"core-cs-nsi-sources-of-payment-4\"> </a></td><td>Средства пациента</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"core-cs-nsi-sources-of-payment-5\"> </a></td><td>Средства третьих физических лиц</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"core-cs-nsi-sources-of-payment-6\"> </a></td><td>Средства третьих юридических лиц</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"core-cs-nsi-sources-of-payment-8\"> </a></td><td>Средства федерального бюджета</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"core-cs-nsi-sources-of-payment-9\"> </a></td><td>Средства регионального бюджета</td></tr><tr><td style=\"white-space:nowrap\">10<a name=\"core-cs-nsi-sources-of-payment-10\"> </a></td><td>Средства обязательного социального страхования</td></tr><tr><td style=\"white-space:nowrap\">11<a name=\"core-cs-nsi-sources-of-payment-11\"> </a></td><td>Средства бюджета медицинской организации</td></tr><tr><td style=\"white-space:nowrap\">12<a name=\"core-cs-nsi-sources-of-payment-12\"> </a></td><td>Средства федерального и регионального бюджета</td></tr></table></div>"
+  },
+  "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment",
+  "version" : "1",
+  "name" : "Core_Cs_Nsi_Sources_Of_Payment",
+  "title" : "Core CodeSystem NSI sources of payment (Источники оплаты медицинской помощи)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-09T17:27:53+00:00",
+  "publisher" : "HL7 FHIR Россия",
+  "contact" : [{
+    "name" : "HL7 FHIR Россия",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://fhir.ru"
+    }]
+  }],
+  "description" : "НСИ МЗ РФ справочник [Источники оплаты медицинской помощи](http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment)",
+  "caseSensitive" : false,
+  "content" : "complete",
+  "count" : 10,
+  "concept" : [{
+    "code" : "1",
+    "display" : "Средства обязательного медицинского страхования"
+  },
+  {
+    "code" : "3",
+    "display" : "Средства добровольного медицинского страхования"
+  },
+  {
+    "code" : "4",
+    "display" : "Средства пациента"
+  },
+  {
+    "code" : "5",
+    "display" : "Средства третьих физических лиц"
+  },
+  {
+    "code" : "6",
+    "display" : "Средства третьих юридических лиц"
+  },
+  {
+    "code" : "8",
+    "display" : "Средства федерального бюджета"
+  },
+  {
+    "code" : "9",
+    "display" : "Средства регионального бюджета"
+  },
+  {
+    "code" : "10",
+    "display" : "Средства обязательного социального страхования"
+  },
+  {
+    "code" : "11",
+    "display" : "Средства бюджета медицинской организации"
+  },
+  {
+    "code" : "12",
+    "display" : "Средства федерального и регионального бюджета"
+  }]
+}

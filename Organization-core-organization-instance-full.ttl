@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ru/ig/core/Organization/core-organization-instance-full> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "core-organization-instance-full"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.ru/ig/core/StructureDefinition/core-organization"^^xsd:anyURI ;
+       fhir:l <https://fhir.ru/ig/core/StructureDefinition/core-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization core-organization-instance-full</b></p><a name=\"core-organization-instance-full\"> </a><a name=\"hccore-organization-instance-full\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-core-organization.html\">Core Organization (Организация)</a></p></div><p><b>identifier</b>: TAX/4719008550, <code>http://fhir.ru/core/systems/frmo</code>/1.2.643.5.1.13.13.12.2.78.8575, <a href=\"NamingSystem-core-ns-rf-ogrn.html\" title=\"Основной государственный регистрационный номер юридического лица (индивидуального предпринимателя) (ОГРН)\">Core_Ns_Rf_OGRN</a>/1024702086420</p><p><b>name</b>: САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ 'ПСИХИАТРИЧЕСКАЯ БОЛЬНИЦА № 1 ИМ. П.П.КАЩЕНКО'</p><p><b>alias</b>: СПБ ГБУЗ 'БОЛЬНИЦА ИМ.П.П.КАЩЕНКО'</p><p><b>address</b>: 190005, Россия, г. Санкт-Петербург, наб. р. Фонтанки, д. 132(work)</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:code [ fhir:v "TAX" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://fhir.ru/core/systems/inn"^^xsd:anyURI ;
+       fhir:l <http://fhir.ru/core/systems/inn>
+     ] ;
+     fhir:value [ fhir:v "4719008550" ]
+  ] [
+     fhir:system [
+       fhir:v "http://fhir.ru/core/systems/frmo"^^xsd:anyURI ;
+       fhir:l <http://fhir.ru/core/systems/frmo>
+     ] ;
+     fhir:value [ fhir:v "1.2.643.5.1.13.13.12.2.78.8575" ]
+  ] [
+     fhir:system [
+       fhir:v "http://fhir.ru/core/systems/ogrn"^^xsd:anyURI ;
+       fhir:l <http://fhir.ru/core/systems/ogrn>
+     ] ;
+     fhir:value [ fhir:v "1024702086420" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ 'ПСИХИАТРИЧЕСКАЯ БОЛЬНИЦА № 1 ИМ. П.П.КАЩЕНКО'"] ; # 
+  fhir:alias ( [ fhir:v "СПБ ГБУЗ 'БОЛЬНИЦА ИМ.П.П.КАЩЕНКО'"] ) ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "aoguid"^^xsd:anyURI ;
+           fhir:l fhir:aoguid
+         ] ;
+         fhir:value [
+           a fhir:Identifier ;
+           fhir:system [
+             fhir:v "urn:hl7-ru:fias:aoguid"^^xsd:anyURI ;
+             fhir:l <urn:hl7-ru:fias:aoguid>
+           ] ;
+           fhir:value [ fhir:v "796de636-5fd9-4f3d-97ad-c865c60a024d" ]
+         ]
+       ] [
+         fhir:url [
+           fhir:v "houseguid"^^xsd:anyURI ;
+           fhir:l fhir:houseguid
+         ] ;
+         fhir:value [
+           a fhir:Identifier ;
+           fhir:system [
+             fhir:v "urn:hl7-ru:fias:houseguid"^^xsd:anyURI ;
+             fhir:l <urn:hl7-ru:fias:houseguid>
+           ] ;
+           fhir:value [ fhir:v "19229ca9-d457-4f07-ab86-8d64c868502a" ]
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "https://fhir.ru/ig/core/StructureDefinition/core-ex-address-fias"^^xsd:anyURI ;
+         fhir:l <https://fhir.ru/ig/core/StructureDefinition/core-ex-address-fias>
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:text [ fhir:v "190005, Россия, г. Санкт-Петербург, наб. р. Фонтанки, д. 132" ] ;
+     fhir:city [ fhir:v "Санкт-Петербург" ] ;
+     fhir:postalCode [ fhir:v "190005" ] ;
+     fhir:country [ fhir:v "Россия" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<NamingSystem xmlns="http://hl7.org/fhir">
+  <id value="core-ns-nsi-confidentiality"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: NamingSystem core-ns-nsi-confidentiality</b></p><a name="core-ns-nsi-confidentiality"> </a><a name="hccore-ns-nsi-confidentiality"> </a><h3>Summary</h3><table class="grid"><tr><td>Defining URL</td><td>https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-confidentiality</td></tr><tr><td>Version</td><td>1</td></tr><tr><td>Name</td><td>core-ns-nsi-confidentiality</td></tr><tr><td>Status</td><td>active</td></tr><tr><td>Definition</td><td><div><p>Справочник НСИ Минздрава &lt;Уровень конфиденциальности медицинского документа&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.285, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2</p>
+</div></td></tr><tr><td>Publisher</td><td>HL7 FHIR Россия</td></tr></table><h3>Identifiers</h3><table class="grid"><tr><td><b>Type</b></td><td><b>Value</b></td><td><b>Preferred</b></td><td><b>Comment</b></td></tr><tr><td>OID</td><td>1.2.643.5.1.13.13.99.2.285</td><td/><td>Основной</td></tr><tr><td>URI</td><td>http://fhir.ru/core/CodeSystem/core-ns-nsi-confidentiality</td><td>true</td><td/></tr><tr><td>URI</td><td>https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2</td><td/><td/></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url">
+    <valueUri value="https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-confidentiality"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version">
+    <valueString value="1"/>
+  </extension>
+  <name value="core-ns-nsi-confidentiality"/>
+  <status value="active"/>
+  <kind value="codesystem"/>
+  <date value="2024-01-01"/>
+  <publisher value="HL7 FHIR Россия"/>
+  <contact>
+    <name value="HL7 FHIR Россия"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://fhir.ru"/>
+    </telecom>
+  </contact>
+  <description value=" Справочник НСИ Минздрава &lt;Уровень конфиденциальности медицинского документа&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.285, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2"/>
+  <uniqueId>
+    <type value="oid"/>
+    <value value="1.2.643.5.1.13.13.99.2.285"/>
+    <comment value="Основной"/>
+  </uniqueId>
+  <uniqueId>
+    <type value="uri"/>
+    <value value="http://fhir.ru/core/CodeSystem/core-ns-nsi-confidentiality"/>
+    <preferred value="true"/>
+  </uniqueId>
+  <uniqueId>
+    <type value="uri"/>
+    <value value="https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2"/>
+  </uniqueId>
+</NamingSystem>

@@ -1,0 +1,65 @@
+{
+  "resourceType" : "Patient",
+  "id" : "core-patient-payer-instance-full",
+  "meta" : {
+    "profile" : ["https://fhir.ru/ig/core/StructureDefinition/core-patient-payer"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient core-patient-payer-instance-full</b></p><a name=\"core-patient-payer-instance-full\"> </a><a name=\"hccore-patient-payer-instance-full\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-core-patient-payer.html\">Core Patient Payer (Пациент - плательщик)</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Владимир Геннадиевич Корольков (official) Male, DoB: 1955-01-10 ( 1)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">TAX/463217055385</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987(home)</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document",
+        "code" : "1"
+      }]
+    },
+    "system" : "http://fhir.ru/core/systems/passport-RF",
+    "value" : "7412 809982"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "code" : "TAX"
+      }]
+    },
+    "system" : "http://fhir.ru/core/systems/inn",
+    "value" : "463217055385"
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Корольков",
+    "given" : ["Владимир",
+    "Геннадиевич"]
+  }],
+  "gender" : "male",
+  "birthDate" : "1955-01-10",
+  "address" : [{
+    "extension" : [{
+      "extension" : [{
+        "url" : "aoguid",
+        "valueIdentifier" : {
+          "system" : "urn:hl7-ru:fias:aoguid",
+          "value" : "7b1996be-c0fe-4797-bedc-f503e31a83fd"
+        }
+      },
+      {
+        "url" : "houseguid",
+        "valueIdentifier" : {
+          "system" : "urn:hl7-ru:fias:houseguid",
+          "value" : "7b1996be-c0fe-4797-bedc-f503e31a83fd"
+        }
+      }],
+      "url" : "https://fhir.ru/ig/core/StructureDefinition/core-ex-address-fias"
+    }],
+    "use" : "home",
+    "type" : "postal",
+    "text" : "Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987",
+    "line" : ["Софийская 32-1-987"],
+    "city" : "Санкт-Петербург",
+    "state" : "Санкт-Петербург",
+    "postalCode" : "192236",
+    "country" : "Россия"
+  }]
+}

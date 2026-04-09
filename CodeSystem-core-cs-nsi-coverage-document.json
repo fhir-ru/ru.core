@@ -1,0 +1,39 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "core-cs-nsi-coverage-document",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem core-cs-nsi-coverage-document</b></p><a name=\"core-cs-nsi-coverage-document\"> </a><a name=\"hccore-cs-nsi-coverage-document\"> </a><p>This case-insensitive code system <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"core-cs-nsi-coverage-document-1\"> </a></td><td>Полис ОМС</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"core-cs-nsi-coverage-document-2\"> </a></td><td>Полис ДМС</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"core-cs-nsi-coverage-document-3\"> </a></td><td>Договор на оказание платных медицинских услуг</td></tr></table></div>"
+  },
+  "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document",
+  "version" : "1",
+  "name" : "Core_Cs_Nsi_Coverage_Document",
+  "title" : "Core CodeSystem NSI coverage document (Документы-основания для оплаты медицинских услуг)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-09T17:27:53+00:00",
+  "publisher" : "HL7 FHIR Россия",
+  "contact" : [{
+    "name" : "HL7 FHIR Россия",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://fhir.ru"
+    }]
+  }],
+  "description" : "НСИ МЗ РФ справочник [Документы-основания для оплаты](http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document)",
+  "caseSensitive" : false,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "1",
+    "display" : "Полис ОМС"
+  },
+  {
+    "code" : "2",
+    "display" : "Полис ДМС"
+  },
+  {
+    "code" : "3",
+    "display" : "Договор на оказание платных медицинских услуг"
+  }]
+}

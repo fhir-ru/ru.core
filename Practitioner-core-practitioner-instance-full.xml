@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="core-practitioner-instance-full"/>
+  <meta>
+    <profile value="https://fhir.ru/ig/core/StructureDefinition/core-practitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner core-practitioner-instance-full</b></p><a name="core-practitioner-instance-full"> </a><a name="hccore-practitioner-instance-full"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-core-practitioner.html">Core Practitioner (Врач/сотрудник)</a></p></div><p><b>identifier</b>: <a href="NamingSystem-core-ns-rf-inn.html" title="Государственные идентификационные номера налогоплательщика, формируются государственной федеральной налоговой службой (ФНС России). Уникальный неизменяемый.. Используется на всей территории РФ и не меняется, даже если налогоплательщик меняет место жительства, фамилию и другие паспортные данные.">Core_Ns_Rf_INN</a>/463217055385, 1/7412 809982, <a href="NamingSystem-core-ns-rf-snils.html" title="Страховой номер индивидуального лицевого счёта, СНИЛС — уникальный номер индивидуального лицевого счёта застрахованного лица в системе обязательного пенсионного страхования">Core_Ns_Rf_SNILS</a>/152-873-614 14</p><p><b>name</b>: Мария Ивановна Иванова (Official)</p><p><b>address</b>: Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987(home)</p><p><b>gender</b>: Female</p></div>
+  </text>
+  <identifier>
+    <system value="http://fhir.ru/core/systems/inn"/>
+    <value value="463217055385"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document"/>
+        <code value="1"/>
+      </coding>
+    </type>
+    <system value="http://fhir.ru/core/systems/passport-RF"/>
+    <value value="7412 809982"/>
+  </identifier>
+  <identifier>
+    <system value="http://fhir.ru/core/systems/snils"/>
+    <value value="152-873-614 14"/>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <family value="Иванова"/>
+    <given value="Мария"/>
+    <given value="Ивановна"/>
+  </name>
+  <address>
+    <extension url="https://fhir.ru/ig/core/StructureDefinition/core-ex-address-fias">
+      <extension url="aoguid">
+        <valueIdentifier>
+          <system value="urn:hl7-ru:fias:aoguid"/>
+          <value value="7b1996be-c0fe-4797-bedc-f503e31a83fd"/>
+        </valueIdentifier>
+      </extension>
+      <extension url="houseguid">
+        <valueIdentifier>
+          <system value="urn:hl7-ru:fias:houseguid"/>
+          <value value="7b1996be-c0fe-4797-bedc-f503e31a83fd"/>
+        </valueIdentifier>
+      </extension>
+    </extension>
+    <use value="home"/>
+    <type value="postal"/>
+    <text value="Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987"/>
+    <line value="Софийская 32-1-987"/>
+    <city value="Санкт-Петербург"/>
+    <state value="Санкт-Петербург"/>
+    <postalCode value="192236"/>
+    <country value="Россия"/>
+  </address>
+  <gender value="female"/>
+</Practitioner>

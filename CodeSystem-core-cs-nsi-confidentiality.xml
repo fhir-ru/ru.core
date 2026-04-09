@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="core-cs-nsi-confidentiality"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem core-cs-nsi-confidentiality</b></p><a name="core-cs-nsi-confidentiality"> </a><a name="hccore-cs-nsi-confidentiality"> </a><p>This case-insensitive code system <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-confidentiality</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1<a name="core-cs-nsi-confidentiality-1"> </a></td><td>Обычный доступ</td></tr><tr><td style="white-space:nowrap">2<a name="core-cs-nsi-confidentiality-2"> </a></td><td>Ограниченный доступ</td></tr><tr><td style="white-space:nowrap">3<a name="core-cs-nsi-confidentiality-3"> </a></td><td>Крайне ограниченный доступ</td></tr></table></div>
+  </text>
+  <url value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-confidentiality"/>
+  <version value="1"/>
+  <name value="Core_Cs_Nsi_Confidentiality"/>
+  <title value="Core CodeSystem NSI Confidentiality (Уровень конфиденциальности медицинского документа)"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-09T17:27:53+00:00"/>
+  <publisher value="HL7 FHIR Россия"/>
+  <contact>
+    <name value="HL7 FHIR Россия"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://fhir.ru"/>
+    </telecom>
+  </contact>
+  <description value="НСИ МЗ РФ справочник [Уровень конфиденциальности медицинского документа](http://fhir.ru/core/CodeSystem/core-cs-nsi-confidentiality)"/>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="1"/>
+    <display value="Обычный доступ"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Ограниченный доступ"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Крайне ограниченный доступ"/>
+  </concept>
+</CodeSystem>

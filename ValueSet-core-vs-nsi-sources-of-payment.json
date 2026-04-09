@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "core-vs-nsi-sources-of-payment",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet core-vs-nsi-sources-of-payment</b></p><a name=\"core-vs-nsi-sources-of-payment\"> </a><a name=\"hccore-vs-nsi-sources-of-payment\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-core-cs-nsi-sources-of-payment.html\"><code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1</span></li></ul></div>"
+  },
+  "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-sources-of-payment",
+  "version" : "1",
+  "name" : "Core_Vs_Nsi_Sources_Of_Payment",
+  "title" : "Core ValueSet NSI sources of payment (Источники оплаты медицинской помощи)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-09T17:27:53+00:00",
+  "publisher" : "HL7 FHIR Россия",
+  "contact" : [{
+    "name" : "HL7 FHIR Россия",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://fhir.ru"
+    }]
+  }],
+  "description" : "Источники оплаты медицинской помощи - набор из всех значений системы кодирования",
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"
+    }]
+  }
+}

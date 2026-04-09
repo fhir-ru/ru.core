@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="core-servicerequest-instance-full"/>
+  <meta>
+    <profile value="https://fhir.ru/ig/core/StructureDefinition/core-servicerequest"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest core-servicerequest-instance-full</b></p><a name="core-servicerequest-instance-full"> </a><a name="hccore-servicerequest-instance-full"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-core-servicerequest.html">Core Service Request (Заказ услуги)</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>subject</b>: <a href="Patient-core-patient-instance-full.html">Мария-Антуанетта Иоганновна Габсбург-Лотарингская (official) Female, DoB: 1955-01-10 ( 6)</a></p></div>
+  </text>
+  <status value="active"/>
+  <intent value="plan"/>
+  <subject>
+    <reference value="Patient/core-patient-instance-full"/>
+  </subject>
+</ServiceRequest>

@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "core-cs-nsi-coverage-document"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem core-cs-nsi-coverage-document</b></p><a name=\"core-cs-nsi-coverage-document\"> </a><a name=\"hccore-cs-nsi-coverage-document\"> </a><p>This case-insensitive code system <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"core-cs-nsi-coverage-document-1\"> </a></td><td>Полис ОМС</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"core-cs-nsi-coverage-document-2\"> </a></td><td>Полис ДМС</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"core-cs-nsi-coverage-document-3\"> </a></td><td>Договор на оказание платных медицинских услуг</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document"^^xsd:anyURI ;
+     fhir:l <https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document>
+  ] ; # 
+  fhir:version [ fhir:v "1"] ; # 
+  fhir:name [ fhir:v "Core_Cs_Nsi_Coverage_Document"] ; # 
+  fhir:title [ fhir:v "Core CodeSystem NSI coverage document (Документы-основания для оплаты медицинских услуг)"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-09T17:27:53+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 FHIR Россия"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 FHIR Россия" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://fhir.ru" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "НСИ МЗ РФ справочник [Документы-основания для оплаты](http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document)"] ; # 
+  fhir:caseSensitive [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "1" ] ;
+     fhir:display [ fhir:v "Полис ОМС" ]
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "Полис ДМС" ]
+  ] [
+     fhir:code [ fhir:v "3" ] ;
+     fhir:display [ fhir:v "Договор на оказание платных медицинских услуг" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

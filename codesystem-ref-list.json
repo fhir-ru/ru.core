@@ -1,0 +1,80 @@
+{
+  "codeSystems" : [{
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "DegreeLicenseCertificate",
+    "title" : "degreeLicenseCertificate",
+    "description" : "Code system of concepts specifying an educational degree (e.g., MD).  Used in the CNN datatype (names and identifiers of clinicians) in Version 2 messaging.  Used in HL7 Version 2.x messaging in the CNN segment; note that in releases of HL7 prior to 2.3.1, was also used in person names (XPN), but this use was deprecated, then withdrawn in 2.7.",
+    "oids" : ["2.16.840.1.113883.18.220"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.1.0/ValueSet-v2-0360.html" : "hl7VS-degreeLicenseCertificate"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Coverage_Document",
+    "title" : "Core CodeSystem NSI coverage document (Документы-основания для оплаты медицинских услуг)",
+    "description" : "НСИ МЗ РФ справочник [Документы-основания для оплаты](http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document)",
+    "uses" : {
+    },
+    "ValueSet-core-vs-nsi-coverage-document.html" : "Core ValueSet NSI coverage document (документы-основания для оплаты медицинских услуг)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Identity_Document",
+    "title" : "Core CodeSystem NSI Identity Documents (Документы удостоверяющие личность)",
+    "description" : "НСИ МЗ РФ справочник [документы удостоверяющие личность](http://fhir.ru/core/NamingSystem/core-ns-nsi-identity-document)",
+    "uses" : {
+    },
+    "ValueSet-core-vs-nsi-identity-documents.html" : "Core ValueSet NSI identity documents (Документы удостоверяющие личность)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Medical_Workers_Positions",
+    "title" : "Core CodeSystem NSI medical workers positions (Должности медицинских работников)",
+    "description" : "НСИ МЗ РФ справочник [Должности медицинских и фармацевтических работников](http://fhir.ru/core/CodeSystem/core-cs-nsi-medical-workers-positions)",
+    "uses" : {
+    },
+    "ValueSet-core-vs-nsi-medical-workers-positions.html" : "Core ValueSet NSI medical workers positions (Должности медицинских работников)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-register-of-medical-organizations",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Register_Of_Medical_Organizations",
+    "title" : "Core CodeSystem NSI register of medical organizations (Реестр медицинских организаций)",
+    "description" : "НСИ МЗ РФ справочник [Реестр медицинских организаций](http://fhir.ru/core/CodeSystem/core-cs-nsi-register_of_ medical_organizations)",
+    "uses" : {
+    },
+    "ValueSet-core-vs-nsi-register-of-medical-organizations.html" : "Core ValueSet NSI register of medical organizations (Реестр медицинских организаций Российской Федерации)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Sources_Of_Payment",
+    "title" : "Core CodeSystem NSI sources of payment (Источники оплаты медицинской помощи)",
+    "description" : "НСИ МЗ РФ справочник [Источники оплаты медицинской помощи](http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment)",
+    "uses" : {
+    },
+    "ValueSet-core-vs-nsi-sources-of-payment.html" : "Core ValueSet NSI sources of payment (Источники оплаты медицинской помощи)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Types_Medical_Documentation",
+    "title" : "Core CodeSystem NSI types of medical documentation (Виды медицинской документации)",
+    "description" : "НСИ МЗ РФ справочник [Виды медицинской документации](http://fhir.ru/core/CodeSystem/core-cs-nsi-types-medical-documentation)",
+    "uses" : {
+    },
+    "ValueSet-core-vs-nsi-types-medical-documentation.html" : "Core ValueSet types medical documentation (Виды медицинской документации)"
+  }]
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="core-cs-nsi-coverage-document"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem core-cs-nsi-coverage-document</b></p><a name="core-cs-nsi-coverage-document"> </a><a name="hccore-cs-nsi-coverage-document"> </a><p>This case-insensitive code system <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1<a name="core-cs-nsi-coverage-document-1"> </a></td><td>Полис ОМС</td></tr><tr><td style="white-space:nowrap">2<a name="core-cs-nsi-coverage-document-2"> </a></td><td>Полис ДМС</td></tr><tr><td style="white-space:nowrap">3<a name="core-cs-nsi-coverage-document-3"> </a></td><td>Договор на оказание платных медицинских услуг</td></tr></table></div>
+  </text>
+  <url value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document"/>
+  <version value="1"/>
+  <name value="Core_Cs_Nsi_Coverage_Document"/>
+  <title value="Core CodeSystem NSI coverage document (Документы-основания для оплаты медицинских услуг)"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-09T17:27:53+00:00"/>
+  <publisher value="HL7 FHIR Россия"/>
+  <contact>
+    <name value="HL7 FHIR Россия"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://fhir.ru"/>
+    </telecom>
+  </contact>
+  <description value="НСИ МЗ РФ справочник [Документы-основания для оплаты](http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document)"/>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="1"/>
+    <display value="Полис ОМС"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Полис ДМС"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Договор на оказание платных медицинских услуг"/>
+  </concept>
+</CodeSystem>

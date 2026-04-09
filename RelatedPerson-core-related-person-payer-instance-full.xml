@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="core-related-person-payer-instance-full"/>
+  <meta>
+    <profile value="https://fhir.ru/ig/core/StructureDefinition/core-related-person-payer"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: RelatedPerson core-related-person-payer-instance-full</b></p><a name="core-related-person-payer-instance-full"> </a><a name="hccore-related-person-payer-instance-full"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-core-related-person-payer.html">Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)</a></p></div><p><b>identifier</b>: TAX/463217055385</p><p><b>patient</b>: <a href="Patient-core-patient-instance-full.html">Мария-Антуанетта Иоганновна Габсбург-Лотарингская (official) Female, DoB: 1955-01-10 ( 6)</a></p><p><b>name</b>: Михаил Иванович Габсбург-Лотарингский (Official)</p><p><b>gender</b>: Male</p><p><b>birthDate</b>: 1960-10-20</p><p><b>address</b>: Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987(home)</p></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <code value="TAX"/>
+      </coding>
+    </type>
+    <system value="http://fhir.ru/core/systems/inn"/>
+    <value value="463217055385"/>
+  </identifier>
+  <patient>
+    <reference value="Patient/core-patient-instance-full"/>
+  </patient>
+  <name>
+    <use value="official"/>
+    <family value="Габсбург-Лотарингский"/>
+    <given value="Михаил"/>
+    <given value="Иванович"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1960-10-20"/>
+  <address>
+    <extension url="https://fhir.ru/ig/core/StructureDefinition/core-ex-address-fias">
+      <extension url="aoguid">
+        <valueIdentifier>
+          <system value="urn:hl7-ru:fias:aoguid"/>
+          <value value="7b1996be-c0fe-4797-bedc-f503e31a83fd"/>
+        </valueIdentifier>
+      </extension>
+      <extension url="houseguid">
+        <valueIdentifier>
+          <system value="urn:hl7-ru:fias:houseguid"/>
+          <value value="7b1996be-c0fe-4797-bedc-f503e31a83fd"/>
+        </valueIdentifier>
+      </extension>
+    </extension>
+    <use value="home"/>
+    <type value="postal"/>
+    <text value="Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987"/>
+    <line value="Софийская 32-1-987"/>
+    <city value="Санкт-Петербург"/>
+    <state value="Санкт-Петербург"/>
+    <postalCode value="192236"/>
+    <country value="Россия"/>
+  </address>
+</RelatedPerson>

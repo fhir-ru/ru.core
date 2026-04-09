@@ -1,0 +1,43 @@
+{
+  "resourceType" : "NamingSystem",
+  "id" : "core-ns-nsi-types-medical-documentation",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: NamingSystem core-ns-nsi-types-medical-documentation</b></p><a name=\"core-ns-nsi-types-medical-documentation\"> </a><a name=\"hccore-ns-nsi-types-medical-documentation\"> </a><h3>Summary</h3><table class=\"grid\"><tr><td>Defining URL</td><td>https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-types-medical-documentation</td></tr><tr><td>Version</td><td>1</td></tr><tr><td>Name</td><td>core-ns-nsi-types-medical-documentation</td></tr><tr><td>Status</td><td>active</td></tr><tr><td>Definition</td><td><div><p>Справочник НСИ Минздрава &lt;Виды медицинской документации&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1522, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24</p>\n</div></td></tr><tr><td>Publisher</td><td>HL7 FHIR Россия</td></tr></table><h3>Identifiers</h3><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Value</b></td><td><b>Preferred</b></td><td><b>Comment</b></td></tr><tr><td>OID</td><td>1.2.643.5.1.13.13.11.1522</td><td/><td>Основной</td></tr><tr><td>URI</td><td>http://fhir.ru/core/CodeSystem/core-ns-nsi-types-medical-documentation</td><td>true</td><td/></tr><tr><td>URI</td><td>https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24</td><td/><td/></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
+    "valueUri" : "https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-types-medical-documentation"
+  },
+  {
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
+    "valueString" : "1"
+  }],
+  "name" : "core-ns-nsi-types-medical-documentation",
+  "status" : "active",
+  "kind" : "codesystem",
+  "date" : "2024-01-01",
+  "publisher" : "HL7 FHIR Россия",
+  "contact" : [{
+    "name" : "HL7 FHIR Россия",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://fhir.ru"
+    }]
+  }],
+  "description" : " Справочник НСИ Минздрава <Виды медицинской документации>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1522, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24",
+  "uniqueId" : [{
+    "type" : "oid",
+    "value" : "1.2.643.5.1.13.13.11.1522",
+    "comment" : "Основной"
+  },
+  {
+    "type" : "uri",
+    "value" : "http://fhir.ru/core/CodeSystem/core-ns-nsi-types-medical-documentation",
+    "preferred" : true
+  },
+  {
+    "type" : "uri",
+    "value" : "https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24"
+  }]
+}

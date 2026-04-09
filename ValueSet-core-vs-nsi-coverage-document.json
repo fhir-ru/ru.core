@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "core-vs-nsi-coverage-document",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet core-vs-nsi-coverage-document</b></p><a name=\"core-vs-nsi-coverage-document\"> </a><a name=\"hccore-vs-nsi-coverage-document\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-core-cs-nsi-coverage-document.html\"><code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1</span></li></ul></div>"
+  },
+  "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-coverage-document",
+  "version" : "1",
+  "name" : "Core_Vs_Nsi_Coverage_Document",
+  "title" : "Core ValueSet NSI coverage document (документы-основания для оплаты медицинских услуг)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-09T17:27:53+00:00",
+  "publisher" : "HL7 FHIR Россия",
+  "contact" : [{
+    "name" : "HL7 FHIR Россия",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://fhir.ru"
+    }]
+  }],
+  "description" : "документы-основания для оплаты медицинских услуг - набор из всех значений системы кодирования",
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document"
+    }]
+  }
+}

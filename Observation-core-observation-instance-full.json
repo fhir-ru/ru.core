@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Observation",
+  "id" : "core-observation-instance-full",
+  "meta" : {
+    "profile" : ["https://fhir.ru/ig/core/StructureDefinition/core-observation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation core-observation-instance-full</b></p><a name=\"core-observation-instance-full\"> </a><a name=\"hccore-observation-instance-full\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-core-observation.html\">Core Observation (Измерения и простые утверждения о пациенте)</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 10414-1}\">Transfuse albumin [Volume]</span></p><p><b>subject</b>: <a href=\"Patient-core-patient-instance-full.html\">Мария-Антуанетта Иоганновна Габсбург-Лотарингская (official) Female, DoB: 1955-01-10 ( 6)</a></p><p><b>performer</b>: <a href=\"Practitioner-core-practitioner-instance-full.html\">Practitioner Мария Ивановна Иванова (official)</a></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "10414-1"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/core-patient-instance-full"
+  },
+  "performer" : [{
+    "reference" : "Practitioner/core-practitioner-instance-full"
+  }]
+}

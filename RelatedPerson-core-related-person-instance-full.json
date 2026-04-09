@@ -1,0 +1,49 @@
+{
+  "resourceType" : "RelatedPerson",
+  "id" : "core-related-person-instance-full",
+  "meta" : {
+    "profile" : ["https://fhir.ru/ig/core/StructureDefinition/core-related-person"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson core-related-person-instance-full</b></p><a name=\"core-related-person-instance-full\"> </a><a name=\"hccore-related-person-instance-full\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-core-related-person.html\">Core Related Person (Лицо, имеющее связь с пациентом)</a></p></div><p><b>patient</b>: <a href=\"Patient-core-patient-instance-full.html\">Мария-Антуанетта Иоганновна Габсбург-Лотарингская (official) Female, DoB: 1955-01-10 ( 6)</a></p><p><b>name</b>: Михаил Иванович Габсбург-Лотарингский (Official)</p><p><b>gender</b>: Male</p><p><b>birthDate</b>: 1960-10-20</p><p><b>address</b>: Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987(home)</p></div>"
+  },
+  "patient" : {
+    "reference" : "Patient/core-patient-instance-full"
+  },
+  "name" : [{
+    "use" : "official",
+    "family" : "Габсбург-Лотарингский",
+    "given" : ["Михаил",
+    "Иванович"]
+  }],
+  "gender" : "male",
+  "birthDate" : "1960-10-20",
+  "address" : [{
+    "extension" : [{
+      "extension" : [{
+        "url" : "aoguid",
+        "valueIdentifier" : {
+          "system" : "urn:hl7-ru:fias:aoguid",
+          "value" : "7b1996be-c0fe-4797-bedc-f503e31a83fd"
+        }
+      },
+      {
+        "url" : "houseguid",
+        "valueIdentifier" : {
+          "system" : "urn:hl7-ru:fias:houseguid",
+          "value" : "7b1996be-c0fe-4797-bedc-f503e31a83fd"
+        }
+      }],
+      "url" : "https://fhir.ru/ig/core/StructureDefinition/core-ex-address-fias"
+    }],
+    "use" : "home",
+    "type" : "postal",
+    "text" : "Россия, г. Санкт-Петербург, Софийская ул., д.32-1-987",
+    "line" : ["Софийская 32-1-987"],
+    "city" : "Санкт-Петербург",
+    "state" : "Санкт-Петербург",
+    "postalCode" : "192236",
+    "country" : "Россия"
+  }]
+}

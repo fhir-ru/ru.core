@@ -1,0 +1,287 @@
+[{
+  "id" : "core-cs-nsi-confidentiality",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-confidentiality",
+  "version" : "1",
+  "name" : "Core_Cs_Nsi_Confidentiality"
+},
+{
+  "id" : "core-cs-nsi-coverage-document",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document",
+  "version" : "1",
+  "name" : "Core_Cs_Nsi_Coverage_Document"
+},
+{
+  "id" : "core-cs-nsi-identity-document",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document",
+  "version" : "1",
+  "name" : "Core_Cs_Nsi_Identity_Document"
+},
+{
+  "id" : "core-cs-nsi-medical-workers-positions",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions",
+  "version" : "1",
+  "name" : "Core_Cs_Nsi_Medical_Workers_Positions"
+},
+{
+  "id" : "core-cs-nsi-register-of-medical-organizations",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-register-of-medical-organizations",
+  "version" : "1",
+  "name" : "Core_Cs_Nsi_Register_Of_Medical_Organizations"
+},
+{
+  "id" : "core-cs-nsi-sources-of-payment",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment",
+  "version" : "1",
+  "name" : "Core_Cs_Nsi_Sources_Of_Payment"
+},
+{
+  "id" : "core-cs-nsi-types-medical-documentation",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation",
+  "version" : "1",
+  "name" : "Core_Cs_Nsi_Types_Medical_Documentation"
+},
+{
+  "id" : "ru.core",
+  "type" : "ImplementationGuide",
+  "url" : "https://fhir.ru/ig/core/ImplementationGuide/ru.core",
+  "version" : "1",
+  "name" : "RuCoreIG"
+},
+{
+  "id" : "core-ns-fias-aoguid",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-fias-aoguid",
+  "version" : "1",
+  "name" : "Core_Ns_Fias_Aoguid"
+},
+{
+  "id" : "core-ns-fias-houseguid",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-fias-houseguid",
+  "version" : "1",
+  "name" : "Core_Ns_Fias_Houseguid"
+},
+{
+  "id" : "core-ns-nsi-confidentiality",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-confidentiality",
+  "version" : "1",
+  "name" : "core-ns-nsi-confidentiality"
+},
+{
+  "id" : "core-ns-nsi-coverage-document",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-coverage-document",
+  "version" : "1",
+  "name" : "core-ns-nsi-coverage-document"
+},
+{
+  "id" : "core-ns-nsi-identity-document",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-identity-document",
+  "version" : "1",
+  "name" : "core-ns-nsi-identity-document"
+},
+{
+  "id" : "core-ns-nsi-medical-workers-positions",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-medical-workers-positions",
+  "version" : "1",
+  "name" : "core-ns-nsi-medical-workers-positions"
+},
+{
+  "id" : "core-ns-nsi-register-of-medical-organizations",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-register-of-medical-organizations",
+  "version" : "1",
+  "name" : "core-ns-nsi-register_of_medical_organizations"
+},
+{
+  "id" : "core-ns-nsi-sources-of-payment",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-sources-of-payment",
+  "version" : "1",
+  "name" : "core-ns-nsi-sources-of-payment"
+},
+{
+  "id" : "core-ns-nsi-types-medical-documentation",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-types-medical-documentation",
+  "version" : "1",
+  "name" : "core-ns-nsi-types-medical-documentation"
+},
+{
+  "id" : "core-ns-rf-birth-certificate",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-rf-birth-certificate",
+  "version" : "1",
+  "name" : "Core_Ns_Rf_Birth_Certificate"
+},
+{
+  "id" : "core-ns-rf-inn",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-rf-inn",
+  "version" : "1",
+  "name" : "Core_Ns_Rf_INN"
+},
+{
+  "id" : "core-ns-rf-ogrn",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-rf-ogrn",
+  "version" : "1",
+  "name" : "Core_Ns_Rf_OGRN"
+},
+{
+  "id" : "core-ns-rf-snils",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.ru/ig/core/NamingSystem/core-ns-rf-snils",
+  "version" : "1",
+  "name" : "Core_Ns_Rf_SNILS"
+},
+{
+  "id" : "core-address",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-address",
+  "version" : "1",
+  "name" : "Core_Address"
+},
+{
+  "id" : "core-coverage",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-coverage",
+  "version" : "1",
+  "name" : "Core_Coverage"
+},
+{
+  "id" : "core-encounter",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-encounter",
+  "version" : "1",
+  "name" : "Core_Encounter"
+},
+{
+  "id" : "core-ex-address-fias",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-ex-address-fias",
+  "version" : "1",
+  "name" : "Core_Ex_Address_Fias"
+},
+{
+  "id" : "core-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-observation",
+  "version" : "1",
+  "name" : "Core_Observation"
+},
+{
+  "id" : "core-organization",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-organization",
+  "version" : "1",
+  "name" : "Core_Organization"
+},
+{
+  "id" : "core-organization-payer",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-organization-payer",
+  "version" : "1",
+  "name" : "Core_Organization_Payer"
+},
+{
+  "id" : "core-patient",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-patient",
+  "version" : "1",
+  "name" : "Core_Patient"
+},
+{
+  "id" : "core-patient-payer",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-patient-payer",
+  "version" : "1",
+  "name" : "Core_Patient_Payer"
+},
+{
+  "id" : "core-practitioner",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-practitioner",
+  "version" : "1",
+  "name" : "Core_Practitioner"
+},
+{
+  "id" : "core-practitioner-role",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-practitioner-role",
+  "version" : "1",
+  "name" : "Core_Practitioner_Role"
+},
+{
+  "id" : "core-related-person",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-related-person",
+  "version" : "1",
+  "name" : "Core_Related_Person"
+},
+{
+  "id" : "core-related-person-payer",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-related-person-payer",
+  "version" : "1",
+  "name" : "Core_Related_Person_Payer"
+},
+{
+  "id" : "core-servicerequest",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.ru/ig/core/StructureDefinition/core-servicerequest",
+  "version" : "1",
+  "name" : "Core_ServiceRequest"
+},
+{
+  "id" : "core-vs-nsi-coverage-document",
+  "type" : "ValueSet",
+  "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-coverage-document",
+  "version" : "1",
+  "name" : "Core_Vs_Nsi_Coverage_Document"
+},
+{
+  "id" : "core-vs-nsi-identity-documents",
+  "type" : "ValueSet",
+  "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-identity-documents",
+  "version" : "1",
+  "name" : "Core_Vs_Nsi_Identity_Documents"
+},
+{
+  "id" : "core-vs-nsi-medical-workers-positions",
+  "type" : "ValueSet",
+  "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-medical-workers-positions",
+  "version" : "1",
+  "name" : "Core_Vs_Nsi_Medical_Workers_Position"
+},
+{
+  "id" : "core-vs-nsi-register-of-medical-organizations",
+  "type" : "ValueSet",
+  "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-register-of-medical-organizations",
+  "version" : "1",
+  "name" : "Core_Vs_Nsi_Register_Of_Medical_Organizations"
+},
+{
+  "id" : "core-vs-nsi-sources-of-payment",
+  "type" : "ValueSet",
+  "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-sources-of-payment",
+  "version" : "1",
+  "name" : "Core_Vs_Nsi_Sources_Of_Payment"
+},
+{
+  "id" : "core-vs-nsi-types-medical-documentation",
+  "type" : "ValueSet",
+  "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-types-medical-documentation",
+  "version" : "1",
+  "name" : "Core_Vs_Nsi_Types_Medical_Documentation"
+}]

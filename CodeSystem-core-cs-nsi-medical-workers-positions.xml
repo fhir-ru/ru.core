@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="core-cs-nsi-medical-workers-positions"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem core-cs-nsi-medical-workers-positions</b></p><a name="core-cs-nsi-medical-workers-positions"> </a><a name="hccore-cs-nsi-medical-workers-positions"> </a><p>This case-insensitive code system <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions</code> defines codes, but no codes are represented here</p></div>
+  </text>
+  <url value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions"/>
+  <version value="1"/>
+  <name value="Core_Cs_Nsi_Medical_Workers_Positions"/>
+  <title value="Core CodeSystem NSI medical workers positions (Должности медицинских работников)"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-09T17:27:53+00:00"/>
+  <publisher value="HL7 FHIR Россия"/>
+  <contact>
+    <name value="HL7 FHIR Россия"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://fhir.ru"/>
+    </telecom>
+  </contact>
+  <description value="НСИ МЗ РФ справочник [Должности медицинских и фармацевтических работников](http://fhir.ru/core/CodeSystem/core-cs-nsi-medical-workers-positions)"/>
+  <caseSensitive value="false"/>
+  <content value="not-present"/>
+</CodeSystem>

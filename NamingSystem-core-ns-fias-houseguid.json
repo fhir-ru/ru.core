@@ -1,0 +1,34 @@
+{
+  "resourceType" : "NamingSystem",
+  "id" : "core-ns-fias-houseguid",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: NamingSystem core-ns-fias-houseguid</b></p><a name=\"core-ns-fias-houseguid\"> </a><a name=\"hccore-ns-fias-houseguid\"> </a><h3>Summary</h3><table class=\"grid\"><tr><td>Defining URL</td><td>https://fhir.ru/ig/core/NamingSystem/core-ns-fias-houseguid</td></tr><tr><td>Version</td><td>1</td></tr><tr><td>Name</td><td>Core_Ns_Fias_Houseguid</td></tr><tr><td>Status</td><td>active</td></tr><tr><td>Definition</td><td><div><p>Идентификатор дома по справочнику ФИАС</p>\n</div></td></tr><tr><td>Publisher</td><td>HL7 FHIR Россия</td></tr></table><h3>Identifiers</h3><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Value</b></td><td><b>Preferred</b></td></tr><tr><td>URI</td><td>urn:hl7-ru:fias:houseguid</td><td>true</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
+    "valueUri" : "https://fhir.ru/ig/core/NamingSystem/core-ns-fias-houseguid"
+  },
+  {
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
+    "valueString" : "1"
+  }],
+  "name" : "Core_Ns_Fias_Houseguid",
+  "status" : "active",
+  "kind" : "identifier",
+  "date" : "2023-10-23",
+  "publisher" : "HL7 FHIR Россия",
+  "contact" : [{
+    "name" : "HL7 FHIR Россия",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://fhir.ru"
+    }]
+  }],
+  "description" : "Идентификатор дома по справочнику ФИАС",
+  "uniqueId" : [{
+    "type" : "uri",
+    "value" : "urn:hl7-ru:fias:houseguid",
+    "preferred" : true
+  }]
+}

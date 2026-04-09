@@ -1,0 +1,26 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "core-cs-nsi-types-medical-documentation",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem core-cs-nsi-types-medical-documentation</b></p><a name=\"core-cs-nsi-types-medical-documentation\"> </a><a name=\"hccore-cs-nsi-types-medical-documentation\"> </a><p>This case-insensitive code system <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation</code> defines codes, but no codes are represented here</p></div>"
+  },
+  "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation",
+  "version" : "1",
+  "name" : "Core_Cs_Nsi_Types_Medical_Documentation",
+  "title" : "Core CodeSystem NSI types of medical documentation (Виды медицинской документации)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-09T17:27:53+00:00",
+  "publisher" : "HL7 FHIR Россия",
+  "contact" : [{
+    "name" : "HL7 FHIR Россия",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://fhir.ru"
+    }]
+  }],
+  "description" : "НСИ МЗ РФ справочник [Виды медицинской документации](http://fhir.ru/core/CodeSystem/core-cs-nsi-types-medical-documentation)",
+  "caseSensitive" : false,
+  "content" : "not-present"
+}

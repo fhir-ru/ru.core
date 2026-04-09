@@ -1,0 +1,83 @@
+# ru.core#1: null
+
+## Pages
+
+* [Home](index.md)
+* [Artifacts Summary](artifacts.md)
+
+## Resources
+
+### CodeSystems
+
+* [Core CodeSystem NSI Confidentiality (Уровень конфиденциальности медицинского документа)](CodeSystem-core-cs-nsi-confidentiality.md)
+* [Core CodeSystem NSI coverage document (Документы-основания для оплаты медицинских услуг)](CodeSystem-core-cs-nsi-coverage-document.md)
+* [Core CodeSystem NSI Identity Documents (Документы удостоверяющие личность)](CodeSystem-core-cs-nsi-identity-document.md)
+* [Core CodeSystem NSI medical workers positions (Должности медицинских работников)](CodeSystem-core-cs-nsi-medical-workers-positions.md)
+* [Core CodeSystem NSI register of medical organizations (Реестр медицинских организаций)](CodeSystem-core-cs-nsi-register-of-medical-organizations.md)
+* [Core CodeSystem NSI sources of payment (Источники оплаты медицинской помощи)](CodeSystem-core-cs-nsi-sources-of-payment.md)
+* [Core CodeSystem NSI types of medical documentation (Виды медицинской документации)](CodeSystem-core-cs-nsi-types-medical-documentation.md)
+
+### ValueSets
+
+* [Core ValueSet NSI coverage document (документы-основания для оплаты медицинских услуг)](ValueSet-core-vs-nsi-coverage-document.md)
+* [Core ValueSet NSI identity documents (Документы удостоверяющие личность)](ValueSet-core-vs-nsi-identity-documents.md)
+* [Core ValueSet NSI medical workers positions (Должности медицинских работников)](ValueSet-core-vs-nsi-medical-workers-positions.md)
+* [Core ValueSet NSI register of medical organizations (Реестр медицинских организаций Российской Федерации)](ValueSet-core-vs-nsi-register-of-medical-organizations.md)
+* [Core ValueSet NSI sources of payment (Источники оплаты медицинской помощи)](ValueSet-core-vs-nsi-sources-of-payment.md)
+* [Core ValueSet types medical documentation (Виды медицинской документации)](ValueSet-core-vs-nsi-types-medical-documentation.md)
+
+### Complex-type Profiles
+
+* [Core Address (Адрес)](StructureDefinition-core-address.md)
+
+### Resource Profiles
+
+* [Core Coverage (Источник финансирования)](StructureDefinition-core-coverage.md)
+* [ Core Encounter (Случай обслуживания)](StructureDefinition-core-encounter.md)
+* [Core Observation (Измерения и простые утверждения о пациенте)](StructureDefinition-core-observation.md)
+* [Core Organisation Payer (Организация-плательщик)](StructureDefinition-core-organization-payer.md)
+* [Core Organization (Организация)](StructureDefinition-core-organization.md)
+* [Core Patient Payer (Пациент - плательщик)](StructureDefinition-core-patient-payer.md)
+* [Core Patient (Пациент)](StructureDefinition-core-patient.md)
+* [Core PractitionerRole (Роль/должность сотрудника)](StructureDefinition-core-practitioner-role.md)
+* [Core Practitioner (Врач/сотрудник)](StructureDefinition-core-practitioner.md)
+* [Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)](StructureDefinition-core-related-person-payer.md)
+* [Core Related Person (Лицо, имеющее связь с пациентом)](StructureDefinition-core-related-person.md)
+* [Core Service Request (Заказ услуги)](StructureDefinition-core-servicerequest.md)
+
+### Extensions
+
+* [Core Extension address fias (Кодирование адреса по ФИАС)](StructureDefinition-core-ex-address-fias.md)
+
+### ImplementationGuides
+
+* [RuCoreIG](index.md)
+
+### NamingSystems
+
+* [Core_Ns_Fias_Aoguid](NamingSystem-core-ns-fias-aoguid.md)
+* [Core_Ns_Fias_Houseguid](NamingSystem-core-ns-fias-houseguid.md)
+* [core-ns-nsi-confidentiality](NamingSystem-core-ns-nsi-confidentiality.md)
+* [core-ns-nsi-coverage-document](NamingSystem-core-ns-nsi-coverage-document.md)
+* [core-ns-nsi-identity-document](NamingSystem-core-ns-nsi-identity-document.md)
+* [core-ns-nsi-medical-workers-positions](NamingSystem-core-ns-nsi-medical-workers-positions.md)
+* [core-ns-nsi-register_of_medical_organizations](NamingSystem-core-ns-nsi-register-of-medical-organizations.md)
+* [core-ns-nsi-sources-of-payment](NamingSystem-core-ns-nsi-sources-of-payment.md)
+* [core-ns-nsi-types-medical-documentation](NamingSystem-core-ns-nsi-types-medical-documentation.md)
+* [Core_Ns_Rf_Birth_Certificate](NamingSystem-core-ns-rf-birth-certificate.md)
+* [Core_Ns_Rf_INN](NamingSystem-core-ns-rf-inn.md)
+* [Core_Ns_Rf_OGRN](NamingSystem-core-ns-rf-ogrn.md)
+* [Core_Ns_Rf_SNILS](NamingSystem-core-ns-rf-snils.md)
+
+### Examples
+
+* [core-coverage-instance-full (Coverage)](Coverage-core-coverage-instance-full.md)
+* [core-observation-instance-full (Observation)](Observation-core-observation-instance-full.md)
+* [САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ 'ПСИХИАТРИЧЕСКАЯ БОЛЬНИЦА № 1 ИМ. П.П.КАЩЕНКО' (Organization)](Organization-core-organization-instance-full.md)
+* [core-patient-instance-full (Patient)](Patient-core-patient-instance-full.md)
+* [core-patient-payer-instance-full (Patient)](Patient-core-patient-payer-instance-full.md)
+* [core-practitioner-instance-full (Practitioner)](Practitioner-core-practitioner-instance-full.md)
+* [core-practitioner-role-instance-full (PractitionerRole)](PractitionerRole-core-practitioner-role-instance-full.md)
+* [core-related-person-instance-full (RelatedPerson)](RelatedPerson-core-related-person-instance-full.md)
+* [core-related-person-payer-instance-full (RelatedPerson)](RelatedPerson-core-related-person-payer-instance-full.md)
+* [core-servicerequest-instance-full (ServiceRequest)](ServiceRequest-core-servicerequest-instance-full.md)

@@ -1,0 +1,56 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-coverage-document",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Coverage_Document",
+    "title" : "Core ValueSet NSI coverage document (документы-основания для оплаты медицинских услуг)",
+    "description" : "документы-основания для оплаты медицинских услуг - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-identity-documents",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Identity_Documents",
+    "title" : "Core ValueSet NSI identity documents (Документы удостоверяющие личность)",
+    "description" : "Документы, удостоверяющие личность - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-medical-workers-positions",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Medical_Workers_Position",
+    "title" : "Core ValueSet NSI medical workers positions (Должности медицинских работников)",
+    "description" : "Должности медицинских работников - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-register-of-medical-organizations",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Register_Of_Medical_Organizations",
+    "title" : "Core ValueSet NSI register of medical organizations (Реестр медицинских организаций Российской Федерации)",
+    "description" : "Реестр медицинских организаций МЗРФ - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-register-of-medical-organizations"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-sources-of-payment",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Sources_Of_Payment",
+    "title" : "Core ValueSet NSI sources of payment (Источники оплаты медицинской помощи)",
+    "description" : "Источники оплаты медицинской помощи - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-types-medical-documentation",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Types_Medical_Documentation",
+    "title" : "Core ValueSet types medical documentation (Виды медицинской документации)",
+    "description" : "Виды медицинской документации - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation"]
+  }]
+}

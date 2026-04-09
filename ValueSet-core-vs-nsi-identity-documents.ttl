@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ru/ig/core/ValueSet/core-vs-nsi-identity-documents> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "core-vs-nsi-identity-documents"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet core-vs-nsi-identity-documents</b></p><a name=\"core-vs-nsi-identity-documents\"> </a><a name=\"hccore-vs-nsi-identity-documents\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-core-cs-nsi-identity-document.html\"><code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1</span></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-identity-documents"^^xsd:anyURI ;
+     fhir:l <https://fhir.ru/ig/core/ValueSet/core-vs-nsi-identity-documents>
+  ] ; # 
+  fhir:version [ fhir:v "1"] ; # 
+  fhir:name [ fhir:v "Core_Vs_Nsi_Identity_Documents"] ; # 
+  fhir:title [ fhir:v "Core ValueSet NSI identity documents (Документы удостоверяющие личность)"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-09T17:27:53+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 FHIR Россия"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 FHIR Россия" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://fhir.ru" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Документы, удостоверяющие личность - набор из всех значений системы кодирования"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document"^^xsd:anyURI ;
+         fhir:l <https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document>
+       ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

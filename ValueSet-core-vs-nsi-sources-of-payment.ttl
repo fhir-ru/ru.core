@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ru/ig/core/ValueSet/core-vs-nsi-sources-of-payment> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "core-vs-nsi-sources-of-payment"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet core-vs-nsi-sources-of-payment</b></p><a name=\"core-vs-nsi-sources-of-payment\"> </a><a name=\"hccore-vs-nsi-sources-of-payment\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-core-cs-nsi-sources-of-payment.html\"><code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1</span></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-sources-of-payment"^^xsd:anyURI ;
+     fhir:l <https://fhir.ru/ig/core/ValueSet/core-vs-nsi-sources-of-payment>
+  ] ; # 
+  fhir:version [ fhir:v "1"] ; # 
+  fhir:name [ fhir:v "Core_Vs_Nsi_Sources_Of_Payment"] ; # 
+  fhir:title [ fhir:v "Core ValueSet NSI sources of payment (Источники оплаты медицинской помощи)"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-09T17:27:53+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 FHIR Россия"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 FHIR Россия" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://fhir.ru" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Источники оплаты медицинской помощи - набор из всех значений системы кодирования"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"^^xsd:anyURI ;
+         fhir:l <https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment>
+       ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

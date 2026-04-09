@@ -1,0 +1,78 @@
+{
+  "codeSystems" : [{
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0360",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Hl7VSDegreeLicenseCertificate",
+    "title" : "hl7VS-degreeLicenseCertificate",
+    "description" : "Concepts specifying an educational degree (e.g., MD).  Used in the CNN datatype (names and identifiers of clinicians) in Version 2 messaging.  Used in Version 2 messaging; note that in releases of HL7 prior to 2.3.1, was also used in person names (XPN), but this use was deprecated, then withdrawn in 2.7.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0360"],
+    "oids" : ["2.16.840.1.113883.21.236"],
+    "sources" : ["2.16.840.1.113883.21.236"],
+    "uses" : {
+    },
+    "StructureDefinition-core-practitioner.html" : "Core Practitioner (Врач/сотрудник)",
+    "StructureDefinition-core-practitioner-role.html" : "Core PractitionerRole (Роль/должность сотрудника)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-coverage-document",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Coverage_Document",
+    "title" : "Core ValueSet NSI coverage document (документы-основания для оплаты медицинских услуг)",
+    "description" : "документы-основания для оплаты медицинских услуг - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document"],
+    "uses" : {
+    },
+    "StructureDefinition-core-coverage.html" : "Core Coverage (Источник финансирования)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-identity-documents",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Identity_Documents",
+    "title" : "Core ValueSet NSI identity documents (Документы удостоверяющие личность)",
+    "description" : "Документы, удостоверяющие личность - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document"],
+    "uses" : {
+    },
+    "StructureDefinition-core-patient.html" : "Core Patient (Пациент)",
+    "StructureDefinition-core-practitioner.html" : "Core Practitioner (Врач/сотрудник)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-medical-workers-positions",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Medical_Workers_Position",
+    "title" : "Core ValueSet NSI medical workers positions (Должности медицинских работников)",
+    "description" : "Должности медицинских работников - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-register-of-medical-organizations",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Register_Of_Medical_Organizations",
+    "title" : "Core ValueSet NSI register of medical organizations (Реестр медицинских организаций Российской Федерации)",
+    "description" : "Реестр медицинских организаций МЗРФ - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-register-of-medical-organizations"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-sources-of-payment",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Sources_Of_Payment",
+    "title" : "Core ValueSet NSI sources of payment (Источники оплаты медицинской помощи)",
+    "description" : "Источники оплаты медицинской помощи - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"]
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/ValueSet/core-vs-nsi-types-medical-documentation",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Vs_Nsi_Types_Medical_Documentation",
+    "title" : "Core ValueSet types medical documentation (Виды медицинской документации)",
+    "description" : "Виды медицинской документации - набор из всех значений системы кодирования",
+    "systems" : ["https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation"]
+  }]
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<NamingSystem xmlns="http://hl7.org/fhir">
+  <id value="core-ns-nsi-medical-workers-positions"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: NamingSystem core-ns-nsi-medical-workers-positions</b></p><a name="core-ns-nsi-medical-workers-positions"> </a><a name="hccore-ns-nsi-medical-workers-positions"> </a><h3>Summary</h3><table class="grid"><tr><td>Defining URL</td><td>https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-medical-workers-positions</td></tr><tr><td>Version</td><td>1</td></tr><tr><td>Name</td><td>core-ns-nsi-medical-workers-positions</td></tr><tr><td>Status</td><td>active</td></tr><tr><td>Definition</td><td><div><p>Справочник НСИ Минздрава &lt;Должности медицинских и фармацевтических работников&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1002, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5</p>
+</div></td></tr><tr><td>Publisher</td><td>HL7 FHIR Россия</td></tr></table><h3>Identifiers</h3><table class="grid"><tr><td><b>Type</b></td><td><b>Value</b></td><td><b>Preferred</b></td><td><b>Comment</b></td></tr><tr><td>OID</td><td>1.2.643.5.1.13.13.11.1002</td><td/><td>Основной</td></tr><tr><td>URI</td><td>http://fhir.ru/core/CodeSystem/core-ns-nsi-medical-workers-positions</td><td>true</td><td/></tr><tr><td>URI</td><td>https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5</td><td/><td/></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url">
+    <valueUri value="https://fhir.ru/ig/core/NamingSystem/core-ns-nsi-medical-workers-positions"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version">
+    <valueString value="1"/>
+  </extension>
+  <name value="core-ns-nsi-medical-workers-positions"/>
+  <status value="active"/>
+  <kind value="codesystem"/>
+  <date value="2024-01-01"/>
+  <publisher value="HL7 FHIR Россия"/>
+  <contact>
+    <name value="HL7 FHIR Россия"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://fhir.ru"/>
+    </telecom>
+  </contact>
+  <description value=" Справочник НСИ Минздрава &lt;Должности медицинских и фармацевтических работников&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1002, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5"/>
+  <uniqueId>
+    <type value="oid"/>
+    <value value="1.2.643.5.1.13.13.11.1002"/>
+    <comment value="Основной"/>
+  </uniqueId>
+  <uniqueId>
+    <type value="uri"/>
+    <value value="http://fhir.ru/core/CodeSystem/core-ns-nsi-medical-workers-positions"/>
+    <preferred value="true"/>
+  </uniqueId>
+  <uniqueId>
+    <type value="uri"/>
+    <value value="https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5"/>
+  </uniqueId>
+</NamingSystem>

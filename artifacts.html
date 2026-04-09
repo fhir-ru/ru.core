@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary -  v1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold"></span>
+            <br/>
+            <span style="display:inline-block;">1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4B/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">RuCoreIG - Local Development build (v1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.ru/ig/core/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Data Type Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#4">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Naming Systems</a>
+      </li>
+      <li>
+         <a href="#7">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-encounter.html"
+                  title="StructureDefinition/core-encounter"> Core Encounter (Случай обслуживания)</a>
+            </td>
+            <td>
+<p>Cлучай оказания медицинской помощи, то есть взаимодействия между пациентом и системой здравоохранения с целью оказания медицинских услуг или оценки состояния здоровья пациентах</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-coverage.html"
+                  title="StructureDefinition/core-coverage">Core Coverage (Источник финансирования)</a>
+            </td>
+            <td>
+<p>Источник финансирования</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-observation.html"
+                  title="StructureDefinition/core-observation">Core Observation (Измерения и простые утверждения о пациенте)</a>
+            </td>
+            <td>
+<p>Измерения и простые утверждения о пациенте, устройстве или других объектах</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-organization-payer.html"
+                  title="StructureDefinition/core-organization-payer">Core Organisation Payer (Организация-плательщик)</a>
+            </td>
+            <td>
+<p>Организация плательщик</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-organization.html"
+                  title="StructureDefinition/core-organization">Core Organization (Организация)</a>
+            </td>
+            <td>
+<p>Организация</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-patient.html"
+                  title="StructureDefinition/core-patient">Core Patient (Пациент)</a>
+            </td>
+            <td>
+<p>Пациент</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-patient-payer.html"
+                  title="StructureDefinition/core-patient-payer">Core Patient Payer (Пациент - плательщик)</a>
+            </td>
+            <td>
+<p>Пациент – плательщик, передача ИНН обязательна</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-practitioner.html"
+                  title="StructureDefinition/core-practitioner">Core Practitioner (Врач/сотрудник)</a>
+            </td>
+            <td>
+<p>Врач, медицинский работник, специалист</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-practitioner-role.html"
+                  title="StructureDefinition/core-practitioner-role">Core PractitionerRole (Роль/должность сотрудника)</a>
+            </td>
+            <td>
+<p>Роль (должность) врача, медицинского работника, специалиста</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-related-person.html"
+                  title="StructureDefinition/core-related-person">Core Related Person (Лицо, имеющее связь с пациентом)</a>
+            </td>
+            <td>
+<p>Лицо, имеющее связь с пациентом</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-related-person-payer.html"
+                  title="StructureDefinition/core-related-person-payer">Core Related Person Payer (Лицо-плательщик, имеющее связь с пациентом)</a>
+            </td>
+            <td>
+<p>Лицо-плательщик, имеющее связь с пациентом</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-servicerequest.html"
+                  title="StructureDefinition/core-servicerequest">Core Service Request (Заказ услуги)</a>
+            </td>
+            <td>
+<p>Заказ услуги</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Data Type Profiles </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-address.html"
+                  title="StructureDefinition/core-address">Core Address (Адрес)</a>
+            </td>
+            <td>
+<p>Адрес</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-core-ex-address-fias.html"
+                  title="StructureDefinition/core-ex-address-fias">Core Extension address fias (Кодирование адреса по ФИАС)</a>
+            </td>
+            <td>
+<p>Кодирование адреса по ФИАС. При маппинге на СЭМД данный url соответствует urn:hl7-ru:fias</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-core-vs-nsi-coverage-document.html"
+                  title="ValueSet/core-vs-nsi-coverage-document">Core ValueSet NSI coverage document (документы-основания для оплаты медицинских услуг)</a>
+            </td>
+            <td>
+<p>документы-основания для оплаты медицинских услуг - набор из всех значений системы кодирования</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-core-vs-nsi-identity-documents.html"
+                  title="ValueSet/core-vs-nsi-identity-documents">Core ValueSet NSI identity documents (Документы удостоверяющие личность)</a>
+            </td>
+            <td>
+<p>Документы, удостоверяющие личность - набор из всех значений системы кодирования</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-core-vs-nsi-medical-workers-positions.html"
+                  title="ValueSet/core-vs-nsi-medical-workers-positions">Core ValueSet NSI medical workers positions (Должности медицинских работников)</a>
+            </td>
+            <td>
+<p>Должности медицинских работников - набор из всех значений системы кодирования</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-core-vs-nsi-register-of-medical-organizations.html"
+                  title="ValueSet/core-vs-nsi-register-of-medical-organizations">Core ValueSet NSI register of medical organizations (Реестр медицинских организаций Российской Федерации)</a>
+            </td>
+            <td>
+<p>Реестр медицинских организаций МЗРФ - набор из всех значений системы кодирования</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-core-vs-nsi-sources-of-payment.html"
+                  title="ValueSet/core-vs-nsi-sources-of-payment">Core ValueSet NSI sources of payment (Источники оплаты медицинской помощи)</a>
+            </td>
+            <td>
+<p>Источники оплаты медицинской помощи - набор из всех значений системы кодирования</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-core-vs-nsi-types-medical-documentation.html"
+                  title="ValueSet/core-vs-nsi-types-medical-documentation">Core ValueSet types medical documentation (Виды медицинской документации)</a>
+            </td>
+            <td>
+<p>Виды медицинской документации - набор из всех значений системы кодирования</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-core-cs-nsi-confidentiality.html"
+                  title="CodeSystem/core-cs-nsi-confidentiality">Core CodeSystem NSI Confidentiality (Уровень конфиденциальности медицинского документа)</a>
+            </td>
+            <td>
+<p>НСИ МЗ РФ справочник <a href="http://fhir.ru/core/CodeSystem/core-cs-nsi-confidentiality">Уровень конфиденциальности медицинского документа</a></p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-core-cs-nsi-identity-document.html"
+                  title="CodeSystem/core-cs-nsi-identity-document">Core CodeSystem NSI Identity Documents (Документы удостоверяющие личность)</a>
+            </td>
+            <td>
+<p>НСИ МЗ РФ справочник <a href="http://fhir.ru/core/NamingSystem/core-ns-nsi-identity-document">документы удостоверяющие личность</a></p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-core-cs-nsi-coverage-document.html"
+                  title="CodeSystem/core-cs-nsi-coverage-document">Core CodeSystem NSI coverage document (Документы-основания для оплаты медицинских услуг)</a>
+            </td>
+            <td>
+<p>НСИ МЗ РФ справочник <a href="http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document">Документы-основания для оплаты</a></p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-core-cs-nsi-medical-workers-positions.html"
+                  title="CodeSystem/core-cs-nsi-medical-workers-positions">Core CodeSystem NSI medical workers positions (Должности медицинских работников)</a>
+            </td>
+            <td>
+<p>НСИ МЗ РФ справочник <a href="http://fhir.ru/core/CodeSystem/core-cs-nsi-medical-workers-positions">Должности медицинских и фармацевтических работников</a></p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-core-cs-nsi-register-of-medical-organizations.html"
+                  title="CodeSystem/core-cs-nsi-register-of-medical-organizations">Core CodeSystem NSI register of medical organizations (Реестр медицинских организаций)</a>
+            </td>
+            <td>
+<p>НСИ МЗ РФ справочник <a href="http://fhir.ru/core/CodeSystem/core-cs-nsi-register_of_ medical_organizations">Реестр медицинских организаций</a></p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-core-cs-nsi-sources-of-payment.html"
+                  title="CodeSystem/core-cs-nsi-sources-of-payment">Core CodeSystem NSI sources of payment (Источники оплаты медицинской помощи)</a>
+            </td>
+            <td>
+<p>НСИ МЗ РФ справочник <a href="http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment">Источники оплаты медицинской помощи</a></p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-core-cs-nsi-types-medical-documentation.html"
+                  title="CodeSystem/core-cs-nsi-types-medical-documentation">Core CodeSystem NSI types of medical documentation (Виды медицинской документации)</a>
+            </td>
+            <td>
+<p>НСИ МЗ РФ справочник <a href="http://fhir.ru/core/CodeSystem/core-cs-nsi-types-medical-documentation">Виды медицинской документации</a></p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Naming Systems </h3>
+    <p>These define identifier and/or code system identities used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-fias-aoguid.html"
+                  title="NamingSystem/core-ns-fias-aoguid">core-ns-fias-aoguid</a>
+            </td>
+            <td>
+<p>Идентификатор адресного объекта по справочнику ФИАС</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-fias-houseguid.html"
+                  title="NamingSystem/core-ns-fias-houseguid">core-ns-fias-houseguid</a>
+            </td>
+            <td>
+<p>Идентификатор дома по справочнику ФИАС</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-nsi-confidentiality.html"
+                  title="NamingSystem/core-ns-nsi-confidentiality">core-ns-nsi-confidentiality</a>
+            </td>
+            <td>
+<p>Справочник НСИ Минздрава &lt;Уровень конфиденциальности медицинского документа&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.285, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-nsi-coverage-document.html"
+                  title="NamingSystem/core-ns-nsi-coverage-document">core-ns-nsi-coverage-document</a>
+            </td>
+            <td>
+<p>Справочник НСИ Минздрава &lt;Типы документов оснований&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.724, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-nsi-identity-document.html"
+                  title="NamingSystem/core-ns-nsi-identity-document">core-ns-nsi-identity-document</a>
+            </td>
+            <td>
+<p>Справочник НСИ Минздрава &lt;Документы, удостоверяющие личность&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.48, Дополнительный OID: 1.2.643.5.1.13.13.11.1011, 1.2.643.5.1.13.2.1.1.736, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-identity-document</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-nsi-medical-workers-positions.html"
+                  title="NamingSystem/core-ns-nsi-medical-workers-positions">core-ns-nsi-medical-workers-positions</a>
+            </td>
+            <td>
+<p>Справочник НСИ Минздрава &lt;Должности медицинских и фармацевтических работников&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1002, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-nsi-register-of-medical-organizations.html"
+                  title="NamingSystem/core-ns-nsi-register-of-medical-organizations">core-ns-nsi-register-of-medical-organizations</a>
+            </td>
+            <td>
+<p>Справочник НСИ Минздрава &lt;Реестр медицинских организаций Российской Федерации&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1461, Дополнительный OID:???, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-ns-nsi-register_of_ medical_organizations</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-nsi-sources-of-payment.html"
+                  title="NamingSystem/core-ns-nsi-sources-of-payment">core-ns-nsi-sources-of-payment</a>
+            </td>
+            <td>
+<p>Справочник НСИ Минздрава &lt;Источники оплаты медицинской помощи&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1039, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-nsi-types-medical-documentation.html"
+                  title="NamingSystem/core-ns-nsi-types-medical-documentation">core-ns-nsi-types-medical-documentation</a>
+            </td>
+            <td>
+<p>Справочник НСИ Минздрава &lt;Виды медицинской документации&gt;, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1522, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-rf-birth-certificate.html"
+                  title="NamingSystem/core-ns-rf-birth-certificate">core-ns-rf-birth-certificate</a>
+            </td>
+            <td>
+<p>Номера государственных свидетельств о рождении формируются государственной системой органов записи актов гражданского состояния (ЗАГС), с внесением в единый реестр записей актов гражданского состояния (ЕГР ЗАГС). Предполагается, что номер уникален, сведений об ограничении срока уникальности номера нет.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-rf-inn.html"
+                  title="NamingSystem/core-ns-rf-inn">core-ns-rf-inn</a>
+            </td>
+            <td>
+<p>Государственные идентификационные номера налогоплательщика, формируются государственной федеральной налоговой службой (ФНС России). Уникальный неизменяемый.. Используется на всей территории РФ и не меняется, даже если налогоплательщик меняет место жительства, фамилию и другие паспортные данные.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-rf-ogrn.html"
+                  title="NamingSystem/core-ns-rf-ogrn">core-ns-rf-ogrn</a>
+            </td>
+            <td>
+<p>Основной государственный регистрационный номер юридического лица (индивидуального предпринимателя) (ОГРН)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-core-ns-rf-snils.html"
+                  title="NamingSystem/core-ns-rf-snils">core-ns-rf-snils</a>
+            </td>
+            <td>
+<p>Страховой номер индивидуального лицевого счёта, СНИЛС — уникальный номер индивидуального лицевого счёта застрахованного лица в системе обязательного пенсионного страхования</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Coverage-core-coverage-instance-full.html"
+                  title="Coverage/core-coverage-instance-full">core-coverage-instance-full</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-core-observation-instance-full.html"
+                  title="Observation/core-observation-instance-full">core-observation-instance-full</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-core-organization-instance-full.html"
+                  title="Organization/core-organization-instance-full">core-organization-instance-full</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-core-patient-instance-full.html"
+                  title="Patient/core-patient-instance-full">core-patient-instance-full</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-core-patient-payer-instance-full.html"
+                  title="Patient/core-patient-payer-instance-full">core-patient-payer-instance-full</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-core-practitioner-instance-full.html"
+                  title="Practitioner/core-practitioner-instance-full">core-practitioner-instance-full</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-core-practitioner-role-instance-full.html"
+                  title="PractitionerRole/core-practitioner-role-instance-full">core-practitioner-role-instance-full</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-core-related-person-instance-full.html"
+                  title="RelatedPerson/core-related-person-instance-full">core-related-person-instance-full</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-core-related-person-payer-instance-full.html"
+                  title="RelatedPerson/core-related-person-payer-instance-full">core-related-person-payer-instance-full</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-core-servicerequest-instance-full.html"
+                  title="ServiceRequest/core-servicerequest-instance-full">core-servicerequest-instance-full</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://fhir.ru">HL7 FHIR Россия</a>.  Package ru.core#1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4B/">FHIR 4.3.0</a>. Generated <span title="Thu, Apr 9, 2026 17:27+0000">2026-04-09</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

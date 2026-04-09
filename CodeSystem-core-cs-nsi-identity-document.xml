@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="core-cs-nsi-identity-document"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem core-cs-nsi-identity-document</b></p><a name="core-cs-nsi-identity-document"> </a><a name="hccore-cs-nsi-identity-document"> </a><p>This case-insensitive code system <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document</code> provides some codes in an undefined hierarchy <b>that are example only</b>:</p><table class="codes"><tr><td><b>Lvl</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style="white-space:nowrap">100<a name="core-cs-nsi-identity-document-100"> </a></td><td>Общегражданские документы</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  1<a name="core-cs-nsi-identity-document-1"> </a></td><td>Паспорт гражданина Российской Федерации</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  42<a name="core-cs-nsi-identity-document-42"> </a></td><td>Заграничный паспорт гражданина Российской Федерации</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  2<a name="core-cs-nsi-identity-document-2"> </a></td><td>Заграничный паспорт гражданина РФ с электронным носителем информации</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  5<a name="core-cs-nsi-identity-document-5"> </a></td><td>Временное удостоверение личности гражданина РФ</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  4<a name="core-cs-nsi-identity-document-4"> </a></td><td>Служебный паспорт гражданина РФ</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  6<a name="core-cs-nsi-identity-document-6"> </a></td><td>Свидетельство о рождении</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  24<a name="core-cs-nsi-identity-document-24"> </a></td><td>Медицинское свидетельство о рождении</td><td>для детей в возрасте до 1 месяца</td></tr><tr><td>2</td><td style="white-space:nowrap">  43<a name="core-cs-nsi-identity-document-43"> </a></td><td>Свидетельство о смерти</td><td/></tr><tr><td>1</td><td style="white-space:nowrap">400<a name="core-cs-nsi-identity-document-400"> </a></td><td>Специальные документы, связанные с удостоверением личности</td><td/></tr><tr><td>2</td><td style="white-space:nowrap">  36<a name="core-cs-nsi-identity-document-36"> </a></td><td>Водительское удостоверение</td><td/></tr></table></div>
+  </text>
+  <url value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document"/>
+  <version value="1"/>
+  <name value="Core_Cs_Nsi_Identity_Document"/>
+  <title value="Core CodeSystem NSI Identity Documents (Документы удостоверяющие личность)"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-09T17:27:53+00:00"/>
+  <publisher value="HL7 FHIR Россия"/>
+  <contact>
+    <name value="HL7 FHIR Россия"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://fhir.ru"/>
+    </telecom>
+  </contact>
+  <description value="НСИ МЗ РФ справочник [документы удостоверяющие личность](http://fhir.ru/core/NamingSystem/core-ns-nsi-identity-document)"/>
+  <caseSensitive value="false"/>
+  <content value="example"/>
+  <concept>
+    <code value="100"/>
+    <display value="Общегражданские документы"/>
+    <concept>
+      <code value="1"/>
+      <display value="Паспорт гражданина Российской Федерации"/>
+    </concept>
+    <concept>
+      <code value="42"/>
+      <display value="Заграничный паспорт гражданина Российской Федерации"/>
+    </concept>
+    <concept>
+      <code value="2"/>
+      <display value="Заграничный паспорт гражданина РФ с электронным носителем информации"/>
+    </concept>
+    <concept>
+      <code value="5"/>
+      <display value="Временное удостоверение личности гражданина РФ"/>
+    </concept>
+    <concept>
+      <code value="4"/>
+      <display value="Служебный паспорт гражданина РФ"/>
+    </concept>
+    <concept>
+      <code value="6"/>
+      <display value="Свидетельство о рождении"/>
+    </concept>
+    <concept>
+      <code value="24"/>
+      <display value="Медицинское свидетельство о рождении"/>
+      <definition value="для детей в возрасте до 1 месяца"/>
+    </concept>
+    <concept>
+      <code value="43"/>
+      <display value="Свидетельство о смерти"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="400"/>
+    <display value="Специальные документы, связанные с удостоверением личности"/>
+    <concept>
+      <code value="36"/>
+      <display value="Водительское удостоверение"/>
+    </concept>
+  </concept>
+</CodeSystem>

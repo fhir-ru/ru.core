@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="core-vs-nsi-medical-workers-positions"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet core-vs-nsi-medical-workers-positions</b></p><a name="core-vs-nsi-medical-workers-positions"> </a><a name="hccore-vs-nsi-medical-workers-positions"> </a><ul><li>Include all codes defined in <a href="CodeSystem-core-cs-nsi-medical-workers-positions.html"><code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li></ul></div>
+  </text>
+  <url value="https://fhir.ru/ig/core/ValueSet/core-vs-nsi-medical-workers-positions"/>
+  <version value="1"/>
+  <name value="Core_Vs_Nsi_Medical_Workers_Position"/>
+  <title value="Core ValueSet NSI medical workers positions (Должности медицинских работников)"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-09T17:27:53+00:00"/>
+  <publisher value="HL7 FHIR Россия"/>
+  <contact>
+    <name value="HL7 FHIR Россия"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://fhir.ru"/>
+    </telecom>
+  </contact>
+  <description value="Должности медицинских работников - набор из всех значений системы кодирования"/>
+  <compose>
+    <include>
+      <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="51a74d48-f7fd-4dbf-bb8e-d35c70ea267d"/>
+  <meta>
+    <lastUpdated value="2026-04-09T17:27:53.030+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="https://fhir.ru/ig/core/ValueSet/core-vs-nsi-coverage-document"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-core-cs-nsi-coverage-document.html">codesystem Core CodeSystem NSI coverage document (Документы-основания для оплаты медицинских услуг) v1 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document|1" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 3 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document-1"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-coverage-document.html#core-cs-nsi-coverage-document-1">1</a>
+                </td>
+                <td>Полис ОМС</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;1&quot;, &quot;display&quot;: &quot;Полис ОМС&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;1&quot;&gt;&lt;display value=&quot;Полис ОМС&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document-2"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-coverage-document.html#core-cs-nsi-coverage-document-2">2</a>
+                </td>
+                <td>Полис ДМС</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;2&quot;, &quot;display&quot;: &quot;Полис ДМС&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;2&quot;&gt;&lt;display value=&quot;Полис ДМС&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document-3"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-coverage-document.html#core-cs-nsi-coverage-document-3">3</a>
+                </td>
+                <td>Договор на оказание платных медицинских услуг</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;3&quot;, &quot;display&quot;: &quot;Договор на оказание платных медицинских услуг&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;3&quot;&gt;&lt;display value=&quot;Договор на оказание платных медицинских услуг&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.ru/ig/core/ValueSet/core-vs-nsi-coverage-document"/>
+        <version value="1"/>
+        <name value="Core_Vs_Nsi_Coverage_Document"/>
+        <title value="Core ValueSet NSI coverage document (документы-основания для оплаты медицинских услуг)"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2026-04-09T17:27:53+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:0903bdfe-fa73-4089-b866-468118d57192"/>
+          <timestamp value="2026-04-09T17:29:17+00:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document|1"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document"/>
+            <code value="1"/>
+            <display value="Полис ОМС"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document"/>
+            <code value="2"/>
+            <display value="Полис ДМС"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document"/>
+            <code value="3"/>
+            <display value="Договор на оказание платных медицинских услуг"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.ru/ig/core/ValueSet/core-vs-nsi-sources-of-payment"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-core-cs-nsi-sources-of-payment.html">codesystem Core CodeSystem NSI sources of payment (Источники оплаты медицинской помощи) v1 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment|1" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 10 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment-1"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-sources-of-payment.html#core-cs-nsi-sources-of-payment-1">1</a>
+                </td>
+                <td>Средства обязательного медицинского страхования</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;1&quot;, &quot;display&quot;: &quot;Средства обязательного медицинского страхования&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;1&quot;&gt;&lt;display value=&quot;Средства обязательного медицинского страхования&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment-3"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-sources-of-payment.html#core-cs-nsi-sources-of-payment-3">3</a>
+                </td>
+                <td>Средства добровольного медицинского страхования</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;3&quot;, &quot;display&quot;: &quot;Средства добровольного медицинского страхования&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;3&quot;&gt;&lt;display value=&quot;Средства добровольного медицинского страхования&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment-4"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-sources-of-payment.html#core-cs-nsi-sources-of-payment-4">4</a>
+                </td>
+                <td>Средства пациента</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;4&quot;, &quot;display&quot;: &quot;Средства пациента&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;4&quot;&gt;&lt;display value=&quot;Средства пациента&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment-5"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-sources-of-payment.html#core-cs-nsi-sources-of-payment-5">5</a>
+                </td>
+                <td>Средства третьих физических лиц</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;5&quot;, &quot;display&quot;: &quot;Средства третьих физических лиц&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;5&quot;&gt;&lt;display value=&quot;Средства третьих физических лиц&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment-6"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-sources-of-payment.html#core-cs-nsi-sources-of-payment-6">6</a>
+                </td>
+                <td>Средства третьих юридических лиц</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;6&quot;, &quot;display&quot;: &quot;Средства третьих юридических лиц&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;6&quot;&gt;&lt;display value=&quot;Средства третьих юридических лиц&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment-8"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-sources-of-payment.html#core-cs-nsi-sources-of-payment-8">8</a>
+                </td>
+                <td>Средства федерального бюджета</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;8&quot;, &quot;display&quot;: &quot;Средства федерального бюджета&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;8&quot;&gt;&lt;display value=&quot;Средства федерального бюджета&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment-9"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-sources-of-payment.html#core-cs-nsi-sources-of-payment-9">9</a>
+                </td>
+                <td>Средства регионального бюджета</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;9&quot;, &quot;display&quot;: &quot;Средства регионального бюджета&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;9&quot;&gt;&lt;display value=&quot;Средства регионального бюджета&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment-10"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-sources-of-payment.html#core-cs-nsi-sources-of-payment-10">10</a>
+                </td>
+                <td>Средства обязательного социального страхования</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;10&quot;, &quot;display&quot;: &quot;Средства обязательного социального страхования&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;10&quot;&gt;&lt;display value=&quot;Средства обязательного социального страхования&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment-11"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-sources-of-payment.html#core-cs-nsi-sources-of-payment-11">11</a>
+                </td>
+                <td>Средства бюджета медицинской организации</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;11&quot;, &quot;display&quot;: &quot;Средства бюджета медицинской организации&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;11&quot;&gt;&lt;display value=&quot;Средства бюджета медицинской организации&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment-12"> </a>
+                  <code>https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-core-cs-nsi-sources-of-payment.html#core-cs-nsi-sources-of-payment-12">12</a>
+                </td>
+                <td>Средства федерального и регионального бюджета</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;, &quot;version&quot;: &quot;1&quot;, &quot;code&quot;: &quot;12&quot;, &quot;display&quot;: &quot;Средства федерального и регионального бюджета&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment&quot;&gt;&lt;version value=&quot;1&quot;&gt;&lt;code value=&quot;12&quot;&gt;&lt;display value=&quot;Средства федерального и регионального бюджета&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.ru/ig/core/ValueSet/core-vs-nsi-sources-of-payment"/>
+        <version value="1"/>
+        <name value="Core_Vs_Nsi_Sources_Of_Payment"/>
+        <title value="Core ValueSet NSI sources of payment (Источники оплаты медицинской помощи)"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2026-04-09T17:27:53+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:22658c9f-7bc3-4301-82d5-3de3283a29ab"/>
+          <timestamp value="2026-04-09T17:29:18+00:00"/>
+          <total value="10"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment|1"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"/>
+            <code value="1"/>
+            <display value="Средства обязательного медицинского страхования"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"/>
+            <code value="3"/>
+            <display value="Средства добровольного медицинского страхования"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"/>
+            <code value="4"/>
+            <display value="Средства пациента"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"/>
+            <code value="5"/>
+            <display value="Средства третьих физических лиц"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"/>
+            <code value="6"/>
+            <display value="Средства третьих юридических лиц"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"/>
+            <code value="8"/>
+            <display value="Средства федерального бюджета"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"/>
+            <code value="9"/>
+            <display value="Средства регионального бюджета"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"/>
+            <code value="10"/>
+            <display value="Средства обязательного социального страхования"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"/>
+            <code value="11"/>
+            <display value="Средства бюджета медицинской организации"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment"/>
+            <code value="12"/>
+            <display value="Средства федерального и регионального бюджета"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

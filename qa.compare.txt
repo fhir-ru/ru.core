@@ -1,0 +1,210 @@
+RuCoreIG : Validation Results
+=========================================
+
+err = 4, warn = 92, info = 3
+$--
+Generated $--. FHIR version $-- for ru.core#$-- (canonical = https://fhir.ru/ig/core)
+ Build Errors : 3 / 20 / 0
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-confidentiality : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-coverage-document : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-identity-document : 0 / 0 / 2
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-medical-workers-positions : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-register-of-medical-organizations : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-sources-of-payment : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/CodeSystem-core-cs-nsi-types-medical-documentation : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Coverage-core-coverage-instance-full : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ImplementationGuide-ru.core : 1 / 12 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-fias-aoguid : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-fias-houseguid : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-confidentiality : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-coverage-document : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-identity-document : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-medical-workers-positions : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-register-of-medical-organizations : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-sources-of-payment : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-nsi-types-medical-documentation : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-rf-birth-certificate : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-rf-inn : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-rf-ogrn : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/NamingSystem-core-ns-rf-snils : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Observation-core-observation-instance-full : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Organization-core-organization-instance-full : 0 / 2 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Patient-core-patient-instance-full : 0 / 5 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Patient-core-patient-payer-instance-full : 0 / 3 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/Practitioner-core-practitioner-instance-full : 0 / 2 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/PractitionerRole-core-practitioner-role-instance-full : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/RelatedPerson-core-related-person-instance-full : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/RelatedPerson-core-related-person-payer-instance-full : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ServiceRequest-core-servicerequest-instance-full : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-address : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-coverage : 0 / 1 / 2
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-encounter : 0 / 2 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-ex-address-fias : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-observation : 0 / 3 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-organization : 0 / 3 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-organization-payer : 0 / 4 / 2
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-patient : 0 / 8 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-patient-payer : 0 / 4 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-practitioner : 0 / 2 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-practitioner-role : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-related-person : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-related-person-payer : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/StructureDefinition-core-servicerequest : 0 / 3 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-coverage-document : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-identity-documents : 0 / 2 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-medical-workers-positions : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-register-of-medical-organizations : 0 / 1 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-sources-of-payment : 0 / 0 / 1
+ /home/runner/work/ru.core/ru.core/RuCoreIG/fsh-generated/resources/ValueSet-core-vs-nsi-types-medical-documentation : 0 / 1 / 1
+</table>
+== n/a ==
+ERROR: ImplementationGuide/ru.core: This IG is version 4.3.0, while the IG 'hl7.terminology.r4' is from version 4.0.1
+ERROR: ImplementationGuide/ru.core: This IG is version 4.3.0, while the IG 'hl7.fhir.uv.extensions.r4' is from version 4.0.1
+ERROR: ImplementationGuide/ru.core: This IG is version 4.3.0, while the IG 'hl7.fhir.uv.tools.r4' is from version 4.0.1
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Coverage/core-coverage-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/core-observation-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/core-organization-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/core-patient-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/core-patient-payer-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/core-practitioner-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource PractitionerRole/core-practitioner-role-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource RelatedPerson/core-related-person-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource RelatedPerson/core-related-person-payer-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ServiceRequest/core-servicerequest-instance-full.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: /home/runner/work/ru.core/ru.core/RuCoreIG/output/NamingSystem-core-ns-nsi-confidentiality.html: Illegal HTML: illegal html element: Уровень (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.285, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2)
+WARNING: /home/runner/work/ru.core/ru.core/RuCoreIG/output/NamingSystem-core-ns-nsi-coverage-document.html: Illegal HTML: illegal html element: Типы (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.724, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document)
+WARNING: /home/runner/work/ru.core/ru.core/RuCoreIG/output/NamingSystem-core-ns-nsi-medical-workers-positions.html: Illegal HTML: illegal html element: Должности (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1002, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5)
+WARNING: /home/runner/work/ru.core/ru.core/RuCoreIG/output/NamingSystem-core-ns-nsi-register-of-medical-organizations.html: Illegal HTML: illegal html element: Реестр (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1461, Дополнительный OID:???, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-ns-nsi-register_of_ medical_organizations)
+WARNING: /home/runner/work/ru.core/ru.core/RuCoreIG/output/NamingSystem-core-ns-nsi-sources-of-payment.html: Illegal HTML: illegal html element: Источники (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1039, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment)
+WARNING: /home/runner/work/ru.core/ru.core/RuCoreIG/output/NamingSystem-core-ns-nsi-types-medical-documentation.html: Illegal HTML: illegal html element: Виды (, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1522, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24)
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CodeSystem-core-cs-nsi-confidentiality.json ==
+== fsh-generated/resources/CodeSystem-core-cs-nsi-coverage-document.json ==
+== fsh-generated/resources/CodeSystem-core-cs-nsi-identity-document.json ==
+INFORMATION: CodeSystem/core-cs-nsi-identity-document: CodeSystem: CodeSystems SHOULD have a stated value for the hierarchyMeaning element so that users know the status and meaning of the code system clearly
+== fsh-generated/resources/CodeSystem-core-cs-nsi-medical-workers-positions.json ==
+== fsh-generated/resources/CodeSystem-core-cs-nsi-register-of-medical-organizations.json ==
+== fsh-generated/resources/CodeSystem-core-cs-nsi-sources-of-payment.json ==
+== fsh-generated/resources/CodeSystem-core-cs-nsi-types-medical-documentation.json ==
+== fsh-generated/resources/Coverage-core-coverage-instance-full.json ==
+WARNING: Coverage/core-coverage-instance-full: Coverage.identifier[0].system: No definition could be found for URL value 'http://fhir.ru/core/systems/OMS'
+== fsh-generated/resources/ImplementationGuide-ru.core.json ==
+WARNING: ImplementationGuide.version: The version 1 is not a valid semantic version and will not be acceptible to the ci-build, nor will it be a valid vesion in the NPM package system
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.definition.resource[0].name: value should not start or finish with whitespace ' Core Encounter (Случай обслуживания)'
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.definition.resource[11].description: value should not start or finish with whitespace ' Измерения и простые утверждения о пациенте, устройстве или других объектах'
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.definition.resource[17].description: value should not start or finish with whitespace ' Роль (должность) врача, медицинского работника, специалиста'
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.definition.resource[30].description: value should not start or finish with whitespace ' Справочник НСИ Минздрава <Уровень конфиденциальности медицинского документа>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.285, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.99.2.285/passport/1.2'
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.definition.resource[31].description: value should not start or finish with whitespace ' Справочник НСИ Минздрава <Типы документов оснований>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.724, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document'
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.definition.resource[32].description: value should not start or finish with whitespace ' Справочник НСИ Минздрава <Документы, удостоверяющие личность>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.99.2.48, Дополнительный OID: 1.2.643.5.1.13.13.11.1011, 1.2.643.5.1.13.2.1.1.736, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-identity-document'
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.definition.resource[33].description: value should not start or finish with whitespace ' Справочник НСИ Минздрава <Должности медицинских и фармацевтических работников>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1002, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1002/passport/9.5'
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.definition.resource[34].description: value should not start or finish with whitespace ' Справочник НСИ Минздрава <Реестр медицинских организаций Российской Федерации>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1461, Дополнительный OID:???, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-ns-nsi-register_of_ medical_organizations'
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.definition.resource[35].description: value should not start or finish with whitespace ' Справочник НСИ Минздрава <Источники оплаты медицинской помощи>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1039, предпочтительно URI: http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment'
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.definition.resource[36].description: value should not start or finish with whitespace ' Справочник НСИ Минздрава <Виды медицинской документации>, может быть известен под следующими идентификаторами: OID: 1.2.643.5.1.13.13.11.1522, Дополнительный OID:???, предпочтительно URI: https://nsi.rosminzdrav.ru/dictionaries/1.2.643.5.1.13.13.11.1522/passport/7.24'
+WARNING: ImplementationGuide/ru.core: ImplementationGuide.dependsOn[0]: The ImplementationGuide is based on FHIR version 4.3.0 but package hl7.terminology.r4#7.1.0 is based on FHIR version 4.0.1. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+ERROR: ImplementationGuide/ru.core: ImplementationGuide.dependsOn[1]: The canonical URL http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions points to the package hl7.fhir.uv.extensions which is inconsistent with the stated packageId of hl7.fhir.uv.extensions.r4
+== fsh-generated/resources/NamingSystem-core-ns-fias-aoguid.json ==
+== fsh-generated/resources/NamingSystem-core-ns-fias-houseguid.json ==
+== fsh-generated/resources/NamingSystem-core-ns-nsi-confidentiality.json ==
+WARNING: NamingSystem/core-ns-nsi-confidentiality: NamingSystem: Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)
+== fsh-generated/resources/NamingSystem-core-ns-nsi-coverage-document.json ==
+WARNING: NamingSystem/core-ns-nsi-coverage-document: NamingSystem: Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)
+== fsh-generated/resources/NamingSystem-core-ns-nsi-identity-document.json ==
+WARNING: NamingSystem/core-ns-nsi-identity-document: NamingSystem: Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)
+== fsh-generated/resources/NamingSystem-core-ns-nsi-medical-workers-positions.json ==
+WARNING: NamingSystem/core-ns-nsi-medical-workers-positions: NamingSystem: Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)
+== fsh-generated/resources/NamingSystem-core-ns-nsi-register-of-medical-organizations.json ==
+WARNING: NamingSystem/core-ns-nsi-register-of-medical-organizations: NamingSystem: Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)
+== fsh-generated/resources/NamingSystem-core-ns-nsi-sources-of-payment.json ==
+WARNING: NamingSystem/core-ns-nsi-sources-of-payment: NamingSystem: Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)
+== fsh-generated/resources/NamingSystem-core-ns-nsi-types-medical-documentation.json ==
+WARNING: NamingSystem/core-ns-nsi-types-medical-documentation: NamingSystem: Constraint failed: nsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.exists() implies name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (defined in http://hl7.org/fhir/StructureDefinition/NamingSystem)
+== fsh-generated/resources/NamingSystem-core-ns-rf-birth-certificate.json ==
+== fsh-generated/resources/NamingSystem-core-ns-rf-inn.json ==
+== fsh-generated/resources/NamingSystem-core-ns-rf-ogrn.json ==
+== fsh-generated/resources/NamingSystem-core-ns-rf-snils.json ==
+== fsh-generated/resources/Observation-core-observation-instance-full.json ==
+WARNING: Observation/core-observation-instance-full: Observation: Best Practice Recommendation: In general, all observations should have an effective[x] ()
+== fsh-generated/resources/Organization-core-organization-instance-full.json ==
+WARNING: Organization/core-organization-instance-full: Organization.identifier[0].type.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: Organization/core-organization-instance-full: Organization.identifier[1].system: No definition could be found for URL value 'http://fhir.ru/core/systems/frmo'
+== fsh-generated/resources/Patient-core-patient-instance-full.json ==
+WARNING: Patient/core-patient-instance-full: Patient.identifier[0].type.coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+WARNING: Patient/core-patient-instance-full: Patient.identifier[1].type.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: Patient/core-patient-instance-full: Patient.identifier[2].type.coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+WARNING: Patient/core-patient-instance-full: Patient.identifier[2].system: No definition could be found for URL value 'http://fhir.ru/core/systems/passport-RF'
+WARNING: Patient/core-patient-instance-full: Patient.identifier[3].type.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+== fsh-generated/resources/Patient-core-patient-payer-instance-full.json ==
+WARNING: Patient/core-patient-payer-instance-full: Patient.identifier[0].type.coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+WARNING: Patient/core-patient-payer-instance-full: Patient.identifier[0].system: No definition could be found for URL value 'http://fhir.ru/core/systems/passport-RF'
+WARNING: Patient/core-patient-payer-instance-full: Patient.identifier[1].type.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+== fsh-generated/resources/Practitioner-core-practitioner-instance-full.json ==
+WARNING: Practitioner/core-practitioner-instance-full: Practitioner.identifier[1].type.coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+WARNING: Practitioner/core-practitioner-instance-full: Practitioner.identifier[1].system: No definition could be found for URL value 'http://fhir.ru/core/systems/passport-RF'
+== fsh-generated/resources/PractitionerRole-core-practitioner-role-instance-full.json ==
+WARNING: PractitionerRole/core-practitioner-role-instance-full: PractitionerRole.code[0].coding[0].system: A definition for CodeSystem 'http://fhir.ru/core/systems/medical-workers-positions' could not be found, so the code cannot be validated
+== fsh-generated/resources/RelatedPerson-core-related-person-instance-full.json ==
+== fsh-generated/resources/RelatedPerson-core-related-person-payer-instance-full.json ==
+WARNING: RelatedPerson/core-related-person-payer-instance-full: RelatedPerson.identifier[0].type.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+== fsh-generated/resources/ServiceRequest-core-servicerequest-instance-full.json ==
+== fsh-generated/resources/StructureDefinition-core-address.json ==
+== fsh-generated/resources/StructureDefinition-core-coverage.json ==
+INFORMATION: StructureDefinition/core-coverage: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+WARNING: StructureDefinition/core-coverage: StructureDefinition.snapshot.element[37].binding: The definition for the element 'Coverage.status' binds to the value set 'http://hl7.org/fhir/ValueSet/fm-status|4.3.0' which is experimental, but this structure is not labeled as experimental
+== fsh-generated/resources/StructureDefinition-core-encounter.json ==
+WARNING: StructureDefinition/core-encounter: StructureDefinition.title: value should not start or finish with whitespace ' Core Encounter (Случай обслуживания)'
+WARNING: StructureDefinition.where(url = 'https://fhir.ru/ig/core/StructureDefinition/core-encounter'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-core-ex-address-fias.json ==
+WARNING: StructureDefinition/core-ex-address-fias: StructureDefinition.context[0]: Review the extension type for core-ex-address-fias: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+== fsh-generated/resources/StructureDefinition-core-observation.json ==
+WARNING: StructureDefinition/core-observation: StructureDefinition.snapshot.element[12].binding: The definition for the element 'Observation.status' binds to the value set 'http://hl7.org/fhir/ValueSet/observation-status|4.3.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/core-observation: StructureDefinition.snapshot.element[13].binding: The definition for the element 'Observation.category' binds to the value set 'http://hl7.org/fhir/ValueSet/observation-category|4.3.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/core-observation: StructureDefinition.snapshot.element[35].binding: The definition for the element 'Observation.referenceRange.type' binds to the value set 'http://hl7.org/fhir/ValueSet/referencerange-meaning|4.3.0' which is experimental, but this structure is not labeled as experimental
+== fsh-generated/resources/StructureDefinition-core-organization.json ==
+WARNING: StructureDefinition/core-organization: StructureDefinition.snapshot.element[14].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition/core-organization: StructureDefinition.differential.element[3].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition/core-organization: StructureDefinition.snapshot.element[48].binding: The definition for the element 'Organization.contact.purpose' binds to the value set 'http://hl7.org/fhir/ValueSet/contactentity-type|4.3.0' which is experimental, but this structure is not labeled as experimental
+== fsh-generated/resources/StructureDefinition-core-organization-payer.json ==
+WARNING: StructureDefinition/core-organization-payer: StructureDefinition.snapshot.element[14].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+INFORMATION: StructureDefinition/core-organization-payer: StructureDefinition.snapshot.element[40].pattern.ofType(string): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+WARNING: StructureDefinition/core-organization-payer: StructureDefinition.snapshot.element[40].pattern.ofType(string): The repeating element has a pattern value for a primitive type. The DotNet validator will not apply this to all the repeats - this is an error
+WARNING: StructureDefinition/core-organization-payer: StructureDefinition.snapshot.element[48].binding: The definition for the element 'Organization.contact.purpose' binds to the value set 'http://hl7.org/fhir/ValueSet/contactentity-type|4.3.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition.where(url = 'https://fhir.ru/ig/core/StructureDefinition/core-organization-payer'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-core-patient.json ==
+WARNING: StructureDefinition/core-patient: StructureDefinition.snapshot.element[14].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+WARNING: StructureDefinition/core-patient: StructureDefinition.snapshot.element[23].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition/core-patient: StructureDefinition.snapshot.element[32].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition/core-patient: StructureDefinition.snapshot.element[41].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+WARNING: StructureDefinition/core-patient: StructureDefinition.differential.element[3].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+WARNING: StructureDefinition/core-patient: StructureDefinition.differential.element[6].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition/core-patient: StructureDefinition.differential.element[9].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition/core-patient: StructureDefinition.differential.element[12].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+== fsh-generated/resources/StructureDefinition-core-patient-payer.json ==
+WARNING: StructureDefinition/core-patient-payer: StructureDefinition.snapshot.element[14].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+WARNING: StructureDefinition/core-patient-payer: StructureDefinition.snapshot.element[23].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition/core-patient-payer: StructureDefinition.snapshot.element[32].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition/core-patient-payer: StructureDefinition.snapshot.element[41].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+== fsh-generated/resources/StructureDefinition-core-practitioner.json ==
+WARNING: StructureDefinition/core-practitioner: StructureDefinition.snapshot.element[32].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+WARNING: StructureDefinition/core-practitioner: StructureDefinition.differential.element[9].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the code cannot be validated
+== fsh-generated/resources/StructureDefinition-core-practitioner-role.json ==
+WARNING: StructureDefinition/core-practitioner-role: StructureDefinition.snapshot.element[26].binding: The definition for the element 'PractitionerRole.specialty' binds to the value set 'http://hl7.org/fhir/ValueSet/c80-practice-codes|4.3.0' which is experimental, but this structure is not labeled as experimental
+== fsh-generated/resources/StructureDefinition-core-related-person.json ==
+== fsh-generated/resources/StructureDefinition-core-related-person-payer.json ==
+== fsh-generated/resources/StructureDefinition-core-servicerequest.json ==
+WARNING: StructureDefinition/core-servicerequest: StructureDefinition.snapshot.element[15].binding: The definition for the element 'ServiceRequest.status' binds to the value set 'http://hl7.org/fhir/ValueSet/request-status|4.3.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/core-servicerequest: StructureDefinition.snapshot.element[16].binding: The definition for the element 'ServiceRequest.intent' binds to the value set 'http://hl7.org/fhir/ValueSet/request-intent|4.3.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/core-servicerequest: StructureDefinition.snapshot.element[18].binding: The definition for the element 'ServiceRequest.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|4.3.0' which is experimental, but this structure is not labeled as experimental
+== fsh-generated/resources/ValueSet-core-vs-nsi-coverage-document.json ==
+== fsh-generated/resources/ValueSet-core-vs-nsi-identity-documents.json ==
+WARNING: ValueSet/core-vs-nsi-identity-documents: ValueSet.compose.include[0]: The value set references CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' which has status 'example'
+WARNING: ValueSet.where(id = 'core-vs-nsi-identity-documents'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document' could not be found, so the value set cannot be expanded
+== fsh-generated/resources/ValueSet-core-vs-nsi-medical-workers-positions.json ==
+WARNING: ValueSet.where(id = 'core-vs-nsi-medical-workers-positions'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions' could not be found, so the value set cannot be expanded
+== fsh-generated/resources/ValueSet-core-vs-nsi-register-of-medical-organizations.json ==
+WARNING: ValueSet.where(id = 'core-vs-nsi-register-of-medical-organizations'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-register-of-medical-organizations' could not be found, so the value set cannot be expanded
+== fsh-generated/resources/ValueSet-core-vs-nsi-sources-of-payment.json ==
+== fsh-generated/resources/ValueSet-core-vs-nsi-types-medical-documentation.json ==
+WARNING: ValueSet.where(id = 'core-vs-nsi-types-medical-documentation'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation' could not be found, so the value set cannot be expanded

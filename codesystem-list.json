@@ -1,0 +1,58 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-confidentiality",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Confidentiality",
+    "title" : "Core CodeSystem NSI Confidentiality (Уровень конфиденциальности медицинского документа)",
+    "description" : "НСИ МЗ РФ справочник [Уровень конфиденциальности медицинского документа](http://fhir.ru/core/CodeSystem/core-cs-nsi-confidentiality)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-coverage-document",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Coverage_Document",
+    "title" : "Core CodeSystem NSI coverage document (Документы-основания для оплаты медицинских услуг)",
+    "description" : "НСИ МЗ РФ справочник [Документы-основания для оплаты](http://fhir.ru/core/CodeSystem/core-cs-nsi-coverage-document)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-identity-document",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Identity_Document",
+    "title" : "Core CodeSystem NSI Identity Documents (Документы удостоверяющие личность)",
+    "description" : "НСИ МЗ РФ справочник [документы удостоверяющие личность](http://fhir.ru/core/NamingSystem/core-ns-nsi-identity-document)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-medical-workers-positions",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Medical_Workers_Positions",
+    "title" : "Core CodeSystem NSI medical workers positions (Должности медицинских работников)",
+    "description" : "НСИ МЗ РФ справочник [Должности медицинских и фармацевтических работников](http://fhir.ru/core/CodeSystem/core-cs-nsi-medical-workers-positions)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-register-of-medical-organizations",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Register_Of_Medical_Organizations",
+    "title" : "Core CodeSystem NSI register of medical organizations (Реестр медицинских организаций)",
+    "description" : "НСИ МЗ РФ справочник [Реестр медицинских организаций](http://fhir.ru/core/CodeSystem/core-cs-nsi-register_of_ medical_organizations)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-sources-of-payment",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Sources_Of_Payment",
+    "title" : "Core CodeSystem NSI sources of payment (Источники оплаты медицинской помощи)",
+    "description" : "НСИ МЗ РФ справочник [Источники оплаты медицинской помощи](http://fhir.ru/core/CodeSystem/core-cs-nsi-sources-of-payment)"
+  },
+  {
+    "url" : "https://fhir.ru/ig/core/CodeSystem/core-cs-nsi-types-medical-documentation",
+    "version" : "1",
+    "status" : "active",
+    "name" : "Core_Cs_Nsi_Types_Medical_Documentation",
+    "title" : "Core CodeSystem NSI types of medical documentation (Виды медицинской документации)",
+    "description" : "НСИ МЗ РФ справочник [Виды медицинской документации](http://fhir.ru/core/CodeSystem/core-cs-nsi-types-medical-documentation)"
+  }]
+}
