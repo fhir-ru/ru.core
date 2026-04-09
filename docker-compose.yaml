@@ -1,21 +1,11 @@
-version: '3.8'
-
 services:
   fhir-ru:
-    image: healthsamurai/fhir-ru:latest
+    build: .
     restart: unless-stopped
-    pull_policy: always
-    volumes:
-      - ./keystore:/app/keystore
-      - /root/.ssh:/root/.ssh
     ports:
-      - "127.0.0.1:8081:8081"
-      - "127.0.0.1:8084:8084"
-      - "127.0.0.1:8085:8085"
-
-  watchtower:
-    image: containrrr/watchtower
-    restart: unless-stopped
-    command: --schedule "0 */5 * * * *"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - "127.0.0.1:8080:8080"
+    environment:
+      - GIT_REPO=https://github.com/fhir-ru/ru.core.git
+      - GIT_BRANCH=main
+      - IG_BRANCH=build
+      - POLL_INTERVAL=60

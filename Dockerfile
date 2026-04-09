@@ -1,25 +1,16 @@
-FROM eclipse-temurin:17-jdk-jammy
+FROM nginx:alpine
 
-WORKDIR /app
+RUN apk add --no-cache git bash rsync
 
-RUN curl -fsSL https://deb.nodesource.com/setup_21.x | bash && \
-    apt-get update && apt-get install -y ruby-full build-essential zlib1g-dev nginx nodejs && \
-    gem install jekyll bundler && \
-    npm install -g fsh-sushi@latest && \
-    rm -rf /var/lib/apt/lists/*
-
-COPY . .
-
-RUN cd RuCoreIG && ./_updatePublisher.sh -y
-RUN cd RuCoreIG && ./_genonce.sh
-
-# RUN cd RuLabIG && ./_updatePublisher.sh -y
-# RUN cd RuLabIG && ./_genonce.sh
+ENV GIT_REPO=""
+ENV GIT_BRANCH="main"
+ENV IG_BRANCH="build"
+ENV POLL_INTERVAL="60"
 
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
-EXPOSE 8081
-EXPOSE 8084
-EXPOSE 8085
+EXPOSE 8080
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
