@@ -97,9 +97,11 @@ clone_or_pull "$REPO_DIR" "$GIT_BRANCH" || true
 clone_or_pull "$IG_DIR" "$IG_BRANCH" || log "IG branch '$IG_BRANCH' not available yet"
 assemble_site
 
-# Start nginx in background (so we can poll)
+# Start nginx in background (so we can poll). -g 'daemon off;' keeps nginx
+# in the foreground so $! is the master PID — otherwise nginx forks and
+# daemonizes, leaving us tracking an already-exited shell child.
 log "Starting nginx..."
-nginx &
+nginx -g 'daemon off;' &
 NGINX_PID=$!
 
 # Poll loop
@@ -124,7 +126,7 @@ while true; do
     # Check nginx is alive
     if ! kill -0 "$NGINX_PID" 2>/dev/null; then
         log "nginx died, restarting..."
-        nginx &
+        nginx -g 'daemon off;' &
         NGINX_PID=$!
     fi
 done
