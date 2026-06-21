@@ -1,0 +1,29 @@
+/*
+ * https://use.typekit.net/usj5xse.css
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * colfax-web:
+ *   - http://typekit.com/eulas/00000000000000003b9acde6
+ *   - http://typekit.com/eulas/00000000000000003b9acde4
+ *
+ * © 2009-2024 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2021-01-11 18:49:02 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=usj5xse&ht=tk&f=15569.15571&a=653177&app=typekit&e=css");
+
+@font-face {
+font-family:"colfax-web";
+src:url("https://use.typekit.net/af/522c51/00000000000000003b9acde6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/522c51/00000000000000003b9acde6/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/522c51/00000000000000003b9acde6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"colfax-web";
+src:url("https://use.typekit.net/af/bac079/00000000000000003b9acde4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/bac079/00000000000000003b9acde4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/bac079/00000000000000003b9acde4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+.tk-colfax-web { font-family: "colfax-web",sans-serif; }
